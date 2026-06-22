@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Sections/Hero";
+import CTA from "./components/Sections/CTA";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <CTA />
       </main>
       <Footer />
     </>

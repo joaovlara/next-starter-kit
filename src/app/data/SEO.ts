@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 const url = "url";
 const title = "Titulo";
 const description = "Descrição";
-const image = `${url}/preview.png`;
+const image = `${url}/preview.jpg`;
 
 export const seoConfig: Metadata = {
   title,
@@ -23,10 +23,6 @@ export const seoConfig: Metadata = {
   keywords: ["Next.js", "ReactJs", "TailwindCSS"],
   alternates: {
     canonical: url,
-    languages: {
-      "pt-BR": url,
-      "en-US": `${url}/en`,
-    },
   },
   robots: {
     index: true,
