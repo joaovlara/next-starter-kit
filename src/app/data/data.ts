@@ -4,7 +4,7 @@ export const infos = {
   endereço: "",
   telefone: "",
   email: "",
-  whatsApp: "",
+  wppLink: "",
   instagram: "",
   facebook: "",
 };
