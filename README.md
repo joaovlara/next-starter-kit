@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Starter Kit
 
-## Getting Started
+Projeto starter kit para criação de sites com Next.js e Tailwind CSS.
 
-First, run the development server:
+## Estrutura principal
+
+- `src/app/` - pasta onde fica o layout da aplicação e as páginas.
+  - `layout.tsx` define o wrapper global do projeto.
+  - `page.tsx` é a página inicial.
+
+- `src/components/` - componentes reutilizáveis de interface.
+  - `Navbar.tsx`, `Footer.tsx`, `WppButton.tsx` são componentes globais.
+  - `src/components/Sections/` agrupa seções de página como `Hero.tsx`, `About.tsx`, `Services.tsx` e `CTA.tsx`.
+
+- `src/data/` - dados do site.
+  - `data.ts` contém conteúdo e informações usados pelas seções e componentes.
+  - `SEO.ts` guarda parâmetros de SEO e metadados.
+
+- `src/app/globals.css` - estilos globais do projeto, incluindo configurações base do Tailwind e customizações.
+
+## Onde encontrar
+
+### Data
+
+As informações do site estão centralizadas em:
+
+- `src/data/data.ts`
+- `src/data/SEO.ts`
+
+Use esses arquivos para atualizar textos, números, títulos, descrições e links do site.
+
+### Styles
+
+Os estilos ficam em:
+
+- `src/app/globals.css`
+
+Aqui você pode ajustar cores, tipografia, espaçamentos e outras regras globais do Tailwind.
+
+### Components
+
+Os componentes estão em:
+
+- `src/components/` para componentes reutilizáveis gerais
+- `src/components/Sections/` para as seções da landing page
+
+A lógica de layout e composição pode ser alterada em `src/app/page.tsx` e `src/app/layout.tsx`.
+
+## Como rodar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Personalização
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Adicione novas seções em `src/components/Sections/`.
+- Atualize o conteúdo em `src/data/data.ts`.
+- Ajuste estilos em `src/app/globals.css`.
+- Edite a estrutura da página em `src/app/page.tsx`.
