@@ -1,9 +1,9 @@
 import { infos } from "@/data/data";
 
-export default function Hero() {
+export default function Testimonials() {
   return (
     <section>
-      <article>Hero</article>
+      <article>Testimonials</article>
     </section>
   );
 }

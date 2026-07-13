@@ -4,7 +4,9 @@ import {infos} from "@/data/data"
 const Navbar = () => {
   return (
     <nav>
-      nav
+      <div>
+        navbar
+      </div>
     </nav>
   )
 }

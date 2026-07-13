@@ -4,7 +4,9 @@ import {infos} from "@/data/data"
 const Footer = () => {
   return (
     <footer>
-      footer
+      <div>
+        Footer
+      </div>
     </footer>
   )
 }
