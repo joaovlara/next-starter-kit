@@ -3,8 +3,8 @@ import {infos} from "@/data/data"
 
 const Navbar = () => {
   return (
-    <nav>
-      <div>
+    <nav className=''>
+      <div className='container1'>
         navbar
       </div>
     </nav>

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  
   /* Fonts */
   --font-montserrat: "Montserrat", sans-serif;
 
@@ -22,28 +21,37 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-gray-300;
+  }
+
+  /* section {
+    @apply bg-gray-300;
+  } */
+
+  .container-1 {
+    @apply bg-gray-200 m-4 px-3 py-6 mx-auto md:max-w-[90%];
+  }
 }
 
 @layer components {
   /* Botão padrão */
   .btn {
     @apply inline-flex items-center justify-center px-6 py-2 
-           rounded-md font-semibold text-white 
+           rounded-md font-semibold text-white border
            cursor-pointer transition-colors duration-300;
   }
-  
+
   /* Título de seção */
   .section-title {
     @apply text-2xl md:text-3xl font-bold text-primary mb-6;
   }
 
   /* Container centralizado */
-  .container {
-    @apply max-w-7xl mx-auto px-4;
-  }
 
   /* H1 principal */
-  .h1-title {
+  h1 {
     @apply text-4xl md:text-5xl font-extrabold leading-tight text-gray-900;
   }
 
