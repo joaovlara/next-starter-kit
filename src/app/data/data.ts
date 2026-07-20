@@ -1,6 +1,14 @@
+export const rotas = [
+  { name: "HOME", href: "/" },
+  { name: "SOBRE", href: "/sobre" },
+  { name: "SERVIÇOS", href: "/servicos" },
+  { name: "CONTATO", href: "/contato" },
+];
+
+// Informações Gerais do site, Links, Redes Sociais
+
 export const infos = {
   nome: "",
-  copyright: "",
   endereço: "",
   telefone: "",
   email: "",
@@ -66,3 +74,14 @@ export const services = [
     description: "Insights valiosos para decisões mais inteligentes.",
   },
 ];
+
+// Footer
+
+export const footer = {
+  contato: [
+    { telefone: "11 11111111" },
+    { email: "email.com.br" },
+    { endereco: "endereço aqui formatado" },
+    { instagram: "linkdoinstagram" },
+  ],
+};

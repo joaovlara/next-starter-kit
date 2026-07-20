@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="">
-      <article className="container-1 rounded-b-[100] h-[70vh]">
+      <article className="container-1 rounded-b-[100] h-[70vh] bg-gray-200">
         <div className="p-12 flex flex-col justify-between h-full">
           <div>
             Icons:
@@ -13,11 +13,11 @@ export default function Hero() {
 
           <div className="flex w-full justify-between">
             <div>
-              <h1>Lorem Ipsum is simply dummy text</h1>
-              <h2>Lorem Ipsum is simply dummy text 2</h2>
+              <h1>Lorem Ipsum is <br /> simply dummy text</h1>
+              <p className="text text-3xl">Lorem Ipsum is simply dummy text 2</p>
             </div>
-            <div>
-              <button>CTA</button>
+            <div className="flex flex-col-reverse">
+              <button className="btn-hero">Btn-hero</button>
             </div>
           </div>
         </div>

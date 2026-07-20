@@ -2,17 +2,19 @@ import { infos } from "@/data/data";
 
 export default function CTA() {
   return (
-    <section className="bg-[url('/images/cta-img.png')] bg-cover bg-center h-[40vh] flex items-center justify-center">
+    <section className="bg-[url('/images/cta-img.png')] bg-cover bg-center h-[30vh] flex items-center justify-center">
       <article className="container-1 w-full flex justify-between">
-        <div>
-          <p>CTA</p>
+        <div className="space-y-3">
+          <p className="cta-tag">CTA</p>
           <h2>Lorem Ipsum is simply text</h2>
-          <p>
+          <p className="text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
         </div>
-        <button className="btn">Link</button>
+        <div className="flex items-center justify-center">
+          <button className="btn w-70">Link</button>
+        </div>
       </article>
     </section>
   );
