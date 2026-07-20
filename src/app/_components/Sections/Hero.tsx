@@ -1,4 +1,4 @@
-import { infos } from "@/data/data";
+import { infos } from "@/src/app/_data/data";
 import Image from "next/image";
 
 export default function Hero() {

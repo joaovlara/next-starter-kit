@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { rotas } from "@/data/data";
+import { rotas } from "@/src/app/_data/data";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 

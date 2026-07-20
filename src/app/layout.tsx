@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { seoConfig } from "./data/SEO";
+import { seoConfig } from "./_data/SEO";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";

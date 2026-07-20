@@ -1,4 +1,4 @@
-import { diferenciais } from "@/data/data";
+import { diferenciais } from "@/src/app/_data/data";
 import Image from "next/image";
 
 export default function Highlights() {

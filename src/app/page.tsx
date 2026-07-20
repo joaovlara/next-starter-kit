@@ -1,13 +1,13 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Hero from "./components/Sections/Hero";
-import CTA from "./components/Sections/CTA";
-import WhatsAppButton from "./components/WppButton";
-import GetApp from "./components/Sections/GetApp";
-import Highlights from "./components/Sections/Highlights";
-import About from "./components/Sections/About";
-import Services from "./components/Sections/Services";
-import Testimonials from "./components/Sections/Testimonials";
+import Navbar from "./_components/Navbar";
+import Footer from "./_components/Footer";
+import Hero from "./_components/Sections/Hero";
+import CTA from "./_components/Sections/CTA";
+import WhatsAppButton from "./_components/WppButton";
+import GetApp from "./_components/Sections/GetApp";
+import Highlights from "./_components/Sections/Highlights";
+import About from "./_components/Sections/About";
+import Services from "./_components/Sections/Services";
+import Testimonials from "./_components/Sections/Testimonials";
 
 export default function Home() {
   return (

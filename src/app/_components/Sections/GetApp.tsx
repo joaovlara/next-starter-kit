@@ -1,4 +1,4 @@
-import { infos } from "@/data/data";
+import { infos } from "@/src/app/_data/data";
 
 export default function GetApp() {
   return (
