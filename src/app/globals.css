@@ -46,6 +46,10 @@
     @apply  bg-gray-500 text-white px-30 py-8 uppercase text-3xl rounded-br-[70px];
   }
 
+  .btn-nav {
+    @apply bg-gray-500 text-white px-15 py-3 ;;
+  }
+
   /* H1 principal */
   h1, .h1 {
     @apply uppercase text-6xl font-bold text-white;

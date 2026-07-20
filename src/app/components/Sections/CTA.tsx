@@ -6,7 +6,7 @@ export default function CTA() {
       <article className="container-1 w-full flex justify-between">
         <div className="space-y-3">
           <p className="cta-tag">CTA</p>
-          <h2>Lorem Ipsum is simply text</h2>
+          <h2 className="h1">Lorem Ipsum is simply text</h2>
           <p className="text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
