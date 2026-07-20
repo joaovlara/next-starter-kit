@@ -3,10 +3,8 @@ import Image from "next/image";
 
 export default function Highlights() {
   return (
-    <section className="bg-gray-500 text-white lg:py-8 p-8">
-
+    <section className="bg-gray-500 text-white lg:py-8 p-6">
       <article className="lg:max-w-[90%] mx-auto bg-gray-300 flex flex-col lg:flex-row lg:rounded-bl-[100px] rounded-tr-[100px] lg:rounded-tr-none">
-        
         <div className="flex flex-col justify-center lg:w-1/4 relative aspect-square">
           <Image
             src="/images/image 9.png"
@@ -33,9 +31,7 @@ export default function Highlights() {
             </div>
           ))}
         </div>
-
       </article>
-
     </section>
   );
 }

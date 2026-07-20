@@ -32,7 +32,7 @@ const infos = {
 const Footer = () => {
   return (
     <footer className="bg-gray-500">
-      <section className="container-1 space-y-9">
+      <section className="container-1 space-y-9 p-6">
         <article className="flex justify-center gap-6">
           {infos.redesSociais.map((rede, index) => (
             <a
@@ -45,7 +45,7 @@ const Footer = () => {
           ))}
         </article>
 
-        <article className="grid grid-cols-3 bg-gray-400 h-[30vh] rounded-b-[80px] p-9 text-white">
+        <article className="grid grid-cols-3 bg-gray-400 h-[30vh] rounded-b-[80px] p-6 text-white">
           <div className="flex items-center justify-center">
             <Image
               src="/images/image 9.png"

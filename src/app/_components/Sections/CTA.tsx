@@ -2,7 +2,7 @@ import { infos } from "@/src/app/_data/data";
 
 export default function CTA() {
   return (
-    <section className="bg-[url('/images/cta-img.png')] bg-cover bg-center min-h-[30vh] flex items-center justify-center">
+    <section className="bg-[url('/images/cta-img.png')] bg-cover bg-center min-h-[30vh] flex items-center justify-center p-6">
       <article className="container-1 w-full flex flex-col md:flex-row justify-between space-y-6">
         <div className="space-y-3">
           <p className="cta-tag">CTA</p>
