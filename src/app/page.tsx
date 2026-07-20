@@ -1,5 +1,3 @@
-import Navbar from "./_components/Navbar";
-import Footer from "./_components/Footer";
 import Hero from "./_components/Sections/Hero";
 import CTA from "./_components/Sections/CTA";
 import WhatsAppButton from "./_components/WppButton";
@@ -12,7 +10,6 @@ import Testimonials from "./_components/Sections/Testimonials";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
         <GetApp />
@@ -22,7 +19,6 @@ export default function Home() {
         {/* <Testimonials /> */}
         <CTA />
       </main>
-      <Footer />
       {/* <WhatsAppButton /> */}
     </>
   );
