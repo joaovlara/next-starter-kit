@@ -5,8 +5,11 @@
   --font-montserrat: "Montserrat", sans-serif;
 
   /* Colors */
-  --color-primary: #4f46e5; /* Exemplo: Indigo-600 */
-  --color-secondary: #ec4899; /* Exemplo: Pink-500 */
+  --color-primary:   #115945;
+  --color-secondary: #bf9850;
+  --color-accent:    #d46a00;
+  --color-neutral:   #2f3634;
+  --color-neutral-dark: #242424;
 
   --color-gray-100: #f2f2f2;
   --color-gray-200: #bfbfbf;
@@ -26,12 +29,8 @@
     @apply bg-gray-300;
   }
 
-  /* section {
-    @apply bg-gray-300;
-  } */
-
   .container-1 {
-    @apply  m-4 px-3 py-6 mx-auto md:max-w-[90%];
+    @apply m-4 px-3 py-6 mx-auto md:max-w-[90%];
   }
 }
 
@@ -43,15 +42,16 @@
   }
 
   .btn-hero {
-    @apply  bg-gray-500 text-white px-30 py-8 uppercase text-3xl rounded-bl-lg rounded-br-[70px];
+    @apply bg-gray-500 text-white px-30 py-8 uppercase text-3xl rounded-bl-lg rounded-br-[70px];
   }
 
   .btn-nav {
-    @apply bg-gray-500 text-white px-15 py-3 ;;
+    @apply bg-gray-500 text-white px-15 py-3;
   }
 
   /* H1 principal */
-  h1, .h1 {
+  h1,
+  .h1 {
     @apply uppercase text-4xl md:text-6xl font-bold text-white;
   }
 
@@ -63,15 +63,14 @@
   .text {
     @apply text-base md:text-lg text-white leading-relaxed;
   }
-
-  /* Legenda / caption */
-  .caption {
-    @apply text-sm text-gray-500 italic;
-  }
 }
 
 @layer utilities {
   .bg-gradient {
     @apply bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .border-iz {
+    @apply border-2
   }
 }
