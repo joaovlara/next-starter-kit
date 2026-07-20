@@ -5,7 +5,7 @@ export default function Highlights() {
   return (
     <section className="bg-gray-500 text-white py-8">
 
-      <article className="md:max-w-[90%] mx-auto bg-gray-300 flex rounded-bl-[100px]">
+      <article className="md:max-w-[90%] mx-auto bg-gray-300 flex flex-col rounded-bl-[100px]">
         <div className="flex flex-col justify-center w-1/4 relative aspect-square ">
           <Image
             src="/images/image 9.png"
