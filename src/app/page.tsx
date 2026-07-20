@@ -16,7 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <GetApp />
-        {/* <Highlights /> */}
+        <Highlights />
         <About />
         <Services />
         {/* <Testimonials /> */}
