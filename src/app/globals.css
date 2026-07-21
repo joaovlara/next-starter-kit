@@ -97,7 +97,7 @@
   }
 
   .service-card {
-    @apply bg-gray-100 h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:bg-gray-200;
+    @apply bg-gray-200 h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:bg-gray-200;
   }
 
   .service-card-header {
