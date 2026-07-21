@@ -2,13 +2,14 @@ import { infos } from "@/src/app/_data/data";
 
 export default function GetApp() {
   return (
-    <section>
-      <article className="container-1 flex flex-col md:flex-row justify-between md:items-center px-6">
-        <h2 className="">Baixe o nosso app:</h2>
-
-        <div className="flex md:flex-row gap-4 pt-3 md:p-0">
-          <button className="btn">ANDROID</button>
-          <button className="btn">APPLE iOS</button>
+    <section className="p-6 pt-0 md:p-0">
+      <article className="container-1 bg-gray-200">
+        <div className="flex items-center justify-between gap-3 p-1">
+          <p className="text">Baixe o nosso App</p>
+          <div className="flex gap-3">
+            <a href="" className="btn-app">Google Play</a>
+            <a href="" className="btn-app">App Store</a> 
+          </div>
         </div>
       </article>
     </section>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="p-6 md:p-0">
+    <section className="px-6 md:p-0">
       <article className="container-1 rounded-b-[100] md:h-[70vh] h-[80vh] bg-gray-200">
         <div className="p-6 md:p-12 flex flex-col justify-between h-full">
           <div>
