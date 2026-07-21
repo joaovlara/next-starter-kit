@@ -1,3 +1,14 @@
+import { ElementType } from "react";
+import {
+  Code,
+  Layout,
+  Smartphone,
+  Database,
+  ShieldCheck,
+  Cloud,
+  Cpu,
+} from "lucide-react";
+
 export const rotas = [
   { name: "HOME", href: "/" },
   { name: "SOBRE", href: "/sobre" },
@@ -38,40 +49,62 @@ export const diferenciais = [
 ];
 
 // Serviços oferecidos
-export const services = [
+export interface ServiceItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: ElementType;
+}
+
+export const servicos: ServiceItem[] = [
   {
-    title: "Consultoria Empresarial",
+    id: "1",
+    title: "Lorem ipsum dolor",
     description:
-      "Orientação estratégica para impulsionar o crescimento da sua empresa.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    icon: Code,
   },
   {
-    title: "Desenvolvimento Web",
-    description: "Sites modernos, responsivos e otimizados para SEO.",
-  },
-  {
-    title: "Marketing Digital",
-    description: "Campanhas eficazes para aumentar sua presença online.",
-  },
-  {
-    title: "Design Gráfico",
-    description: "Identidade visual criativa e profissional.",
-  },
-  {
-    title: "Treinamentos",
-    description: "Capacitação de equipes em diversas áreas.",
-  },
-  {
-    title: "Suporte Técnico",
+    id: "2",
+    title: "Lorem ipsum dolor",
     description:
-      "Assistência rápida e eficiente para manter seus sistemas funcionando.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    icon: Layout,
   },
   {
-    title: "Gestão de Projetos",
-    description: "Planejamento e execução de projetos com foco em resultados.",
+    id: "3",
+    title: "Lorem ipsum dolor",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    icon: Smartphone,
   },
   {
-    title: "Análise de Dados",
-    description: "Insights valiosos para decisões mais inteligentes.",
+    id: "4",
+    title: "Lorem ipsum dolor",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    icon: Database,
+  },
+  {
+    id: "5",
+    title: "Lorem ipsum dolor",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    icon: ShieldCheck,
+  },
+  {
+    id: "6",
+    title: "Lorem ipsum dolor",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    icon: Cloud,
+  },
+  {
+    id: "7",
+    title: "Lorem ipsum dolor",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    icon: Cpu,
   },
 ];
 

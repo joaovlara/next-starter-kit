@@ -67,6 +67,14 @@
     @apply bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 font-semibold transition-all duration-300 hover:from-secondary hover:to-accent hover:shadow-lg focus:outline-none;
   }
 
+  .btn-app {
+    /* Cores padrao do projeto - ajustar conforme a paleta de cores oficial */
+    @apply bg-gray-900 text-white hover:bg-gray-800;
+
+    /* Regra de responsividade do tamanho dos botoes baseada nos breakpoints */
+    @apply px-2.5 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-2.5 md:text-base font-semibold rounded-md transition-all whitespace-nowrap;
+  }
+
   /* Tipografia */
   h1,
   .h1 {
@@ -83,6 +91,30 @@
 
   .link-a {
     @apply text-white hover:underline;
+  }
+
+  .highlight-card {
+    @apply flex flex-col p-3 lg:p-6 min-h-40 bg-gray-200 shadow rounded h-full lg:aspect-square justify-between;
+  }
+
+  .service-card {
+    @apply bg-gray-100 h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:bg-gray-200;
+  }
+
+  .service-card-header {
+    @apply flex flex-col gap-4;
+  }
+
+  .service-card-icon {
+    @apply w-8 h-8 text-gray-800;
+  }
+
+  .service-card-title {
+    @apply text-lg font-bold text-gray-900 uppercase;
+  }
+
+  .service-card-description {
+    @apply text-sm text-gray-600 line-clamp-4;
   }
 }
 

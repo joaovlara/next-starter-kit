@@ -1,7 +1,10 @@
 import CardHighlight from "../_components/Cards/CardHighlight";
-import CardServico from "../_components/Cards/CardServico";
+import { ServiceCard } from "../_components/Cards/ServiceCard";
+import { servicos } from "../_data/data";
 
 export default function GuideStyle() {
+  const item = servicos[0];
+
   return (
     <main className="bg-black min-h-screen">
       <section className="container-1 p-6 space-y-8">
@@ -106,7 +109,9 @@ export default function GuideStyle() {
             minima. Inventore maxime accusantium tempora at numquam accusamus
             libero, harum deleniti rerum saepe.
           </p>
-          <a href="" className="link-a">Link-a</a>
+          <a href="" className="link-a">
+            Link-a
+          </a>
         </div>
 
         {/* Variações de botões */}
@@ -137,7 +142,12 @@ export default function GuideStyle() {
         {/* Renderização de cards */}
         <div className="space-y-4">
           <CardHighlight />
-          <CardServico />
+          <ServiceCard
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            icon={item.icon}
+          />
         </div>
       </section>
     </main>
