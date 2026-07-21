@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full">
-      <section className="mx-auto flex w-full max-w-[90%] items-center justify-between px-4 py-6 md:px-0">
+      <section className="mx-auto flex w-full max-w-[90%] items-center justify-between  py-6 md:px-0">
         <div className="shrink-0">
           <Image src="/images/image 9.png" alt="Logo" width={50} height={50} />
         </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
       </section>
 
       {isOpen && (
-        <div className="border-t border-white/20 bg-gray-500/95 px-4 py-4 md:hidden">
+        <div className="border-t border-white/20 bg-gray-500/95 p-6 md:hidden">
           <div className="flex flex-col gap-4 font-semibold text-white">
             {rotas.map((rota, index) => (
               <a key={index} href={rota.href} onClick={() => setIsOpen(false)}>

@@ -3,7 +3,7 @@ import { ServiceCard } from "../Cards/ServiceCard";
 
 export default function Services() {
   return (
-    <section className="bg-gray-300 md:py-9">
+    <section className="md:py-9">
       <article className="md:p-0 container-1 grid md:grid-cols-4 md:gap-3 gap-6 p-6">
         {/* Bloco de Titulo */}
         <div className="md:h-80 flex items-end justify-start md:px-3">

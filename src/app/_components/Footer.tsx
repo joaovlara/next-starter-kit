@@ -31,7 +31,7 @@ const infos = {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-500">
+    <footer>
       <section className="container-1 space-y-9 p-6">
         <article className="flex justify-center gap-6">
           {infos.redesSociais.map((rede, index) => (
