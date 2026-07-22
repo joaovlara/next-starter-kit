@@ -1,61 +1,42 @@
-import React from "react";
-import {
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaWhatsapp,
-  FaInstagram,
-  FaFacebook,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
-
-interface ContactData {
-  address: string;
-  email: string;
-  whatsapp: string;
-  instagram: string;
-}
-
-const contactMockup: ContactData = {
-  address: "Lorem Ipsum, 123 - Bairro Dolor, Cidade - ST",
-  email: "contato@loremipsum.com.br",
-  whatsapp: "+55 (00) 99999-9999",
-  instagram: "@lorem_ipsum_oficial",
-};
+import Image from "next/image";
+import HeaderPage from "../_components/HeaderPage";
+import CTA from "../_components/Sections/CTA";
+import { footerContacts, rotas, siteLinks } from "@/data/data";
 
 export default function ContatoPage() {
   return (
-    <main className="w-full">
-      <section className="">
-        <article className="container-1 gap-6 p-6  bg-gray-200">
-          {/* Coluna Esquerda: Informacoes de Contato */}
-          <div className="flex flex-col gap-4">
-            <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-              LOREM IPSUM
-            </h2>
+    <main>
+      <HeaderPage />
+      <section className="px-6">
+        <article className="container-1 bg-gray-400 grid md:grid-cols-2 mb-6">
+          <div className="flex flex-col gap-3 w-full md:text-left bg-gray-200 p-6">
+            <h3 className="h2">Contato</h3>
+            {footerContacts.map((item) => {
+              const Icon = item.icon;
 
-            <div className="flex items-center gap-3 text-gray-800 font-medium text-sm md:text-base">
-              <FaMapMarkerAlt className="w-5 h-5 text-gray-700 shrink-0" />
-              <span>{contactMockup.address}</span>
-            </div>
-
-            <div className="flex items-center gap-3 text-gray-800 font-medium text-sm md:text-base">
-              <FaEnvelope className="w-5 h-5 text-gray-700 shrink-0" />
-              <span>{contactMockup.email}</span>
-            </div>
-
-            <div className="flex items-center gap-3 text-gray-800 font-medium text-sm md:text-base">
-              <FaWhatsapp className="w-5 h-5 text-gray-700 shrink-0" />
-              <span>{contactMockup.whatsapp}</span>
-            </div>
-
-            <div className="flex items-center gap-3 text-gray-800 font-medium text-sm md:text-base">
-              <FaInstagram className="w-5 h-5 text-gray-700 shrink-0" />
-              <span>{contactMockup.instagram}</span>
-            </div>
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-2"
+                >
+                  {Icon && <Icon aria-hidden="true" />}
+                  <span>{item.name}</span>
+                </a>
+              );
+            })}
+          </div>
+          <div className="flex items-center justify-center p-6">
+            <Image
+              src="/images/image 9.png"
+              alt="Logo"
+              width={200}
+              height={200}
+            />
           </div>
         </article>
       </section>
+      <CTA />
     </main>
   );
 }

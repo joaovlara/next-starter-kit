@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { footerContacts, rotas, siteLinks } from "../_data/data";
+import { footerContacts, rotas, siteLinks } from "@/data/data";
 
 export default function Footer() {
   return (
