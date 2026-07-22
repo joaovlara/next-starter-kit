@@ -1,80 +1,72 @@
-import Link from "next/link";
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+import Link from "next/link";
+import { footerContacts, rotas, siteLinks } from "../_data/data";
 
-// Simulando a estrutura que deve vir do seu arquivo @/data/data
-const infos = {
-  links: [
-    { name: "LINK", href: "#" },
-    { name: "LINK", href: "#" },
-    { name: "LINK", href: "#" },
-    { name: "LINK", href: "#" },
-  ],
-  contatos: [
-    { text: "contato" },
-    { text: "contato" },
-    { text: "contato" },
-    { text: "contato" },
-  ],
-  redesSociais: [
-    { icon: <FaFacebookF size={18} />, href: "#" },
-    { icon: <FaInstagram size={18} />, href: "#" },
-    { icon: <FaLinkedinIn size={18} />, href: "#" },
-    { icon: <FaTwitter size={18} />, href: "#" },
-  ],
-};
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer>
-      <section className="container-1 space-y-9 p-6">
-        <article className="flex justify-center gap-6">
-          {infos.redesSociais.map((rede, index) => (
-            <a
-              key={index}
-              href={rede.href}
-              className="rounded-full bg-gray-100 p-4"
-            >
-              {rede.icon}
-            </a>
-          ))}
-        </article>
+    <footer className="text-white">
+      <section className="p-6">
+        <article className="flex justify-center items-center gap-6 p-6">
+          {siteLinks.map((item) => {
+            const Icon = item.icon;
 
-        <article className="grid grid-cols-3 bg-gray-400 h-[30vh] rounded-b-[80px] p-6 text-white">
-          <div className="flex items-center justify-center">
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                aria-label={item.name}
+                title={item.name}
+                className="bg-gray-200 text-gray-800 rounded-full h-15 w-15 flex items-center justify-center"
+              >
+                <Icon aria-hidden="true" />
+              </a>
+            );
+          })}
+        </article>
+        <article className="container-1 bg-gray-300 grid grid-cols-1 md:grid-cols-3 space-y-3 justify-items-center md:justify-items-start items-start">
+          {/* Coluna 1: Logo */}
+          <div className="flex justify-center items-center w-full h-full">
             <Image
               src="/images/image 9.png"
               alt="Logo"
               width={200}
               height={200}
-              className="rounded-full aspect-square"
+              className="rounded-full"
             />
           </div>
-          <ul className="flex flex-col text-start items-center justify-center">
-            <h3 className="text-xl font-bold mb-4">Contato</h3>
-            {infos.contatos.map((contato, index) => (
-              <li key={index}>{contato.text}</li>
-            ))}
-          </ul>
-          <ul className="flex flex-col text-start items-center justify-center">
-            <h3 className="text-xl font-bold mb-4">Navegar</h3>
-            {infos.links.map((link, index) => (
-              <li key={index}>{link.name}</li>
-            ))}
-          </ul>
-        </article>
 
-        <article className="text-center text-white">
-          <p>© Todos os direitos reservados.</p>
+          {/* Coluna 2: Contato */}
+          <div className="flex flex-col gap-3 w-full md:text-left">
+            <h3 className="h2">Contato</h3>
+            {footerContacts.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-2"
+                >
+                  {Icon && <Icon aria-hidden="true" />}
+                  <span>{item.name}</span>
+                </a>
+              );
+            })}
+          </div>
+
+          {/* Coluna 3: Navegação */}
+          <nav className="flex flex-col gap-3 w-full md:text-left">
+            <h3 className="h2">Menu</h3>
+            <div className="flex flex-col gap-2">
+              {rotas.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </nav>
         </article>
       </section>
     </footer>
   );
-};
-
-export default Footer;
+}
