@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="text-white">
       <section className="p-6">
-        <article className="flex justify-center items-center gap-6 p-6">
+        <article className="flex justify-center items-center gap-6 md:p-6">
           {siteLinks.map((item) => {
             const Icon = item.icon;
 
@@ -18,7 +18,7 @@ export default function Footer() {
                 title={item.name}
                 className="bg-gray-200 text-gray-800 rounded-full h-15 w-15 flex items-center justify-center"
               >
-                <Icon aria-hidden="true" />
+                <Icon size="30" aria-hidden="true" />
               </a>
             );
           })}
