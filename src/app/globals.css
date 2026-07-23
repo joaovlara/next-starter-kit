@@ -118,6 +118,11 @@
 }
 
 @layer utilities {
+
+  .separador {
+    @apply border-t border-gray-300 w-full;
+  }
+
   /* Gradientes de fundo horizontais */
   .bg-gradient {
     @apply bg-gradient-to-r from-primary to-secondary;

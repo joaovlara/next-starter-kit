@@ -99,6 +99,11 @@ export default function GuideStyle() {
           </div>
         </div>
 
+        {/* Separador */}
+        <div className="flex flex-wrap gap-3">
+          <hr className="separador" />
+        </div>
+
         {/* Seção de tipografia */}
         <div>
           <h1>Title H1</h1>
