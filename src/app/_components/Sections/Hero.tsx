@@ -13,14 +13,14 @@ export default function Hero() {
   return (
     <section className="px-6 md:p-0">
       {/* Container com posicionamento relativo e overflow oculta para comportar a imagem */}
-      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh]">
+      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh] bg-gradient-t-dark border-2 border-secondary">
         {/* Imagem de Fundo */}
         <Image
-          src="/images/hero-bg.png"
+          src="/images/condominio.jpg"
           alt="Imagem de fundo da seção Hero"
           fill
           priority
-          className="object-cover -z-10"
+          className="object-cover -z-10 opacity-60"
         />
 
         {/* Conteúdo sobreposto */}
@@ -30,15 +30,15 @@ export default function Hero() {
             {icons.map((Icon, index) => (
               <span
                 key={index}
-                className="bg-gray-500 border rounded-full h-10 w-10 flex items-center justify-center shadow"
+                className="bg-dark border-2 border-secondary rounded-full h-10 w-10 flex items-center justify-center shadow"
               >
-                <Icon className="text-xl" />
+                <Icon className="text-xl text-secondary" />
               </span>
             ))}
           </div>
 
           {/* Texto e Ação */}
-          <div className="flex flex-col md:flex-row w-full justify-between space-y-6">
+          <div className="flex flex-col lg:flex-row w-full justify-between space-y-6">
             <div>
               <h1>
                 Lorem Ipsum is <br /> simply dummy text

@@ -10,7 +10,7 @@
   --color-accent: #d46a00;
   --color-neutral: #2f3634;
   --color-neutral-dark: #242424;
-  --color-dark: #0C0C09;
+  --color-dark: #0c0c09;
 
   --color-gray-100: #f2f2f2;
   --color-gray-200: #bfbfbf;
@@ -30,7 +30,7 @@
 
   a,
   button {
-    @apply cursor-pointer;
+    @apply cursor-pointer transition-all duration-300;
   }
 
   .container-1 {
@@ -45,11 +45,11 @@
   }
 
   .btn-hero {
-    @apply bg-gray-500 px-30 py-8 uppercase text-3xl rounded-full md:rounded-none md:rounded-bl-lg md:rounded-br-[70px] transition-all duration-300 hover:bg-primary;
+    @apply px-30 py-10 border-2 border-secondary rounded-full text-secondary hover:bg-secondary hover:text-black uppercase font-bold;
   }
 
   .btn-nav {
-    @apply bg-gray-500 px-15 py-3 transition-all duration-300 hover:bg-secondary;
+    @apply bg-secondary hover:bg-white px-12 py-3 rounded-lg text-dark;
   }
 
   .btn-primary {
@@ -69,7 +69,7 @@
   }
 
   .btn-app {
-    @apply bg-neutral-dark hover:bg-gray-800;
+    @apply border-2 border-primary px-9 py-3;
 
     /* Regra de responsividade do tamanho dos botoes baseada nos breakpoints */
     @apply px-2.5 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-2.5 font-semibold transition-all whitespace-nowrap;
@@ -81,7 +81,8 @@
     @apply uppercase text-4xl md:text-6xl font-bold;
   }
 
-  h2, .h2 {
+  h2,
+  .h2 {
     @apply text-2xl md:text-3xl uppercase font-semibold;
   }
 
@@ -119,14 +120,13 @@
 }
 
 @layer utilities {
-
   .separador {
     @apply border-t border-gray-300 w-full;
   }
 
   /* Gradientes de fundo horizontais */
   .bg-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary;
+    @apply bg-gradient-to-t from-primary to-secondary;
   }
 
   .bg-gradient-primary-accent {
@@ -162,6 +162,10 @@
     @apply bg-gradient-to-t from-neutral-dark to-transparent;
   }
 
+  .bg-gradient-t-dark {
+    @apply bg-gradient-to-t from-dark from-10% to-transparent;
+  }
+
   /* Bordas sólidas e interativas */
   .border-iz {
     @apply border-2 border-accent;
@@ -179,8 +183,7 @@
   .border-gradient-primary-secondary {
     border: 2px solid transparent;
     background-image:
-      linear-gradient(var(--color-neutral-dark), var(--color-neutral-dark)),
-      linear-gradient(to right, var(--color-primary), var(--color-secondary));
+      linear-gradient(to top, var(--color-primary), var(--color-secondary));
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
@@ -189,7 +192,7 @@
     border: 2px solid transparent;
     background-image:
       linear-gradient(var(--color-neutral-dark), var(--color-neutral-dark)),
-      linear-gradient(to right, var(--color-primary), var(--color-accent));
+      linear-gradient(to top, var(--color-primary), var(--color-accent));
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
@@ -198,7 +201,7 @@
     border: 2px solid transparent;
     background-image:
       linear-gradient(var(--color-neutral-dark), var(--color-neutral-dark)),
-      linear-gradient(to right, var(--color-accent), var(--color-secondary));
+      linear-gradient(to top, var(--color-accent), var(--color-secondary));
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
