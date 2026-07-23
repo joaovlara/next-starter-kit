@@ -1,6 +1,11 @@
+"use client";
+
 import CardHighlight from "../_components/Cards/CardHighlight";
 import { ServiceCard } from "../_components/Cards/ServiceCard";
 import { servicos } from "../_data/data";
+import ShinyText from "../_components/Animations/ShinyText";
+import Grainient from "../_components/Animations/Grainient";
+import SpotlightCard from "../_components/Animations/SpotlightCard";
 
 export default function GuideStyle() {
   const item = servicos[0];
@@ -102,6 +107,48 @@ export default function GuideStyle() {
         {/* Separador */}
         <div className="flex flex-wrap gap-3">
           <hr className="separador" />
+        </div>
+
+        {/* Animações */}
+        <div className="flex flex-wrap gap-3">
+          <h1>
+            <ShinyText text="ShinyText" />
+          </h1>
+
+          <div className="h-70vh w-full">
+            <Grainient
+              color1="#115945"
+              color2="#242424"
+              color3="#bf9850"
+              timeSpeed={0.5}
+              colorBalance={0}
+              warpStrength={1}
+              warpFrequency={5}
+              warpSpeed={2}
+              warpAmplitude={50}
+              blendAngle={0}
+              blendSoftness={0.05}
+              rotationAmount={500}
+              noiseScale={1}
+              grainAmount={0.1}
+              grainScale={2}
+              grainAnimated={false}
+              contrast={1.5}
+              gamma={1}
+              saturation={1}
+              centerX={0}
+              centerY={0}
+              zoom={0.9}
+            />
+          </div>
+
+          <SpotlightCard
+            className="custom-spotlight-card"
+            spotlightColor="rgba(0, 229, 255, 0.2)"
+          >
+            // Content goes here
+          </SpotlightCard>
+          
         </div>
 
         {/* Seção de tipografia */}
