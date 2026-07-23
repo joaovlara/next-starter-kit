@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="px-6 md:p-0">
       {/* Container com posicionamento relativo e overflow oculta para comportar a imagem */}
-      <article className="container-1 relative overflow-hidden rounded-b-[100px] md:h-[70vh] h-[80vh]">
+      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh]">
         {/* Imagem de Fundo */}
         <Image
           src="/images/hero-bg.png"
@@ -32,7 +32,7 @@ export default function Hero() {
                 key={index}
                 className="bg-gray-500 border rounded-full h-10 w-10 flex items-center justify-center shadow"
               >
-                <Icon className="text-xl text-white" />
+                <Icon className="text-xl" />
               </span>
             ))}
           </div>

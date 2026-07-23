@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Highlights() {
   return (
-    <section className="text-white p-6 lg:p-6 lg:py-8">
+    <section className="p-6 lg:p-6 lg:py-8">
       <article className="lg:max-w-[90%] mx-auto bg-gray-300 flex flex-col lg:flex-row lg:rounded-bl-[100px] rounded-tr-[100px] lg:rounded-tr-none">
         {/* Bloco de Imagem e Titulo */}
         <div className="flex flex-col justify-center lg:w-1/4 relative aspect-4/3 lg:aspect-square">
@@ -28,7 +28,7 @@ export default function Highlights() {
               <h3 className="font-semibold text-lg lg:text-2xl">
                 {item.title}
               </h3>
-              <p className="text-sm text-gray-600">{item.description}</p>
+              <p className="text-sm">{item.description}</p>
             </div>
           ))}
         </div>

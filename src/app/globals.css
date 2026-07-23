@@ -10,6 +10,7 @@
   --color-accent: #d46a00;
   --color-neutral: #2f3634;
   --color-neutral-dark: #242424;
+  --color-dark: #0C0C09;
 
   --color-gray-100: #f2f2f2;
   --color-gray-200: #bfbfbf;
@@ -24,7 +25,7 @@
   }
 
   body {
-    @apply bg-neutral-dark;
+    @apply bg-dark text-gray-100;
   }
 
   a,
@@ -40,19 +41,19 @@
 @layer components {
   /* Botões do sistema */
   .btn {
-    @apply bg-gray-500 text-white px-16 py-4 transition-all duration-300 hover:bg-neutral;
+    @apply bg-gray-500 px-16 py-4 transition-all duration-300 hover:bg-neutral;
   }
 
   .btn-hero {
-    @apply bg-gray-500 text-white px-30 py-8 uppercase text-3xl rounded-full md:rounded-none md:rounded-bl-lg md:rounded-br-[70px] transition-all duration-300 hover:bg-primary;
+    @apply bg-gray-500 px-30 py-8 uppercase text-3xl rounded-full md:rounded-none md:rounded-bl-lg md:rounded-br-[70px] transition-all duration-300 hover:bg-primary;
   }
 
   .btn-nav {
-    @apply bg-gray-500 text-white px-15 py-3 transition-all duration-300 hover:bg-secondary;
+    @apply bg-gray-500 px-15 py-3 transition-all duration-300 hover:bg-secondary;
   }
 
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 font-semibold transition-all duration-300 hover:bg-secondary hover:shadow-lg focus:outline-none;
+    @apply bg-primary px-6 py-3 font-semibold transition-all duration-300 hover:bg-secondary hover:shadow-lg focus:outline-none;
   }
 
   .btn-secondary {
@@ -64,11 +65,11 @@
   }
 
   .btn-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 font-semibold transition-all duration-300 hover:from-secondary hover:to-accent hover:shadow-lg focus:outline-none;
+    @apply bg-gradient-to-r from-primary to-secondary px-6 py-3 font-semibold transition-all duration-300 hover:from-secondary hover:to-accent hover:shadow-lg focus:outline-none;
   }
 
   .btn-app {
-    @apply bg-neutral-dark text-white hover:bg-gray-800;
+    @apply bg-neutral-dark hover:bg-gray-800;
 
     /* Regra de responsividade do tamanho dos botoes baseada nos breakpoints */
     @apply px-2.5 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-2.5 font-semibold transition-all whitespace-nowrap;
@@ -77,19 +78,19 @@
   /* Tipografia */
   h1,
   .h1 {
-    @apply uppercase text-4xl md:text-6xl font-bold text-white;
+    @apply uppercase text-4xl md:text-6xl font-bold;
   }
 
   h2, .h2 {
-    @apply text-2xl md:text-3xl uppercase font-semibold text-white;
+    @apply text-2xl md:text-3xl uppercase font-semibold;
   }
 
   .text {
-    @apply text-base md:text-lg text-white leading-relaxed;
+    @apply text-base md:text-lg leading-relaxed;
   }
 
   .link-a {
-    @apply text-white hover:underline;
+    @apply hover:underline;
   }
 
   .highlight-card {
@@ -97,7 +98,7 @@
   }
 
   .service-card {
-    @apply bg-gray-200 h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:bg-gray-200;
+    @apply bg-gray-300 h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:bg-gray-400;
   }
 
   .service-card-header {
@@ -105,15 +106,15 @@
   }
 
   .service-card-icon {
-    @apply w-8 h-8 text-gray-800;
+    @apply w-8 h-8;
   }
 
   .service-card-title {
-    @apply text-lg font-bold text-gray-900 uppercase;
+    @apply text-lg font-bold uppercase;
   }
 
   .service-card-description {
-    @apply text-sm text-gray-600 line-clamp-4;
+    @apply text-sm line-clamp-4;
   }
 }
 

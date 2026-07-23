@@ -15,7 +15,7 @@ const Navbar = () => {
           <Image src="/images/image 9.png" alt="Logo" width={50} height={50} />
         </div>
 
-        <div className="hidden flex-1 items-center justify-center gap-6 font-semibold text-white md:flex">
+        <div className="hidden flex-1 items-center justify-center gap-6 font-semibold md:flex">
           {rotas.map((rota, index) => (
             <a key={index} href={rota.href}>
               {rota.name}
@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <button
           type="button"
-          className="rounded-md p-2 text-white md:hidden"
+          className="rounded-md p-2 md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-expanded={isOpen}
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
@@ -40,7 +40,7 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="border-t border-white/20 bg-gray-500/95 p-6 md:hidden">
-          <div className="flex flex-col gap-4 font-semibold text-white">
+          <div className="flex flex-col gap-4 font-semibold">
             {rotas.map((rota, index) => (
               <a key={index} href={rota.href} onClick={() => setIsOpen(false)}>
                 {rota.name}

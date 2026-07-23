@@ -4,7 +4,7 @@ import { footerContacts, rotas, siteLinks } from "@/data/data";
 
 export default function Footer() {
   return (
-    <footer className="text-white">
+    <footer className="text-center">
       <section className="p-6">
         <article className="flex justify-center items-center gap-6 md:p-6">
           {siteLinks.map((item) => {
@@ -16,14 +16,14 @@ export default function Footer() {
                 href={item.href}
                 aria-label={item.name}
                 title={item.name}
-                className="bg-gray-200 text-gray-800 rounded-full h-15 w-15 flex items-center justify-center"
+                className="bg-gray-200 rounded-full h-15 w-15 flex items-center justify-center"
               >
                 <Icon size="30" aria-hidden="true" />
               </a>
             );
           })}
         </article>
-        <article className="container-1 bg-gray-300 grid grid-cols-1 md:grid-cols-3 space-y-3 justify-items-center md:justify-items-start items-start">
+        <article className="container-1 grid grid-cols-1 md:grid-cols-3 space-y-9 justify-items-center md:justify-items-start items-start">
           {/* Coluna 1: Logo */}
           <div className="flex justify-center items-center w-full h-full">
             <Image
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           {/* Coluna 2: Contato */}
-          <div className="flex flex-col gap-3 w-full md:text-left">
+          <div className="flex flex-col gap-3 w-full justify-center items-center md:items-start md:text-left">
             <h3 className="h2">Contato</h3>
             {footerContacts.map((item) => {
               const Icon = item.icon;
