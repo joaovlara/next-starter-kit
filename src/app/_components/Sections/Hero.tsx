@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="px-6 md:p-0">
       {/* Container com posicionamento relativo e overflow oculta para comportar a imagem */}
-      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh] bg-gradient-t-dark border-2 border-secondary">
+      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh] bg-gradient-t-dark shadow-sm shadow-secondary-2">
         {/* Imagem de Fundo */}
         <Image
           src="/images/condominio.jpg"
@@ -30,7 +30,7 @@ export default function Hero() {
             {icons.map((Icon, index) => (
               <span
                 key={index}
-                className="bg-dark border-2 border-secondary rounded-full h-10 w-10 flex items-center justify-center shadow"
+                className="bg-dark border-2 border-secondary rounded-full h-10 w-10 flex items-center justify-center"
               >
                 <Icon className="text-xl text-secondary" />
               </span>

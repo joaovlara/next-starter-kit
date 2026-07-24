@@ -6,7 +6,9 @@
 
   /* Colors */
   --color-primary: #115945;
+  --color-primary-2: #1b3f35;
   --color-secondary: #bf9850;
+  --color-secondary-2: #d19c39;
   --color-accent: #d46a00;
   --color-neutral: #2f3634;
   --color-neutral-dark: #242424;
@@ -69,7 +71,7 @@
   }
 
   .btn-app {
-    @apply border-2 border-primary px-9 py-3;
+    @apply px-9 py-3 bg-primary rounded-md hover:bg-white hover:text-dark;
 
     /* Regra de responsividade do tamanho dos botoes baseada nos breakpoints */
     @apply px-2.5 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-2.5 font-semibold transition-all whitespace-nowrap;
@@ -95,7 +97,17 @@
   }
 
   .highlight-card {
-    @apply flex flex-col p-3 lg:p-6 min-h-40 bg-gray-200 shadow rounded h-full lg:aspect-square justify-between;
+    @apply flex flex-col p-6 min-h-40 border-l-2 border-accent shadow-lg/40 rounded-md shadow-accent transition-all duration-300 flex-none w-[85vw] max-w-[320px] snap-start lg:w-auto lg:max-w-none;
+  }
+
+  /* Variacao de fundo primario */
+  .highlight-card-primary {
+    @apply bg-primary hover:bg-primary-2;
+  }
+
+  /* Variacao de fundo secundario */
+  .highlight-card-secondary {
+    @apply bg-secondary hover:bg-primary-2;
   }
 
   .service-card {
@@ -120,6 +132,15 @@
 }
 
 @layer utilities {
+  /* Oculta a barra de rolagem em navegadores baseados em Webkit e Firefox */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
   .separador {
     @apply border-t border-gray-300 w-full;
   }
@@ -166,6 +187,10 @@
     @apply bg-gradient-to-t from-dark from-10% to-transparent;
   }
 
+  .bg-gradient-r-dark {
+    @apply bg-gradient-to-r from-dark from-10% to-transparent;
+  }
+
   /* Bordas sólidas e interativas */
   .border-iz {
     @apply border-2 border-accent;
@@ -182,8 +207,11 @@
   /* Bordas com gradiente estáticas */
   .border-gradient-primary-secondary {
     border: 2px solid transparent;
-    background-image:
-      linear-gradient(to top, var(--color-primary), var(--color-secondary));
+    background-image: linear-gradient(
+      to top,
+      var(--color-primary),
+      var(--color-secondary)
+    );
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
