@@ -5,14 +5,14 @@
   --font-montserrat: "Montserrat", sans-serif;
 
   /* Colors */
-  --color-primary:      #115945;
-  --color-primary-2:    #1b3f35;
-  --color-secondary:    #bf9850;
-  --color-secondary-2:  #d19c39;
-  --color-accent:       #d46a00;
-  --color-neutral:      #2f3634;
+  --color-primary: #115945;
+  --color-primary-2: #193930;
+  --color-secondary: #bf9850;
+  --color-secondary-2: #b0812a;
+  --color-accent: #d8cb14;
+  --color-neutral: #2f3634;
   --color-neutral-dark: #242424;
-  --color-dark:         #0c0c09;
+  --color-dark: #0c0c0c;
 }
 
 @layer base {
@@ -31,6 +31,15 @@
 
   .container-1 {
     @apply m-4 px-3 py-6 mx-auto md:max-w-[90%];
+  }
+  h1,
+  .h1 {
+    @apply uppercase text-4xl md:text-6xl font-bold;
+  }
+
+  h2,
+  .h2 {
+    @apply text-2xl md:text-3xl uppercase font-semibold;
   }
 }
 
@@ -71,16 +80,11 @@
     @apply px-2.5 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-2.5 font-semibold transition-all whitespace-nowrap;
   }
 
-  /* Tipografia */
-  h1,
-  .h1 {
-    @apply uppercase text-4xl md:text-6xl font-bold;
+  .separador {
+    @apply border-t border-gray-300 w-full;
   }
 
-  h2,
-  .h2 {
-    @apply text-2xl md:text-3xl uppercase font-semibold;
-  }
+  /* Tipografia */
 
   .text {
     @apply text-base md:text-lg leading-relaxed;
@@ -126,15 +130,19 @@
 }
 
 @layer utilities {
-  /* Oculta a barra de rolagem em navegadores baseados em Webkit e Firefox */
+  /* Gradientes */
 
-  .separador {
-    @apply border-t border-gray-300 w-full;
+  .bg-gradient-mixed {
+    @apply bg-linear-to-tl from-primary via-secondary to-accent;
   }
 
-  /* Gradientes de fundo horizontais */
+  .bg-gradient-primary-accent {
+    @apply bg-linear-to-tl from-primary to-accent;
+  }
 
-  /* Gradientes verticais de baixo para cima (bottom to top) por cor */
+  .bg-gradient-accent-secondary {
+    @apply bg-linear-to-t from-accent to-secondary;
+  }
 
   .bg-gradient-t-dark {
     @apply bg-linear-to-t from-dark from-10% to-transparent;
@@ -144,8 +152,100 @@
     @apply bg-linear-to-r from-dark from-10% to-transparent;
   }
 
+  .bg-gradient-t-primary {
+    @apply bg-linear-to-t from-primary to-transparent;
+  }
+
+  .bg-gradient-t-primary-2 {
+    @apply bg-linear-to-t from-primary-2 to-transparent;
+  }
+
+  .bg-gradient-t-secondary {
+    @apply bg-linear-to-t from-secondary to-transparent;
+  }
+
+  .bg-gradient-t-secondary-2 {
+    @apply bg-linear-to-t from-secondary-2 to-transparent;
+  }
+
+  .bg-gradient-t-accent {
+    @apply bg-linear-to-t from-accent from-10% to-transparent;
+  }
+
+  .bg-gradient-primary-secondary {
+    @apply bg-linear-65 from-primary to-secondary
+  }
+
   /* Bordas sólidas e interativas */
 
+  .borda-primary {
+    @apply border border-primary;
+  }
+
+  .borda-primary-2 {
+    @apply border border-primary-2;
+  }
+
+  .borda-secondary {
+    @apply border border-secondary;
+  }
+
+  .borda-secondary-2 {
+    @apply border border-secondary-2;
+  }
+
+  .borda-accent {
+    @apply border border-accent;
+  }
+
+  .border-hover-primary {
+    @apply border-2 border-primary rounded-md transition-all duration-300 hover:border-secondary hover:shadow-primary;
+  }
+
+  .border-hover-accent {
+    @apply border-2 border-accent rounded-md transition-all duration-300 hover:border-secondary hover:shadow-accent;
+  }
+
+  .b-shadow-primary {
+    @apply shadow-xs shadow-primary;
+  }
+
+  .b-shadow-primary-2 {
+    @apply shadow-xs shadow-primary-2;
+  }
+
+  .b-shadow-accent {
+    @apply shadow-xs shadow-accent;
+  }
 
   /* Utilitários de animação */
+
+  .hover-saturate {
+    transition: filter 300ms ease;
+  }
+
+  .hover-saturate:hover {
+    filter: saturate(1.2) brightness(1.05);
+  }
+
+  .hover-lift {
+    transition: transform 300ms ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .hover-scale {
+    transition: transform 300ms ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+
+  .hovered {
+    @apply transition-all duration-500;
+  }
+
 }
