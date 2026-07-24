@@ -5,20 +5,14 @@
   --font-montserrat: "Montserrat", sans-serif;
 
   /* Colors */
-  --color-primary: #115945;
-  --color-primary-2: #1b3f35;
-  --color-secondary: #bf9850;
-  --color-secondary-2: #d19c39;
-  --color-accent: #d46a00;
-  --color-neutral: #2f3634;
+  --color-primary:      #115945;
+  --color-primary-2:    #1b3f35;
+  --color-secondary:    #bf9850;
+  --color-secondary-2:  #d19c39;
+  --color-accent:       #d46a00;
+  --color-neutral:      #2f3634;
   --color-neutral-dark: #242424;
-  --color-dark: #0c0c09;
-
-  --color-gray-100: #f2f2f2;
-  --color-gray-200: #bfbfbf;
-  --color-gray-300: #8c8c8c;
-  --color-gray-400: #595959;
-  --color-gray-500: #262626;
+  --color-dark:         #0c0c09;
 }
 
 @layer base {
@@ -111,7 +105,7 @@
   }
 
   .service-card {
-    @apply bg-gray-300 h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:bg-gray-400;
+    @apply bg-secondary h-50 md:h-80 p-6 flex flex-col justify-between transition-all;
   }
 
   .service-card-header {
@@ -123,7 +117,7 @@
   }
 
   .service-card-title {
-    @apply text-lg font-bold uppercase;
+    @apply text-2xl font-bold uppercase;
   }
 
   .service-card-description {
@@ -133,122 +127,25 @@
 
 @layer utilities {
   /* Oculta a barra de rolagem em navegadores baseados em Webkit e Firefox */
-  .scrollbar-none {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-none::-webkit-scrollbar {
-    display: none;
-  }
 
   .separador {
     @apply border-t border-gray-300 w-full;
   }
 
   /* Gradientes de fundo horizontais */
-  .bg-gradient {
-    @apply bg-gradient-to-t from-primary to-secondary;
-  }
-
-  .bg-gradient-primary-accent {
-    @apply bg-gradient-to-r from-primary to-accent;
-  }
-
-  .bg-gradient-accent-secondary {
-    @apply bg-gradient-to-r from-accent to-secondary;
-  }
-
-  .bg-gradient-hover {
-    @apply bg-gradient-to-r from-primary to-secondary transition-all duration-500 hover:from-secondary hover:to-accent;
-  }
 
   /* Gradientes verticais de baixo para cima (bottom to top) por cor */
-  .bg-gradient-t-primary {
-    @apply bg-gradient-to-t from-primary to-transparent;
-  }
-
-  .bg-gradient-t-secondary {
-    @apply bg-gradient-to-t from-secondary to-transparent;
-  }
-
-  .bg-gradient-t-accent {
-    @apply bg-gradient-to-t from-accent to-transparent;
-  }
-
-  .bg-gradient-t-neutral {
-    @apply bg-gradient-to-t from-neutral to-transparent;
-  }
-
-  .bg-gradient-t-neutral-dark {
-    @apply bg-gradient-to-t from-neutral-dark to-transparent;
-  }
 
   .bg-gradient-t-dark {
-    @apply bg-gradient-to-t from-dark from-10% to-transparent;
+    @apply bg-linear-to-t from-dark from-10% to-transparent;
   }
 
   .bg-gradient-r-dark {
-    @apply bg-gradient-to-r from-dark from-10% to-transparent;
+    @apply bg-linear-to-r from-dark from-10% to-transparent;
   }
 
   /* Bordas sólidas e interativas */
-  .border-iz {
-    @apply border-2 border-accent;
-  }
 
-  .border-hover-primary {
-    @apply border-2 border-gray-400 transition-colors duration-300 hover:border-primary;
-  }
-
-  .border-hover-accent {
-    @apply border-2 border-transparent transition-colors duration-300 hover:border-accent;
-  }
-
-  /* Bordas com gradiente estáticas */
-  .border-gradient-primary-secondary {
-    border: 2px solid transparent;
-    background-image: linear-gradient(
-      to top,
-      var(--color-primary),
-      var(--color-secondary)
-    );
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-
-  .border-gradient-primary-accent {
-    border: 2px solid transparent;
-    background-image:
-      linear-gradient(var(--color-neutral-dark), var(--color-neutral-dark)),
-      linear-gradient(to top, var(--color-primary), var(--color-accent));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-
-  .border-gradient-accent-secondary {
-    border: 2px solid transparent;
-    background-image:
-      linear-gradient(var(--color-neutral-dark), var(--color-neutral-dark)),
-      linear-gradient(to top, var(--color-accent), var(--color-secondary));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-
-  /* Aumento de saturação no hover */
-  .hover-saturate {
-    @apply transition-[filter] duration-300 saturate-100 hover:saturate-200;
-  }
 
   /* Utilitários de animação */
-  .smooth-transition {
-    @apply transition-all duration-300 ease-in-out;
-  }
-
-  .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-1;
-  }
-
-  .hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
-  }
 }
