@@ -8,23 +8,28 @@ export default function ContatoPage() {
     <main>
       <HeaderPage />
       <section className="px-6">
-        <article className="container-1 bg-gray-400 grid md:grid-cols-2 mb-6">
-          <div className="flex flex-col gap-3 w-full md:text-left bg-gray-200 p-6">
+        <article className="container-1 grid md:grid-cols-2 mb-6">
+          <div className="flex flex-col gap-3 w-full md:text-left bg-primary-2 p-6">
             <h3 className="h2">Contato</h3>
-            {footerContacts.map((item) => {
-              const Icon = item.icon;
+            {/* Lista de Contatos */}
+            <div className="flex flex-col gap-6">
+              {footerContacts.map((item) => {
+                const Icon = item.icon;
 
-              return (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center gap-2"
-                >
-                  {Icon && <Icon aria-hidden="true" />}
-                  <span>{item.name}</span>
-                </a>
-              );
-            })}
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="flex items-center gap-2 border-b border-primary pb-2"
+                  >
+                    <div className="flex items-center justify-center rounded-full bg-primary p-2">
+                      {Icon && <Icon aria-hidden="true" />}
+                    </div>
+                    <p>{item.name}</p>
+                  </a>
+                );
+              })}
+            </div>
           </div>
           <div className="flex items-center justify-center p-6">
             <Image

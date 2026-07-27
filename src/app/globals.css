@@ -59,7 +59,7 @@
   }
 
   .btn-nav {
-    @apply bg-secondary-2 hover:bg-white px-12 py-3 rounded text-dark;
+    @apply bg-secondary-2 text-olive-200 px-12 py-3 rounded uppercase font-black hover:bg-white hover:text-dark;
   }
 
   .btn-primary {
@@ -130,12 +130,13 @@
 }
 
 @layer utilities {
-  .bg-parallax {
-    clip-path: inset(0 0 0 0);
+
+  .cta-parallax-container {
+    @apply absolute inset-0 -z-10 bg-fixed bg-cover bg-center;
   }
 
-  .bg-parallax img {
-    @apply fixed top-0 left-0 w-full h-full pointer-events-none;
+  .cta-parallax-image {
+    @apply object-cover opacity-30;
   }
 
   /* Gradientes */
