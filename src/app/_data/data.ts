@@ -68,7 +68,7 @@ export interface SiteLink {
 export interface HighlightItem {
   title: string;
   description: string;
-  icon: string;
+  icon: ContentIcon;
 }
 
 export const rotas: RouteItem[] = [
@@ -171,17 +171,17 @@ export const diferenciais: HighlightItem[] = [
   {
     title: "Atendimento Personalizado",
     description: "Equipe dedicada para entender e atender suas necessidades.",
-    icon: "👩‍💼",
+    icon: FaInstagram,
   },
   {
     title: "Qualidade Garantida",
     description: "Produtos e serviços com alto padrão de excelência.",
-    icon: "⭐",
+    icon: FaInstagram,
   },
   {
     title: "Entrega Rápida",
     description: "Compromisso com prazos e agilidade na entrega.",
-    icon: "🚚",
+    icon: FaInstagram,
   },
 ];
 

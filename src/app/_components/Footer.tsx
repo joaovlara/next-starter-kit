@@ -17,7 +17,7 @@ export default function Footer() {
                 href={item.href}
                 aria-label={item.name}
                 title={item.name}
-                className="bg-secondary hover:bg-primary rounded-full h-15 w-15 flex items-center justify-center"
+                className="bg-secondary hover:bg-primary rounded-full h-15 w-15 flex items-center justify-center hover:scale-110"
               >
                 <Icon size="30" aria-hidden="true" />
               </a>

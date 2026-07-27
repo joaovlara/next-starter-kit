@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="px-6 md:p-0">
       {/* Container com posicionamento relativo e overflow oculta para comportar a imagem */}
-      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh] bg-gradient-t-dark shadow-sm shadow-secondary-2">
+      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh] bg-gradient-t-dark b-shadow-secondary">
         {/* Imagem de Fundo */}
         <Image
           src="/images/condominio.jpg"
