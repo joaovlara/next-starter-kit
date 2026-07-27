@@ -109,7 +109,7 @@
 
   .service-card {
     @apply bg-neutral-dark h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:scale-105
-    hover:bg-linear-to-t from-secondary-2 to-transparent hover:border-l-2 border-secondary-2;
+    hover:bg-linear-to-t from-secondary-2 to-transparent hover:border-l-3 border-primary;
   }
 
   .service-card-header {
