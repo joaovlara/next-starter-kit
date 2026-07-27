@@ -10,6 +10,7 @@ export default function About() {
           Ipsum is simply dummy text Lorem Ipsum is simply dummy textLorem
           Ipsum is simply dummy textLorem Ipsum is simply dummy text
         </p>
+        <hr className="separador mt-9" />
       </article>
     </section>
   );

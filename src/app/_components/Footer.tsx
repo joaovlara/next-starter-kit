@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="text-center">
       <section className="p-6">
-        <article className="flex justify-center items-center gap-6 md:p-6">
+        <article className="flex justify-center items-center gap-6 p-6 border-b border-primary">
           {siteLinks.map((item) => {
             const Icon = item.icon;
 
@@ -24,21 +24,23 @@ export default function Footer() {
             );
           })}
         </article>
-        <article className="container-1 grid grid-cols-1 md:grid-cols-3 space-y-9 justify-items-center md:justify-items-start items-start">
+
+        {/* Grid de conteúdo principal */}
+        <article className="container-1 grid grid-cols-1 md:grid-cols-3 gap-8 py-8 items-start">
           {/* Coluna 1: Logo */}
-          <div className="flex justify-center items-center w-full h-full">
+          <div className="flex justify-start items-center w-full">
             <Image
               src="/images/image 9.png"
               alt="Logo"
-              width={200}
-              height={200}
+              width={160}
+              height={160}
               className="rounded-full"
             />
           </div>
 
-          {/* Coluna 2: Contato */}
-          <div className="flex flex-col gap-3 w-full justify-center items-center md:items-start md:text-left border-left">
-            <h3 className="h2">Contato</h3>
+          {/* Coluna 2: Contato com ícones em círculo primary */}
+          <div className="flex flex-col gap-3 w-full items-start text-left border-left">
+            <h3 className="h2 font-bold mb-2">Contato</h3>
             {footerContacts.map((item) => {
               const Icon = item.icon;
 
@@ -46,9 +48,13 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
-                  {Icon && <Icon aria-hidden="true" />}
+                  {Icon && (
+                    <span className="bg-primary text-white p-2 rounded-full flex items-center justify-center shrink-0 w-8 h-8">
+                      <Icon size={18} aria-hidden="true" />
+                    </span>
+                  )}
                   <span>{item.name}</span>
                 </a>
               );
@@ -56,8 +62,8 @@ export default function Footer() {
           </div>
 
           {/* Coluna 3: Navegação */}
-          <nav className="flex flex-col gap-3 w-full md:text-left border-left">
-            <h3 className="h2">Menu</h3>
+          <nav className="flex flex-col gap-3 w-full text-left border-left">
+            <h3 className="h2 font-bold mb-2">Menu</h3>
             <div className="flex flex-col gap-2">
               {rotas.map((item) => (
                 <Link
@@ -74,7 +80,7 @@ export default function Footer() {
         <article>
           <p className="text-sm">
             © Todos os direitos reservados {currentYear}
-          </p>{" "}
+          </p>
         </article>
       </section>
     </footer>

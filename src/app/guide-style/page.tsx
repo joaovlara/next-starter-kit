@@ -41,7 +41,7 @@ export default function GuideStyle() {
 
         {/* Separador */}
         <div className="flex flex-wrap gap-3">
-          <hr className="separador" />
+          <hr className="separador"/>
         </div>
 
         {/* Animações React Bits*/}

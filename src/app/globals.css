@@ -79,14 +79,14 @@
   }
 
   .btn-app {
-    @apply px-9 py-3 bg-primary rounded-md hover:bg-white hover:text-dark;
+    @apply px-9 py-3 border text-olive-300 border-primary rounded-md hover:bg-white hover:text-dark;
 
     /* Regra de responsividade do tamanho dos botoes baseada nos breakpoints */
     @apply px-2.5 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-2.5 font-semibold transition-all whitespace-nowrap;
   }
 
   .separador {
-    @apply border-t border-gray-300 w-full;
+    @apply border-b border-primary-2 w-full;
   }
 
   .carousel {
@@ -236,7 +236,7 @@
   }
 
   .border-left {
-    @apply border-b md:border-s border-secondary md:pl-3 pb-3 md:border-b-0;
+    @apply border-b md:border-s border-primary-2 md:pl-3 pb-3 md:border-b-0;
   }
 
   /* Utilitários de animação */

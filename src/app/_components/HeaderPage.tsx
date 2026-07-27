@@ -7,7 +7,7 @@ interface HeaderPageProps {
 
 const DEFAULT_TITLE = "$h1-title";
 const DEFAULT_TEXT =
-  "$text lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum veniam perspiciatis expedita cupiditate, optio ipsam minus, nihil vel repudiandae quod repellat. Quos soluta consequuntur quaerat expedita, ea ratione omnis itaque?";
+  "$text lorem, ipsum udiandae quod repellat. Ququaerat expedita, ea ratione omnis itaque?";
 
 export default function HeaderPage({
   title = DEFAULT_TITLE,
