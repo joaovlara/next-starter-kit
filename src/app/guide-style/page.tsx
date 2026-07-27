@@ -6,12 +6,15 @@ import { servicos } from "../_data/data";
 import ShinyText from "../_components/Animations/ShinyText";
 import Grainient from "../_components/Animations/Grainient";
 import SpotlightCard from "../_components/Animations/SpotlightCard";
+import HeaderPage from "../_components/HeaderPage";
 
 export default function GuideStyle() {
   const item = servicos[0];
 
   return (
     <main className="bg-dark min-h-screen">
+      <HeaderPage />
+
       <section className="container-1 p-6 space-y-8">
         <div className="space-y-3">
           <h2>Paleta de cores</h2>

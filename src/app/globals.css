@@ -21,7 +21,7 @@
   }
 
   body {
-    @apply bg-dark text-gray-100;
+    @apply bg-dark text-olive-200;
   }
 
   a,
@@ -41,6 +41,11 @@
   .h2 {
     @apply text-2xl md:text-3xl uppercase font-semibold;
   }
+
+  p,
+  .text {
+    @apply text-base md:text-lg leading-relaxed text-olive-300;
+  }
 }
 
 @layer components {
@@ -54,7 +59,7 @@
   }
 
   .btn-nav {
-    @apply bg-secondary hover:bg-white px-12 py-3 rounded-lg text-dark;
+    @apply bg-secondary-2 hover:bg-white px-12 py-3 rounded text-dark;
   }
 
   .btn-primary {
@@ -85,10 +90,6 @@
   }
 
   /* Tipografia */
-
-  .text {
-    @apply text-base md:text-lg leading-relaxed;
-  }
 
   .link-a {
     @apply hover:underline;
@@ -173,7 +174,7 @@
   }
 
   .bg-gradient-primary-secondary {
-    @apply bg-linear-65 from-primary to-secondary
+    @apply bg-linear-65 from-primary to-secondary;
   }
 
   /* Bordas sólidas e interativas */
@@ -207,15 +208,27 @@
   }
 
   .b-shadow-primary {
-    @apply shadow-xs shadow-primary;
+    @apply shadow-sm shadow-primary;
   }
 
   .b-shadow-primary-2 {
-    @apply shadow-xs shadow-primary-2;
+    @apply shadow-sm shadow-primary-2;
+  }
+
+  .b-shadow-secondary {
+    @apply shadow-sm shadow-secondary;
+  }
+
+  .b-shadow-secondary-2 {
+    @apply shadow-sm shadow-secondary-2;
   }
 
   .b-shadow-accent {
     @apply shadow-xs shadow-accent;
+  }
+
+  .border-left {
+    @apply border-b md:border-s border-secondary md:pl-3 pb-3 md:border-b-0
   }
 
   /* Utilitários de animação */
@@ -247,5 +260,4 @@
   .hovered {
     @apply transition-all duration-500;
   }
-
 }
