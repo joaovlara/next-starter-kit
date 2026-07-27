@@ -99,16 +99,16 @@
     @apply hover:underline;
   }
 
-  .highlight-card {
-    @apply p-6;
+  .highlight-card-banner {
+    @apply relative min-w-[45vw] md:min-w-0 aspect-square snap-center overflow-hidden flex items-end rounded-tl-[90px] p-6;
   }
 
   .highlight-card-item {
-    @apply bg-neutral;
+    @apply rounded min-w-[45vw] md:min-w-0 aspect-square snap-center bg-neutral-dark p-6 flex flex-col space-y-3 justify-end hover:bg-linear-to-b from-primary-2/50 to-transparent;
   }
 
   .service-card {
-    @apply bg-neutral h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:scale-105
+    @apply bg-neutral-dark h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:scale-105
     hover:bg-linear-to-t from-secondary-2 to-transparent hover:border-l-2 border-secondary-2;
   }
 

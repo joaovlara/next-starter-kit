@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Highlights() {
   return (
     <section className="">
-      <article className="container-1 carousel">
-        <div className="relative min-w-[80vw] sm:min-w-[50vw] md:min-w-0 aspect-square snap-center overflow-hidden flex items-end p-6">
+      <article className="container-1 carousel md:p-0 gap-6">
+        <div className="highlight-card-banner bg-gradient-t-dark">
           <Image
             src="/images/condominio.jpg"
             alt="Foto do condomínio"
@@ -23,16 +23,13 @@ export default function Highlights() {
         {diferenciais.slice(0, 3).map((item, index) => {
           const IconComponent = item.icon;
           return (
-            <div
-              key={index}
-              className="min-w-[80vw] sm:min-w-[50vw] md:min-w-0 aspect-square snap-center bg-neutral p-6 flex flex-col justify-between"
-            >
-              <div className="space-y-3">
-                {IconComponent && <IconComponent size={32} />}
-                <h3 className="">{item.title}</h3>
-                <p className="text-sm">{item.description}</p>
-              </div>
-              <span className="text-xs">0{index + 1}</span>
+            <div key={index} className="highlight-card-item b-shadow-secondary">
+              {IconComponent && (
+                <IconComponent size={32} className="text-secondary" />
+              )}
+              <h3 className="">{item.title}</h3>
+              <p className="text-sm">{item.description}</p>
+              <span className="text-xs text-secondary pt-3">0{index + 1}</span>
             </div>
           );
         })}
