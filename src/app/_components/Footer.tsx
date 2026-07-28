@@ -28,7 +28,7 @@ export default function Footer() {
         {/* Grid de conteúdo principal */}
         <article className="container-1 grid grid-cols-1 md:grid-cols-3 gap-8 py-8 items-start">
           {/* Coluna 1: Logo */}
-          <div className="flex justify-start items-center w-full">
+          <div className="flex justify-center items-center h-full w-full">
             <Image
               src="/images/image 9.png"
               alt="Logo"
