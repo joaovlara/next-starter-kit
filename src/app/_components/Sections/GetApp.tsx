@@ -1,21 +1,89 @@
+"use client";
+
 import { infos } from "@/src/app/_data/data";
+import { motion, Variants } from "framer-motion";
+import AnimatedSeparator from "../Animations/AnimatedSeparator";
+
+// Animação para a frase "Baixe o nosso App"
+const textVariants: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+// Container pai dos botões para gerenciar o stagger
+const buttonGroupVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, // Intervalo entre os botões
+      delayChildren: 0.2, // Pequeno atraso após a frase aparecer
+    },
+  },
+};
+
+// Animação individual dos botões + Interação de Hover
+const buttonVariants: Variants = {
+  hidden: { opacity: 0, y: 15, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
 
 export default function GetApp() {
   return (
     <section className="px-6 pt-0 md:p-0">
       <article className="container-1">
-        <div className="flex items-center justify-between gap-3 p-6">
-          <p className="text uppercase">Baixe o nosso App</p>
-          <div className="flex gap-3">
-            <a href="" className="btn-app">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-6">
+          {/* Texto surgindo da esquerda */}
+          <motion.p
+            variants={textVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="text uppercase font-semibold"
+          >
+            Baixe o nosso App
+          </motion.p>
+
+          {/* Grupo de botões em sequência */}
+          <motion.div
+            variants={buttonGroupVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="flex gap-3"
+          >
+            <motion.a
+              href="#"
+              variants={buttonVariants}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="btn-app transition-shadow"
+            >
               Google Play
-            </a>
-            <a href="" className="btn-app">
+            </motion.a>
+
+            <motion.a
+              href="#"
+              variants={buttonVariants}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="btn-app transition-shadow"
+            >
               App Store
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
-        <hr className="separador" />
+
+        <AnimatedSeparator />
       </article>
     </section>
   );

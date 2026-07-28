@@ -1,13 +1,29 @@
-import React from "react";
+"use client";
+
+import { motion, Variants } from "framer-motion";
+import SplitText from "./Animations/SplitText";
 
 interface HeaderPageProps {
   title?: string;
   text?: string;
 }
 
-const DEFAULT_TITLE = "$h1-title";
+const fadeInVariants: Variants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 0.6,
+    },
+  },
+};
+
+const DEFAULT_TITLE = "Header Title";
 const DEFAULT_TEXT =
-  "$text lorem, ipsum udiandae quod repellat. Ququaerat expedita, ea ratione omnis itaque?";
+  "Lorem, ipsum udiandae quod repellat. Ququaerat expedita, ea ratione omnis itaque?";
 
 export default function HeaderPage({
   title = DEFAULT_TITLE,
@@ -17,8 +33,21 @@ export default function HeaderPage({
     <section className="p-6">
       <article className="container-1 border-b border-primary">
         <div className="p-6 space-y-3">
-          <h1 className="text-6xl">{title}</h1>
-          <p className="text">{text}</p>
+          {/* Título com animação SplitText */}
+          <h1 className="text-6xl">
+            <SplitText text={title} delay={0.12} />
+          </h1>
+
+          {/* Parágrafo com animação Fade-In */}
+          <motion.p
+            className="text"
+            variants={fadeInVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {text}
+          </motion.p>
         </div>
       </article>
     </section>

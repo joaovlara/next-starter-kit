@@ -7,6 +7,7 @@ import ShinyText from "../_components/Animations/ShinyText";
 import Grainient from "../_components/Animations/Grainient";
 import SpotlightCard from "../_components/Animations/SpotlightCard";
 import HeaderPage from "../_components/HeaderPage";
+import AnimatedSeparator from "../_components/Animations/AnimatedSeparator";
 
 export default function GuideStyle() {
   const item = servicos[0];
@@ -37,11 +38,11 @@ export default function GuideStyle() {
           </div>
         </div>
 
-      {/* Adicione aqui divs para exibir as b-shodws, borda, e bg-gradients  */}
+        {/* Adicione aqui divs para exibir as b-shodws, borda, e bg-gradients  */}
 
         {/* Separador */}
         <div className="flex flex-wrap gap-3">
-          <hr className="separador"/>
+          <AnimatedSeparator />{" "}
         </div>
 
         {/* Animações React Bits*/}

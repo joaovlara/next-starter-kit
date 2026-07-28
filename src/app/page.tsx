@@ -5,7 +5,6 @@ import GetApp from "./_components/Sections/GetApp";
 import Highlights from "./_components/Sections/Highlights";
 import About from "./_components/Sections/About";
 import Services from "./_components/Sections/Services";
-import Testimonials from "./_components/Sections/Testimonials";
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
         <Highlights />
         <About />
         <Services />
-        {/* <Testimonials /> */}
         <CTA />
       </main>
       {/* <WhatsAppButton /> */}

@@ -1,34 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import { footerContacts, rotas, siteLinks } from "@/data/data";
+import { StaggerContainer, StaggerItem } from "./Animations/StaggerContainer";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="text-center">
       <section className="p-6">
-        <article className="flex justify-center items-center gap-6 p-6 border-b border-primary">
+        {/* 1. Animação sequencial dos Ícones de Redes Sociais */}
+        <StaggerContainer
+          className="flex justify-center items-center gap-6 p-6 border-b border-primary"
+          staggerDelay={0.1}
+        >
           {siteLinks.map((item) => {
             const Icon = item.icon;
 
             return (
-              <a
-                key={item.name}
-                href={item.href}
-                aria-label={item.name}
-                title={item.name}
-                className="bg-secondary hover:bg-primary rounded-full h-15 w-15 flex items-center justify-center hover:scale-110"
-              >
-                <Icon size="30" aria-hidden="true" />
-              </a>
+              <StaggerItem key={item.name}>
+                <a
+                  href={item.href}
+                  aria-label={item.name}
+                  title={item.name}
+                  className="bg-secondary hover:bg-primary rounded-full h-15 w-15 flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <Icon size="30" aria-hidden="true" />
+                </a>
+              </StaggerItem>
             );
           })}
-        </article>
+        </StaggerContainer>
 
-        {/* Grid de conteúdo principal */}
-        <article className="container-1 grid grid-cols-1 md:grid-cols-3 gap-8 py-8 items-start">
+        {/* 2. Animação sequencial das 3 Colunas da Grid */}
+        <StaggerContainer
+          className="container-1 grid grid-cols-1 md:grid-cols-3 gap-8 py-8 items-start"
+          staggerDelay={0.2}
+        >
           {/* Coluna 1: Logo */}
-          <div className="flex justify-center items-center h-full w-full">
+          <StaggerItem className="flex justify-center items-center h-full w-full">
             <Image
               src="/images/image 9.png"
               alt="Logo"
@@ -36,10 +45,10 @@ export default function Footer() {
               height={160}
               className="rounded-full"
             />
-          </div>
+          </StaggerItem>
 
-          {/* Coluna 2: Contato com ícones em círculo primary */}
-          <div className="flex flex-col gap-3 w-full items-start text-left border-left">
+          {/* Coluna 2: Contato */}
+          <StaggerItem className="flex flex-col gap-3 w-full items-start text-left border-left">
             <h3 className="h2 font-bold mb-2">Contato</h3>
             {footerContacts.map((item) => {
               const Icon = item.icon;
@@ -59,24 +68,28 @@ export default function Footer() {
                 </a>
               );
             })}
-          </div>
+          </StaggerItem>
 
           {/* Coluna 3: Navegação */}
-          <nav className="flex flex-col gap-3 w-full text-left border-left">
-            <h3 className="h2 font-bold mb-2">Menu</h3>
-            <div className="flex flex-col gap-2">
-              {rotas.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="hover:underline hover:text-secondary"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </nav>
-        </article>
+          <StaggerItem>
+            <nav className="flex flex-col gap-3 w-full text-left border-left">
+              <h3 className="h2 font-bold mb-2">Menu</h3>
+              <div className="flex flex-col gap-2">
+                {rotas.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="hover:underline hover:text-secondary"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+          </StaggerItem>
+        </StaggerContainer>
+
+        {/* Direitos Reservados */}
         <article>
           <p className="text-sm">
             © Todos os direitos reservados {currentYear}
