@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import SplitText from "./Animations/SplitText";
+import AnimatedSeparator from "./Animations/AnimatedSeparator";
 
 interface HeaderPageProps {
   title?: string;
@@ -31,7 +32,7 @@ export default function HeaderPage({
 }: HeaderPageProps) {
   return (
     <section className="p-6">
-      <article className="container-1 border-b border-primary">
+      <article className="container-1">
         <div className="p-6 space-y-3">
           {/* Título com animação SplitText */}
           <h1 className="text-6xl">
@@ -49,6 +50,7 @@ export default function HeaderPage({
             {text}
           </motion.p>
         </div>
+        <AnimatedSeparator direction="center" />
       </article>
     </section>
   );

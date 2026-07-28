@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="text-center">
-      <section className="p-6">
+      <section className="px-6">
         {/* 1. Animação sequencial dos Ícones de Redes Sociais */}
         <StaggerContainer
           className="flex justify-center items-center gap-6 p-6 border-b border-primary"

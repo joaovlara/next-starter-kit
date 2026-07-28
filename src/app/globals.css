@@ -30,7 +30,7 @@
   }
 
   .container-1 {
-    @apply m-4 px-3 py-6 mx-auto md:max-w-[90%];
+    @apply mb-4 px-3 py-6 mx-auto md:max-w-[90%];
   }
   h1,
   .h1 {
@@ -55,7 +55,7 @@
   }
 
   .btn-hero {
-    @apply px-30 py-10 border-2 border-secondary rounded-full text-secondary hover:bg-secondary hover:text-black uppercase font-bold;
+    @apply px-30 py-6 border-2 w-full border-secondary rounded-full text-secondary hover:bg-secondary hover:text-black uppercase font-bold;
   }
 
   .btn-nav {

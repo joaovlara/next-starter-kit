@@ -41,8 +41,10 @@ export default function CTA() {
           </h3>
 
           <p className="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            <SplitText
+              text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+              delay={0.28}
+            />
           </p>
 
           <motion.div
