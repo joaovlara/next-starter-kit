@@ -130,7 +130,6 @@
 }
 
 @layer utilities {
-
   .cta-parallax-container {
     @apply absolute inset-0 -z-10 bg-fixed bg-cover bg-center;
   }

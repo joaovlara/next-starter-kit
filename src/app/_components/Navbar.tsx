@@ -12,7 +12,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="w-full">
+    <nav className="w-full shadow-xs shadow-primary">
       <section className="mx-auto flex w-full max-w-[90%] items-center justify-between py-6 md:px-0">
         {/* Logo Clicável */}
         <div className="shrink-0">

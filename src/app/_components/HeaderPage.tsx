@@ -15,7 +15,7 @@ export default function HeaderPage({
 }: HeaderPageProps) {
   return (
     <section className="p-6">
-      <article className="container-1 rounded-br-[100px] b-shadow-secondary rounded-lg">
+      <article className="container-1 border-b border-primary">
         <div className="p-6 space-y-3">
           <h1 className="text-6xl">{title}</h1>
           <p className="text">{text}</p>
