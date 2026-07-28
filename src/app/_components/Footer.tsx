@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { social, routes } from "../_data/data";
+import { social, routes, contato } from "../_data/data";
 import { StaggerContainer, StaggerItem } from "./Animations/StaggerContainer";
 
 export default function Footer() {
@@ -50,13 +50,13 @@ export default function Footer() {
           {/* Coluna 2: Contato */}
           <StaggerItem className="flex flex-col gap-3 w-full items-start text-left border-left">
             <h3 className="h2 font-bold mb-2">Contato</h3>
-            {social.map((item) => {
+            {contato.map((item) => {
               const Icon = item.icon;
 
               return (
                 <a
                   key={item.name}
-                  href={item.url}
+                  href={item.value}
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   {Icon && (

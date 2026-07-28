@@ -54,7 +54,7 @@ const Navbar = () => {
         {/* BOTÃO MENU MOBILE */}
         <button
           type="button"
-          className="rounded-md p-2 md:hidden"
+          className="rounded p-2 md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-expanded={isOpen}
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}

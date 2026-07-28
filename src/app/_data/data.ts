@@ -5,6 +5,7 @@ import {
   FaGooglePlay,
   FaInstagram,
   FaMapMarkerAlt,
+  FaMapPin,
   FaPhone,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -18,39 +19,77 @@ import {
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
+import { BsBuildingCheck } from "react-icons/bs";
 
-export const infos = [
-  {
-    name: "Nome do Site",
-    value: "$nome do contratante do site",
-  },
-  {
-    name: "Endereço",
-    icon: FaMapMarkerAlt,
-    value: "$endereço do site, 1111, Brasil",
-  },
-  {
-    name: "Telefone",
-    icon: FaPhone,
-    value: "$99 9999-9999",
-  },
-];
+export const infos = {
+  name: "nome da empresa",
+  adress: "Endereço daEmpresa, 000, Brasil",
+  phone: "99 99999-9999",
+  mail: "email@email.com",
+  instagram: "https://www.instagram.com",
+  wppApp: "https://www.WhatsApp.com",
+  appleStore: "https://www.appstore.com",
+  playStore: "https://www.playstore.com",
+};
 
 export const social = [
   {
     icon: FaWhatsapp,
     name: "WhatsApp",
-    url: "https://www.WhatsApp.com",
+    url: infos.wppApp,
   },
   {
     icon: FaInstagram,
     name: "Instagram",
-    url: "https://www.instagram.com",
+    url: infos.instagram,
   },
   {
     name: "Email",
     icon: FaEnvelope,
-    url: "$email@email.com",
+    url: infos.mail,
+  },
+  {
+    name: "Apple",
+    icon: FaApple,
+    url: infos.appleStore,
+  },
+  {
+    name: "PlayStore",
+    icon: FaGooglePlay,
+    url: infos.playStore,
+  },
+];
+
+export const contato = [
+  {
+    icon: BsBuildingCheck,
+    name: "Nome",
+    value: infos.name,
+  },
+  {
+    icon: FaMapPin,
+    name: "Endereço",
+    value: infos.adress,
+  },
+  {
+    icon: FaPhone,
+    name: "Telefone",
+    value: infos.phone,
+  },
+  {
+    name: "Email",
+    icon: FaEnvelope,
+    value: infos.mail,
+  },
+  {
+    icon: FaWhatsapp,
+    name: "WhatsApp",
+    value: infos.wppApp,
+  },
+  {
+    icon: FaInstagram,
+    name: "@instagram",
+    value: infos.instagram,
   },
 ];
 
@@ -61,7 +100,7 @@ export const routes = [
   { name: "CONTATO", href: "/contato" },
 ];
 
-//*************Home***************//
+//Home Page
 
 export const hero = {
   h1: "Lorem Ipsum is simply dummy text",
@@ -73,12 +112,12 @@ export const getApp = [
   {
     icon: FaApple,
     name: "Apple Store",
-    url: "https://www.WhatsApp.com",
+    url: infos.appleStore,
   },
   {
     icon: FaGooglePlay,
     name: "Play Store",
-    url: "https://www.instagram.com",
+    url: infos.playStore,
   },
 ];
 
@@ -163,9 +202,7 @@ export const cta = {
   linkCta: "linkdocta",
 };
 
-//********************************//
-
-//Sobre
+//Sobre Page
 
 export const aboutHeader = {
   h1: "Lorem Ipsum is simply dummy text",
@@ -176,14 +213,14 @@ export const aboutHeader = {
   image2path: "Lorem Ipsum is simply dummy text",
 };
 
-//Servicos
+//Servicos Page
 
 export const servicesHeader = {
   h1: "Lorem Ipsum is simply dummy text",
   text: "Lorem Ipsum is simply dummy text",
 };
 
-//Contato
+//Contato Page
 
 export const contactHeader = {
   h1: "Lorem Ipsum is simply dummy text",
@@ -191,7 +228,7 @@ export const contactHeader = {
   infosContact: {},
 };
 
-//Footer
+//Footer Page
 
 export const footer = {
   social: {

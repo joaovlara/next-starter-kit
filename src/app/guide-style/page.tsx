@@ -5,7 +5,6 @@ import { ServiceCard } from "../_components/Cards/ServiceCard";
 import { services } from "../_data/data";
 import ShinyText from "../_components/Animations/ShinyText";
 import Grainient from "../_components/Animations/Grainient";
-import SpotlightCard from "../_components/Animations/SpotlightCard";
 import HeaderPage from "../_components/HeaderPage";
 import AnimatedSeparator from "../_components/Animations/AnimatedSeparator";
 
@@ -78,12 +77,6 @@ export default function GuideStyle() {
             />
           </div>
 
-          <SpotlightCard
-            className="custom-spotlight-card"
-            spotlightColor="rgba(0, 229, 255, 0.2)"
-          >
-            {"Content goes here"}
-          </SpotlightCard>
         </div>
 
         {/* Seção de tipografia */}

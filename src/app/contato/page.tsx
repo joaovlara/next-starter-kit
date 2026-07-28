@@ -3,7 +3,7 @@
 import Image from "next/image";
 import HeaderPage from "../_components/HeaderPage";
 import CTA from "../_components/Sections/CTA";
-import { social } from "../_data/data";
+import { contato } from "../_data/data";
 import { StaggerContainer, StaggerItem,} from "../_components/Animations/StaggerContainer";
 
 export default function ContatoPage() {
@@ -19,19 +19,19 @@ export default function ContatoPage() {
           className="container-1 grid md:grid-cols-2 mb-6 gap-6 md:gap-0"
           staggerDelay={0.2}
         >
-          <StaggerItem className="flex flex-col gap-3 w-full md:text-left bg-primary-2 p-6 rounded-2xl md:rounded-r-none">
+          <StaggerItem className="flex flex-col gap-3 w-full md:text-left bg-primary-2 p-6 rounded md:rounded-r-none">
             <h3 className="h2">Contato</h3>
             <StaggerContainer
               className="flex flex-col gap-6 mt-2"
               staggerDelay={0.1}
             >
-              {social.map((item) => {
+              {contato.map((item) => {
                 const Icon = item.icon;
 
                 return (
                   <StaggerItem key={item.name}>
                     <a
-                      href={item.url}
+                      href={item.value}
                       className="flex items-center gap-2 border-b border-primary pb-2 hover:opacity-80 transition-opacity"
                     >
                       <div className="flex items-center justify-center rounded-full bg-primary p-2">
@@ -45,7 +45,7 @@ export default function ContatoPage() {
             </StaggerContainer>
           </StaggerItem>
 
-          <StaggerItem className="flex items-center justify-center p-6 bg-primary-2/20 rounded-2xl md:rounded-l-none">
+          <StaggerItem className="flex items-center justify-center p-6 bg-primary-2/20 rounded md:rounded-l-none">
             <Image
               src="/images/image 9.png"
               alt="Logo"

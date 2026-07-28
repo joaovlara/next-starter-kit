@@ -60,7 +60,7 @@ export default function Sobre() {
                 alt="Descrição da imagem 1"
                 width={500}
                 height={300}
-                className="rounded-2xl shadow-lg"
+                className="rounded shadow-lg"
               />
             </motion.div>
           </div>
@@ -79,7 +79,7 @@ export default function Sobre() {
                 alt="Descrição da imagem 2"
                 width={500}
                 height={300}
-                className="rounded-2xl shadow-lg"
+                className="rounded shadow-lg"
               />
             </motion.div>
 
