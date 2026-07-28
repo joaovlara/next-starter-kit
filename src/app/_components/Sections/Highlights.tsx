@@ -1,4 +1,4 @@
-import { diferenciais } from "@/src/app/_data/data";
+import { diferenciais } from "../../_data/data";
 import Image from "next/image";
 import { StaggerContainer, StaggerItem } from "../Animations/StaggerContainer";
 

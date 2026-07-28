@@ -1,5 +1,6 @@
 "use client";
 
+import { cta } from "../../_data/data";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import SplitText from "../Animations/SplitText";
@@ -37,14 +38,11 @@ export default function CTA() {
           <p className="cta-tag">CTA</p>
 
           <h3 className="h1">
-            <SplitText text="Lorem Ipsum is simply dummy text" delay={0.18} />
+            <SplitText text={cta.h2} delay={0.18} />
           </h3>
 
           <p className="text">
-            <SplitText
-              text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              delay={0.28}
-            />
+            <SplitText text={cta.text} delay={0.28} />
           </p>
 
           <motion.div
@@ -53,7 +51,9 @@ export default function CTA() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <button className="btn-cta w-full md:w-70">Fale Conosco</button>
+            <a href={cta.linkCta} className="btn-cta w-full md:w-70 inline-flex justify-center">
+              Fale Conosco
+            </a>
           </motion.div>
         </div>
       </article>

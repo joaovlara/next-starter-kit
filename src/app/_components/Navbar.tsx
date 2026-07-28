@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { rotas } from "@/src/app/_data/data";
+import { routes } from "../_data/data";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
@@ -28,7 +28,7 @@ const Navbar = () => {
 
         {/* NAVEGAÇÃO DESKTOP */}
         <div className="hidden flex-1 items-center justify-center gap-6 font-semibold md:flex">
-          {rotas.map((rota, index) => {
+          {routes.map((rota, index) => {
             const isActive = pathname === rota.href;
             return (
               <Link
@@ -67,7 +67,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="b-shadow-secondary p-6 md:hidden">
           <div className="flex flex-col gap-4 font-semibold">
-            {rotas.map((rota, index) => {
+            {routes.map((rota, index) => {
               const isActive = pathname === rota.href;
               return (
                 <Link

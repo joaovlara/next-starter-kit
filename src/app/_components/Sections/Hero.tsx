@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { infos } from "@/src/app/_data/data";
+import { hero } from "../../_data/data";
 import Image from "next/image";
 import {
   BsBuildingCheck,
@@ -96,10 +96,7 @@ export default function Hero() {
           <div className="flex flex-col lg:flex-row w-full justify-between space-y-6 gap-1">
             <div>
               <h1>
-                <SplitText
-                  text="Lorem Ipsum is simply dummy text"
-                  delay={0.18}
-                />
+                <SplitText text={hero.h1} delay={0.18} />
               </h1>
               <motion.div
                 variants={fadeInVariants}
@@ -107,9 +104,7 @@ export default function Hero() {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                <p className="text text-2xl md:text-3xl">
-                  Lorem Ipsum is simply dummy text
-                </p>
+                <p className="text text-2xl md:text-3xl">{hero.text}</p>
               </motion.div>
             </div>
             <div className="flex flex-col-reverse">
@@ -119,7 +114,9 @@ export default function Hero() {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                <button className="btn-hero">Btn-hero</button>
+                <a href={hero.link} className="btn-hero inline-flex">
+                  Saiba mais
+                </a>
               </motion.div>
             </div>
           </div>

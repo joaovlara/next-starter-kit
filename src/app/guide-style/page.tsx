@@ -2,7 +2,7 @@
 
 import CardHighlight from "../_components/Cards/CardHighlight";
 import { ServiceCard } from "../_components/Cards/ServiceCard";
-import { servicos } from "../_data/data";
+import { services } from "../_data/data";
 import ShinyText from "../_components/Animations/ShinyText";
 import Grainient from "../_components/Animations/Grainient";
 import SpotlightCard from "../_components/Animations/SpotlightCard";
@@ -10,7 +10,7 @@ import HeaderPage from "../_components/HeaderPage";
 import AnimatedSeparator from "../_components/Animations/AnimatedSeparator";
 
 export default function GuideStyle() {
-  const item = servicos[0];
+  const item = services[0];
 
   return (
     <main className="bg-dark min-h-screen">

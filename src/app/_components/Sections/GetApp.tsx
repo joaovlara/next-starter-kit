@@ -1,6 +1,6 @@
 "use client";
 
-import { infos } from "@/src/app/_data/data";
+import { getApp } from "../../_data/data";
 import { motion, Variants } from "framer-motion";
 import AnimatedSeparator from "../Animations/AnimatedSeparator";
 
@@ -61,25 +61,23 @@ export default function GetApp() {
             viewport={{ once: true, margin: "-50px" }}
             className="flex gap-3"
           >
-            <motion.a
-              href="#"
-              variants={buttonVariants}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="btn-app transition-shadow"
-            >
-              Google Play
-            </motion.a>
+            {getApp.map((item) => {
+              const IconComponent = item.icon;
 
-            <motion.a
-              href="#"
-              variants={buttonVariants}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="btn-app transition-shadow"
-            >
-              App Store
-            </motion.a>
+              return (
+                <motion.a
+                  key={item.name}
+                  href={item.url}
+                  variants={buttonVariants}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="btn-app transition-shadow"
+                >
+                  {IconComponent ? <IconComponent className="mr-2" /> : null}
+                  {item.name}
+                </motion.a>
+              );
+            })}
           </motion.div>
         </div>
 

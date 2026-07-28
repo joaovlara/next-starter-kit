@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { footerContacts, rotas, siteLinks } from "@/data/data";
+import { social, routes } from "../_data/data";
 import { StaggerContainer, StaggerItem } from "./Animations/StaggerContainer";
 
 export default function Footer() {
@@ -13,13 +13,13 @@ export default function Footer() {
           className="flex justify-center items-center gap-6 p-6 border-b border-primary"
           staggerDelay={0.1}
         >
-          {siteLinks.map((item) => {
+          {social.map((item) => {
             const Icon = item.icon;
 
             return (
               <StaggerItem key={item.name}>
                 <a
-                  href={item.href}
+                  href={item.url}
                   aria-label={item.name}
                   title={item.name}
                   className="bg-secondary hover:bg-primary rounded-full h-15 w-15 flex items-center justify-center hover:scale-110 transition-transform"
@@ -50,13 +50,13 @@ export default function Footer() {
           {/* Coluna 2: Contato */}
           <StaggerItem className="flex flex-col gap-3 w-full items-start text-left border-left">
             <h3 className="h2 font-bold mb-2">Contato</h3>
-            {footerContacts.map((item) => {
+            {social.map((item) => {
               const Icon = item.icon;
 
               return (
                 <a
                   key={item.name}
-                  href={item.href}
+                  href={item.url}
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   {Icon && (
@@ -75,7 +75,7 @@ export default function Footer() {
             <nav className="flex flex-col gap-3 w-full text-left border-left">
               <h3 className="h2 font-bold mb-2">Menu</h3>
               <div className="flex flex-col gap-2">
-                {rotas.map((item) => (
+                {routes.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}

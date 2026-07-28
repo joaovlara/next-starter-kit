@@ -1,4 +1,4 @@
-import { servicos } from "@/src/app/_data/data";
+import { services } from "../../_data/data";
 import { ServiceCard } from "../Cards/ServiceCard";
 import { StaggerContainer, StaggerItem } from "../Animations/StaggerContainer";
 
@@ -17,7 +17,7 @@ export default function Services() {
           </div>
 
         {/* Mapeamento dos Cards de Serviço */}
-        {servicos.map((item) => (
+        {services.map((item) => (
           <StaggerItem key={item.id}>
             <ServiceCard
               title={item.title}

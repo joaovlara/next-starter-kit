@@ -1,6 +1,6 @@
 "use client";
 
-import { infos } from "@/src/app/_data/data";
+import { about } from "../../_data/data";
 import { motion, Variants } from "framer-motion";
 import SplitText from "../Animations/SplitText";
 import AnimatedSeparator from "../Animations/AnimatedSeparator";
@@ -23,7 +23,7 @@ export default function About() {
     <section className="min-h-[35vh] flex items-center justify-center p-6">
       <article className="container-1 text-center space-y-3">
         <h2 className="h1">
-          <SplitText text="Lorem Ipsum is simply dummy text" delay={0.18} />
+          <SplitText text={about.h2} delay={0.18} />
         </h2>
         <motion.div
           variants={fadeInVariants}
@@ -31,11 +31,7 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <p className="text text-xl upper mb-12">
-            Lorem Ipsum is simply dummy textLorem Ipsum is simply dummy
-            textLorem Ipsum is simply dummy text Lorem Ipsum is simply dummy
-            textLorem Ipsum is simply dummy textLorem Ipsum is simply dummy text
-          </p>
+          <p className="text text-xl upper mb-12">{about.text}</p>
         </motion.div>
         <AnimatedSeparator />
       </article>

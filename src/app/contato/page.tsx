@@ -3,7 +3,7 @@
 import Image from "next/image";
 import HeaderPage from "../_components/HeaderPage";
 import CTA from "../_components/Sections/CTA";
-import { footerContacts } from "@/data/data";
+import { social } from "../_data/data";
 import { StaggerContainer, StaggerItem,} from "../_components/Animations/StaggerContainer";
 
 export default function ContatoPage() {
@@ -25,13 +25,13 @@ export default function ContatoPage() {
               className="flex flex-col gap-6 mt-2"
               staggerDelay={0.1}
             >
-              {footerContacts.map((item) => {
+              {social.map((item) => {
                 const Icon = item.icon;
 
                 return (
                   <StaggerItem key={item.name}>
                     <a
-                      href={item.href}
+                      href={item.url}
                       className="flex items-center gap-2 border-b border-primary pb-2 hover:opacity-80 transition-opacity"
                     >
                       <div className="flex items-center justify-center rounded-full bg-primary p-2">
