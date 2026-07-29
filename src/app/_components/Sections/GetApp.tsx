@@ -71,7 +71,7 @@ export default function GetApp() {
                   variants={buttonVariants}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="btn-app transition-shadow"
+                  className="btn-app flex justify-center items-center transition-shadow"
                 >
                   {IconComponent ? <IconComponent className="mr-2" /> : null}
                   {item.name}
