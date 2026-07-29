@@ -4,7 +4,10 @@ import Image from "next/image";
 import HeaderPage from "../_components/HeaderPage";
 import CTA from "../_components/Sections/CTA";
 import { contato } from "../_data/data";
-import { StaggerContainer, StaggerItem,} from "../_components/Animations/StaggerContainer";
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "../_components/Animations/StaggerContainer";
 
 export default function ContatoPage() {
   return (
@@ -45,14 +48,14 @@ export default function ContatoPage() {
             </StaggerContainer>
           </StaggerItem>
 
-          <StaggerItem className="flex items-center justify-center p-6 bg-primary-2/20 rounded md:rounded-l-none">
-            <Image
-              src="/images/image 9.png"
-              alt="Logo"
-              width={200}
-              height={200}
-              className="object-contain"
-            />
+          <StaggerItem className="flex items-center justify-center p-0 md:p-0 bg-primary-2/20 rounded md:rounded-l-none overflow-hidden min-h-[350px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.428741134916!2d-46.636807988423655!3d-23.58895196251926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ba6ffbb574d%3A0x12ec02b378a4ad62!2sSP%20CONDO%20COBRAN%C3%87AS%20GARANTIDAS%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1785343292483!5m2!1spt-BR!2sbr"
+              className="w-full h-full min-h-[350px] border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </StaggerItem>
         </StaggerContainer>
       </section>
