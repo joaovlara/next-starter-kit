@@ -10,7 +10,7 @@ export default function Footer() {
       <section className="px-6">
         {/* 1. Animação sequencial dos Ícones de Redes Sociais */}
         <StaggerContainer
-          className="flex justify-center items-center gap-6 p-6 border-b border-primary"
+          className="flex justify-center items-center gap-3 md:gap-6 p-6 border-b border-primary"
           staggerDelay={0.1}
         >
           {social.map((item) => {
@@ -22,7 +22,7 @@ export default function Footer() {
                   href={item.url}
                   aria-label={item.name}
                   title={item.name}
-                  className="bg-secondary hover:bg-primary rounded-full h-15 w-15 flex items-center justify-center hover:scale-110 transition-transform"
+                  className="bg-primary hover:bg-secondary rounded-full h-15 w-15 flex items-center justify-center hover:scale-110 transition-transform"
                 >
                   <Icon size="30" aria-hidden="true" />
                 </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   {Icon && (
-                    <span className="bg-primary text-white p-2 rounded-full flex items-center justify-center shrink-0 w-8 h-8">
+                    <span className="bg-primary-2 p-2 rounded-full flex items-center justify-center shrink-0 w-8 h-8">
                       <Icon size={18} aria-hidden="true" />
                     </span>
                   )}

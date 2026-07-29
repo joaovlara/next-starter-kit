@@ -100,7 +100,7 @@
   }
 
   .highlight-card-banner {
-    @apply relative min-w-[45vw] md:min-w-0 aspect-square snap-center overflow-hidden flex items-end rounded-tl-[90px] p-6;
+    @apply relative min-w-[45vw] md:min-w-0 aspect-square snap-center overflow-hidden flex items-end rounded-tl-[90px] p-3;
   }
 
   .highlight-card-item {

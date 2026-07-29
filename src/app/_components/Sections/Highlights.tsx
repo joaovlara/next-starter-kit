@@ -18,7 +18,7 @@ export default function Highlights() {
             className="object-cover -z-10 opacity-60"
             sizes="(max-width: 768px)"
           />
-          <h2 className="relative z-20">
+          <h2 className="z-20">
             Nossos <br /> Diferenciais
           </h2>
         </StaggerItem>
@@ -32,7 +32,7 @@ export default function Highlights() {
               className="highlight-card-item b-shadow-secondary"
             >
               {IconComponent && (
-                <IconComponent size={32} className="text-secondary" />
+                <IconComponent size={24} className="text-secondary" />
               )}
               <h3>{item.title}</h3>
               <p className="text-sm">{item.description}</p>
