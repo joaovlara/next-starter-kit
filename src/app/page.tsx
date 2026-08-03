@@ -1,6 +1,5 @@
 import Hero from "./_components/Sections/Hero";
 import CTA from "./_components/Sections/CTA";
-import WhatsAppButton from "./_components/WppButton";
 import GetApp from "./_components/Sections/GetApp";
 import Highlights from "./_components/Sections/Highlights";
 import About from "./_components/Sections/About";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <main>
-        <WhatsAppButton />
         <Hero />
         <GetApp />
         <Highlights />

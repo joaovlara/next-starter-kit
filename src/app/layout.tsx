@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 import { LoadingProvider } from "./_context/LoadingContext";
+import WhatsAppButton from "./_components/WppButton";
 
 export const metadata: Metadata = seoConfig;
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           {/* <GoogleTagManager gtmId="GTM-XXXXXXX" /> */}
           <Analytics />
           <SpeedInsights />
+          <WhatsAppButton />
         </LoadingProvider>
       </body>
     </html>
