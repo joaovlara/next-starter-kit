@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { routes } from "../_data/data";
@@ -9,10 +9,32 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
+  // Monitora o scroll da página
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Fica fixo se tiver scroll OU se o menu mobile estiver aberto
+  const isFixed = isScrolled || isOpen;
+
   return (
-    <nav className="w-full shadow-xs shadow-primary">
+    <nav
+      className={`z-50 w-full bg-dark transition-all duration-300 md:relative ${
+        isFixed ? "fixed top-0 left-0 shadow-md" : "relative"
+      }`}
+    >
       <section className="mx-auto flex w-full max-w-[90%] items-center justify-between py-6 md:px-0">
         {/* Logo Clicável */}
         <div className="shrink-0">
@@ -65,7 +87,7 @@ const Navbar = () => {
 
       {/* MENU MOBILE */}
       {isOpen && (
-        <div className="b-shadow-secondary p-6 md:hidden">
+        <div className="b-shadow-secondary bg-dark p-6 md:hidden">
           <div className="flex flex-col gap-4 font-semibold">
             {routes.map((rota, index) => {
               const isActive = pathname === rota.href;

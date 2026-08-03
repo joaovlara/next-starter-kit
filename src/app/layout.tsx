@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
+import { LoadingProvider } from "./_context/LoadingContext";
 
 export const metadata: Metadata = seoConfig;
 
@@ -17,12 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
-        <Footer />
-        {/* <GoogleTagManager gtmId="GTM-XXXXXXX" /> */}
-        <Analytics />
-        <SpeedInsights />
+        <LoadingProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          {/* <GoogleTagManager gtmId="GTM-XXXXXXX" /> */}
+          <Analytics />
+          <SpeedInsights />
+        </LoadingProvider>
       </body>
     </html>
   );

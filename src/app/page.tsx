@@ -5,6 +5,7 @@ import GetApp from "./_components/Sections/GetApp";
 import Highlights from "./_components/Sections/Highlights";
 import About from "./_components/Sections/About";
 import Services from "./_components/Sections/Services";
+import Preloader from "./_components/Animations/Preloader";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <About />
         <Services />
         <CTA />
+        <Preloader
+         />
       </main>
       {/* <WhatsAppButton /> */}
     </>
