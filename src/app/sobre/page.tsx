@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import HeaderPage from "../_components/HeaderPage";
 import CTA from "../_components/Sections/CTA";
+import { aboutHeader } from "../_data/data";
 
 // Variantes para entrada da esquerda
 const fadeInLeft: Variants = {
@@ -28,7 +29,7 @@ const fadeInRight: Variants = {
 export default function Sobre() {
   return (
     <main className="overflow-x-hidden">
-      <HeaderPage/>
+      <HeaderPage title={aboutHeader.h1} text={aboutHeader.text} />
 
       <section className="px-6 py-12">
         <article className="container-1 flex flex-col gap-16">
@@ -41,11 +42,8 @@ export default function Sobre() {
               viewport={{ once: true, margin: "-50px" }}
               className="space-y-3 bg-texture-pattern"
             >
-              <h2>Título da Primeira Seção</h2>
-              <p className="text">
-                Descrição do texto para a primeira seção. Explique a história ou
-                propósito da empresa de maneira engajadora.
-              </p>
+              <h2>{aboutHeader.section1Title}</h2>
+              <p className="text">{aboutHeader.section1Text}</p>
             </motion.div>
 
             <motion.div
@@ -56,8 +54,8 @@ export default function Sobre() {
               className="flex justify-center"
             >
               <Image
-                src="/images/image 9.png"
-                alt="Descrição da imagem 1"
+                src={aboutHeader.image1path}
+                alt={aboutHeader.image1Alt}
                 width={500}
                 height={300}
                 className="rounded shadow-lg"
@@ -75,8 +73,8 @@ export default function Sobre() {
               className="order-2 md:order-1 flex justify-center"
             >
               <Image
-                src="/images/image 9.png"
-                alt="Descrição da imagem 2"
+                src={aboutHeader.image2path}
+                alt={aboutHeader.image2Alt}
                 width={500}
                 height={300}
                 className="rounded shadow-lg"
@@ -90,11 +88,8 @@ export default function Sobre() {
               viewport={{ once: true, margin: "-50px" }}
               className="order-1 md:order-2 space-y-3 bg-texture-pattern"
             >
-              <h2>Título da Segunda Seção</h2>
-              <p className="text">
-                Descrição do texto para a segunda seção. Destaque os diferenciais
-                ou a visão de futuro da empresa.
-              </p>
+              <h2>{aboutHeader.section2Title}</h2>
+              <p className="text">{aboutHeader.section2Text}</p>
             </motion.div>
           </div>
         </article>

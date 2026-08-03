@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import HeaderPage from "../_components/HeaderPage";
 import CTA from "../_components/Sections/CTA";
-import { services } from "../_data/data";
+import { services, servicesHeader } from "../_data/data";
 import { ServiceCardPage } from "../_components/Cards/ServiceCardPage";
 import { ServiceModal } from "../_components/Cards/ServiceModal";
 import { StaggerContainer, StaggerItem } from "../_components/Animations/StaggerContainer";
@@ -39,16 +39,16 @@ export default function ServicosPage() {
 
   return (
     <main className="min-h-screen">
-      <HeaderPage />
+      <HeaderPage title={servicesHeader.h1} text={servicesHeader.text} />
 
       <section className="px-6">
         <div className="container-1 mx-auto p-0">
           {/* Cabeçalho */}
           <div className="flex flex-col items-center text-center mb-10">
             <span className="uppercase text-secondary font-semibold mb-1">
-              O que oferecemos
+              {servicesHeader.eyebrow}
             </span>
-            <h2>Nossos Serviços Exclusivos</h2>
+            <h2>{servicesHeader.title}</h2>
           </div>
 
           {/* Grid de Serviços */}

@@ -35,7 +35,7 @@ export default function CTA() {
 
       <article className="container-1 w-full flex flex-col justify-between space-y-6 relative z-10">
         <div className="space-y-3">
-          <p className="text-secondary">CTA</p>
+          <p className="text-secondary">{cta.eyebrow}</p>
 
           <h3 className="h1">
             <SplitText text={cta.h2} delay={0.9} />
@@ -52,7 +52,7 @@ export default function CTA() {
             viewport={{ once: true }}
           >
             <a href={cta.linkCta} className="btn-cta w-full md:w-70 inline-flex justify-center">
-              Fale Conosco
+              {cta.buttonLabel}
             </a>
           </motion.div>
         </div>

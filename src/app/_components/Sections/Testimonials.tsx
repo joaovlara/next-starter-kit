@@ -2,34 +2,8 @@
 
 import Image from "next/image";
 import { Quote } from "lucide-react";
+import { testimonials } from "../../_data/data";
 import { StaggerContainer, StaggerItem } from "../Animations/StaggerContainer";
-
-const testimonialsData = [
-  {
-    id: 1,
-    nome: "Carlos Eduardo",
-    funcao: "Proprietário",
-    depoimento:
-      "A experiência de morar neste condomínio superou todas as nossas expectativas. O acabamento e a segurança são de primeiríssima qualidade.",
-    imagem: "/images/avatars/user1.jpg",
-  },
-  {
-    id: 2,
-    nome: "Mariana Siqueira",
-    funcao: "Moradora",
-    depoimento:
-      "A tranquilidade do local aliada à estrutura completa de lazer fez toda a diferença para o bem-estar da minha família.",
-    imagem: "/images/avatars/user2.jpg",
-  },
-  {
-    id: 3,
-    nome: "Roberto & Ana",
-    funcao: "Investidores",
-    depoimento:
-      "Excelente valorização e gestão extremamente profissional. Todo o suporte oferecido pela equipe passa total confiança.",
-    imagem: "/images/avatars/user3.jpg",
-  },
-];
 
 export default function Testimonials() {
   return (
@@ -38,9 +12,9 @@ export default function Testimonials() {
         {/* Cabeçalho */}
         <div className="flex flex-col items-center text-center mb-8">
           <span className="text-[11px] uppercase tracking-widest text-secondary font-semibold mb-1">
-            Depoimentos
+            {testimonials.eyebrow}
           </span>
-          <h2>O que dizem sobre nós</h2>
+          <h2>{testimonials.title}</h2>
         </div>
 
         {/* Grid Centralizado de Cards */}
@@ -48,7 +22,7 @@ export default function Testimonials() {
           className="carousel mx-auto md:max-w-[90%] md:grid md:grid-cols-3 md:justify-center md:items-stretch md:overflow-visible md:gap-5 md:py-0"
           staggerDelay={0.15}
         >
-          {testimonialsData.map((item) => (
+          {testimonials.items.map((item) => (
             <StaggerItem
               key={item.id}
               className="testimonial-card-item group relative bg-soft-dark p-5 flex flex-col items-center text-center justify-between transition-all duration-300 max-w-sm mx-auto w-full b-shadow-primary-2"

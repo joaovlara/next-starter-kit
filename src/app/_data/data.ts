@@ -122,7 +122,7 @@ export const getApp = [
   },
 ];
 
-export const diferenciais = [
+export const highlights = [
   {
     title: "Lorem ipsum dolor",
     description: "Lorem Ipsum is simply dummy text to use and see",
@@ -219,35 +219,76 @@ export const services = [
 ];
 
 export const cta = {
+  eyebrow: "CTA",
   h2: "Lorem Ipsum is simply dummy text",
   text: "Lorem Ipsum is simply dummy text r adipisicing elit. Eligendi perspiciatis perferendis cupiditate fa",
   linkCta: "linkdocta",
+  buttonLabel: "Fale Conosco",
+};
+
+export const testimonials = {
+  eyebrow: "Depoimentos",
+  title: "O que dizem sobre nós",
+  items: [
+    {
+      id: 1,
+      nome: "Carlos Eduardo",
+      funcao: "Proprietário",
+      depoimento:
+        "A experiência de morar neste condomínio superou todas as nossas expectativas. O acabamento e a segurança são de primeiríssima qualidade.",
+      imagem: "/images/avatars/user1.jpg",
+    },
+    {
+      id: 2,
+      nome: "Mariana Siqueira",
+      funcao: "Moradora",
+      depoimento:
+        "A tranquilidade do local aliada à estrutura completa de lazer fez toda a diferença para o bem-estar da minha família.",
+      imagem: "/images/avatars/user2.jpg",
+    },
+    {
+      id: 3,
+      nome: "Roberto & Ana",
+      funcao: "Investidores",
+      depoimento:
+        "Excelente valorização e gestão extremamente profissional. Todo o suporte oferecido pela equipe passa total confiança.",
+      imagem: "/images/avatars/user3.jpg",
+    },
+  ],
 };
 
 //Sobre Page
 
 export const aboutHeader = {
-  h1: "Lorem Ipsum is simply dummy text",
-  text: "Lorem Ipsum is simply dummy text",
-  section1: "Lorem Ipsum is simply dummy text",
-  image1path: "Lorem Ipsum is simply dummy text",
-  section2: "Lorem Ipsum is simply dummy text",
-  image2path: "Lorem Ipsum is simply dummy text",
+  h1: "Sobre Nós",
+  text: "Conheça a história, a visão e os valores que movem a nossa empresa.",
+  section1Title: "Título da Primeira Seção",
+  section1Text:
+    "Descrição do texto para a primeira seção. Explique a história ou propósito da empresa de maneira engajadora.",
+  image1path: "/images/image 9.png",
+  image1Alt: "Descrição da imagem 1",
+  section2Title: "Título da Segunda Seção",
+  section2Text:
+    "Descrição do texto para a segunda seção. Destaque os diferenciais ou a visão de futuro da empresa.",
+  image2path: "/images/image 9.png",
+  image2Alt: "Descrição da imagem 2",
 };
 
 //Servicos Page
 
 export const servicesHeader = {
-  h1: "Lorem Ipsum is simply dummy text",
-  text: "Lorem Ipsum is simply dummy text",
+  h1: "Nossos Serviços",
+  text: "Explore as soluções e recursos que entregamos com foco em qualidade e resultado.",
+  eyebrow: "O que oferecemos",
+  title: "Nossos Serviços Exclusivos",
 };
 
 //Contato Page
 
 export const contactHeader = {
-  h1: "Lorem Ipsum is simply dummy text",
-  text: "Lorem Ipsum is simply dummy text",
-  infosContact: {},
+  title: "Entre em Contato",
+  text: "Estamos prontos para atende-lo. Escolha o canal de sua preferência ou agende uma reunião.",
+  contactTitle: "Contato",
 };
 
 //Footer Page

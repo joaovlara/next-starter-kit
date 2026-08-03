@@ -1,4 +1,4 @@
-import { diferenciais } from "../../_data/data";
+import { highlights } from "../../_data/data";
 import Image from "next/image";
 import { StaggerContainer, StaggerItem } from "../Animations/StaggerContainer";
 
@@ -24,7 +24,7 @@ export default function Highlights() {
         </StaggerItem>
 
         {/* Mapeamento dos Cards */}
-        {diferenciais.slice(0, 3).map((item, index) => {
+        {highlights.slice(0, 3).map((item, index) => {
           const IconComponent = item.icon;
           return (
             <StaggerItem

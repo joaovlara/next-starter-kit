@@ -3,7 +3,7 @@
 import Image from "next/image";
 import HeaderPage from "../_components/HeaderPage";
 import CTA from "../_components/Sections/CTA";
-import { contato } from "../_data/data";
+import { contato, contactHeader } from "../_data/data";
 import {
   StaggerContainer,
   StaggerItem,
@@ -12,10 +12,7 @@ import {
 export default function ContatoPage() {
   return (
     <main>
-      <HeaderPage
-        title="Entre em Contato"
-        text="Estamos prontos para atende-lo. Escolha o canal de sua preferência ou agende uma reunião."
-      />
+      <HeaderPage title={contactHeader.title} text={contactHeader.text} />
 
       <section className="px-6">
         <StaggerContainer
@@ -23,7 +20,7 @@ export default function ContatoPage() {
           staggerDelay={0.2}
         >
           <StaggerItem className="flex flex-col gap-3 w-full md:text-left bg-primary-2 p-6 rounded md:rounded-r-none">
-            <h3 className="h2">Contato</h3>
+            <h3 className="h2">{contactHeader.contactTitle}</h3>
             <StaggerContainer
               className="flex flex-col gap-6 mt-2"
               staggerDelay={0.1}
