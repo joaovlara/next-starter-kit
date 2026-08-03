@@ -41,11 +41,11 @@ export default function ServicosPage() {
     <main className="min-h-screen">
       <HeaderPage />
 
-      <section>
-        <div className="container-1 mx-auto">
+      <section className="px-6">
+        <div className="container-1 mx-auto p-0">
           {/* Cabeçalho */}
           <div className="flex flex-col items-center text-center mb-10">
-            <span className="text-xs uppercase text-secondary font-semibold mb-1">
+            <span className="uppercase text-secondary font-semibold mb-1">
               O que oferecemos
             </span>
             <h2>Nossos Serviços Exclusivos</h2>

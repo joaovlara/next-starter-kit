@@ -39,7 +39,7 @@ export default function Sobre() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="space-y-3"
+              className="space-y-3 bg-texture-pattern"
             >
               <h2>Título da Primeira Seção</h2>
               <p className="text">
@@ -88,7 +88,7 @@ export default function Sobre() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="order-1 md:order-2 space-y-3"
+              className="order-1 md:order-2 space-y-3 bg-texture-pattern"
             >
               <h2>Título da Segunda Seção</h2>
               <p className="text">
