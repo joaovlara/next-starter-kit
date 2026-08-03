@@ -38,11 +38,11 @@ export default function CTA() {
           <p className="text-secondary">{cta.eyebrow}</p>
 
           <h3 className="h1">
-            <SplitText text={cta.h2} delay={0.9} />
+            <SplitText text={cta.h2} delay={0.3} />
           </h3>
 
           <p className="text">
-            <SplitText text={cta.text} delay={0.12} />
+            <SplitText text={cta.text} delay={0.6} />
           </p>
 
           <motion.div

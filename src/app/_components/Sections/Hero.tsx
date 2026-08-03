@@ -59,7 +59,7 @@ export default function Hero() {
         {/* Conteúdo sobreposto */}
         <div className="p-6 md:p-12 flex flex-col justify-end h-full relative z-10">
           <div className="flex flex-col lg:flex-row w-full justify-between items-end gap-6">
-            <div className="flex-1">
+            <div className="flex-1 space-y-3">
               <h1>
                 {isPreloaderFinished ? (
                   <SplitText text={hero.h1} delay={0.3} />
@@ -73,7 +73,7 @@ export default function Hero() {
                 initial="hidden"
                 animate={isPreloaderFinished ? "visible" : "hidden"}
               >
-                <p className="text text-2xl md:text-3xl">{hero.text}</p>
+                <p className="text text-lg md:text-3xl">{hero.text}</p>
               </motion.div>
             </div>
 
