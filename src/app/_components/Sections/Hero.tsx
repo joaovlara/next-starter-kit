@@ -7,7 +7,7 @@ import { motion, Variants } from "framer-motion";
 import SplitText from "../Animations/SplitText";
 import { useLoading } from "../../_context/LoadingContext"; 
 
-// Fade para o parágrafo (delay curto após a cortina abrir)
+// Animações de entrada
 const paragraphVariants: Variants = {
   hidden: { opacity: 0, y: 15 },
   visible: {
@@ -16,12 +16,11 @@ const paragraphVariants: Variants = {
     transition: {
       duration: 0.6,
       ease: "easeOut",
-      delay: 0.3, // Dispara 0.3s após a cortina começar a abrir
+      delay: 0.3,
     },
   },
 };
 
-// Fade para o botão
 const buttonVariants: Variants = {
   hidden: { opacity: 0, y: 15 },
   visible: {
@@ -37,7 +36,7 @@ const buttonVariants: Variants = {
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const { isPreloaderFinished } = useLoading(); // Obtém o estado global
+  const { isPreloaderFinished } = useLoading();
 
   return (
     <section className="px-6 md:p-0">
@@ -48,7 +47,12 @@ export default function Hero() {
           alt="Imagem de fundo da seção Hero"
           fill
           priority
-          onLoad={() => setIsLoaded(true)}
+          onLoad={(img) => {
+            // Garante a execução mesmo se a imagem já estiver no cache do navegador
+            if (img.currentTarget.complete) {
+              setIsLoaded(true);
+            }
+          }}
           className={`object-cover -z-10 transition-opacity duration-1000 ease-in-out ${
             isLoaded ? "opacity-60" : "opacity-0"
           }`}
@@ -59,7 +63,6 @@ export default function Hero() {
           <div className="flex flex-col lg:flex-row w-full justify-between items-end gap-6">
             <div className="flex-1">
               <h1>
-                {/* O SplitText só inicia quando o Preloader libera */}
                 {isPreloaderFinished ? (
                   <SplitText text={hero.h1} delay={0.1} />
                 ) : (

@@ -130,6 +130,15 @@
 }
 
 @layer utilities {
+  .bg-texture-pattern {
+    /* Padrão de pontos utilizando a cor --color-secondary do projeto com opacidade */
+    background-image: radial-gradient(
+      rgba(17, 89, 69, 0.35) 1px,
+      transparent 1px
+    );
+    background-size: 20px 20px;
+  }
+
   .cta-parallax-container {
     @apply absolute inset-0 -z-10 bg-fixed bg-cover bg-center;
   }
