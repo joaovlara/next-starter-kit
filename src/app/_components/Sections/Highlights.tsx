@@ -32,11 +32,11 @@ export default function Highlights() {
               className="highlight-card-item b-shadow-primary"
             >
               {IconComponent && (
-                <IconComponent size={24} className="text-secondary" />
+                <IconComponent size={24} className="text-secondary-2/80" />
               )}
               <h3>{item.title}</h3>
               <p className="text-sm line-clamp-3">{item.description}</p>{" "}
-              <span className="text-xs text-secondary pt-3">0{index + 1}</span>
+              <span className="text-xs text-secondary/70 pt-3">0{index + 1}</span>
             </StaggerItem>
           );
         })}

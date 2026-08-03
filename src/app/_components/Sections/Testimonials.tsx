@@ -45,13 +45,13 @@ export default function Testimonials() {
 
         {/* Grid Centralizado de Cards */}
         <StaggerContainer
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 justify-center items-stretch"
+          className="carousel mx-auto md:max-w-[90%] md:grid md:grid-cols-3 md:justify-center md:items-stretch md:overflow-visible md:gap-5 md:py-0"
           staggerDelay={0.15}
         >
           {testimonialsData.map((item) => (
             <StaggerItem
               key={item.id}
-              className="group relative bg-soft-dark p-5 flex flex-col items-center text-center justify-between transition-all duration-300 max-w-sm mx-auto w-full b-shadow-primary-2"
+              className="testimonial-card-item group relative bg-soft-dark p-5 flex flex-col items-center text-center justify-between transition-all duration-300 max-w-sm mx-auto w-full b-shadow-primary-2"
             >
               {/* Ícone de Aspas */}
               <div className="mb-2 flex justify-center">

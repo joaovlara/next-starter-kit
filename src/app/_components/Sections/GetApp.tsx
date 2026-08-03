@@ -69,7 +69,6 @@ export default function GetApp() {
                   key={item.name}
                   href={item.url}
                   variants={buttonVariants}
-                  whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   className="btn-app flex justify-center items-center transition-shadow"
                 >
