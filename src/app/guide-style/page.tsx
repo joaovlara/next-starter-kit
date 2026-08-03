@@ -1,6 +1,5 @@
 "use client";
 
-import CardHighlight from "../_components/Cards/CardHighlight";
 import { ServiceCard } from "../_components/Cards/ServiceCard";
 import { services } from "../_data/data";
 import ShinyText from "../_components/Animations/ShinyText";
@@ -121,7 +120,6 @@ export default function GuideStyle() {
 
         {/* Renderização de cards */}
         <div className="space-y-4">
-          <CardHighlight />
           <ServiceCard
             key={item.id}
             title={item.title}
