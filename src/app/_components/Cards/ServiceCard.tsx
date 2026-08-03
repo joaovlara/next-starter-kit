@@ -8,7 +8,7 @@ export interface ServiceCardProps {
 
 export function ServiceCard({ title, description, icon: Icon }: ServiceCardProps) {
   return (
-    <div className="service-card b-shadow-secondary">
+    <div className="service-card b-shadow-primary">
       <div className="service-card-header">
         <Icon className="service-card-icon" />
         <h3 className="service-card-title">{title}</h3>

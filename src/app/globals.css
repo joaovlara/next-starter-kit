@@ -56,7 +56,7 @@
   }
 
   .btn-hero {
-    @apply px-30 py-6 border-2 w-full border-secondary rounded-full text-secondary hover:bg-secondary hover:text-black uppercase font-bold;
+    @apply px-15 md:px-30 py-6 border-2 w-full flex justify-center border-primary rounded-full text-olive-300 hover:bg-primary hover:text-black uppercase font-bold;
   }
 
   .btn-nav {
@@ -87,7 +87,7 @@
   }
 
   .separador {
-    @apply border-b border-primary-2 w-full;
+    @apply border-b border-secondary-2/70 w-full;
   }
 
   .carousel {
@@ -109,7 +109,7 @@
   }
 
   .service-card {
-    @apply bg-soft-dark h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:scale-105
+    @apply bg-soft-dark h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:scale-101
     hover:bg-linear-to-t from-secondary-2 to-transparent hover:border-l-3 border-primary;
   }
 

@@ -29,7 +29,7 @@ export default function Highlights() {
           return (
             <StaggerItem
               key={index}
-              className="highlight-card-item b-shadow-secondary"
+              className="highlight-card-item b-shadow-primary"
             >
               {IconComponent && (
                 <IconComponent size={24} className="text-secondary" />
