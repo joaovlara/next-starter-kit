@@ -13,7 +13,7 @@ const fadeInVariants: Variants = {
     transition: {
       duration: 0.6,
       ease: "easeOut",
-      delay: 1.2,
+      delay: 0.9,
     },
   },
 };
@@ -38,11 +38,11 @@ export default function CTA() {
           <p className="cta-tag">CTA</p>
 
           <h3 className="h1">
-            <SplitText text={cta.h2} delay={0.18} />
+            <SplitText text={cta.h2} delay={0.9} />
           </h3>
 
           <p className="text">
-            <SplitText text={cta.text} delay={0.28} />
+            <SplitText text={cta.text} delay={0.12} />
           </p>
 
           <motion.div

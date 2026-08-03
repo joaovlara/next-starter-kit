@@ -12,6 +12,7 @@
   --color-accent: #d8cb14;
   --color-neutral: #2f3634;
   --color-neutral-dark: #242424;
+  --color-soft-dark: #121212;
   --color-dark: #0c0c0c;
 }
 
@@ -90,7 +91,7 @@
   }
 
   .carousel {
-    @apply overflow-x-auto snap-x snap-mandatory flex md:grid md:grid-cols-4 scrollbar-none;
+    @apply flex justify-around gap-6 p-6  overflow-x-auto scrollbar-none;
   }
 
   /* Tipografia */
@@ -100,15 +101,15 @@
   }
 
   .highlight-card-banner {
-    @apply relative min-w-[45vw] md:min-w-0 aspect-square snap-center overflow-hidden flex items-end rounded-tl-[90px] p-3;
+    @apply relative min-w-[57vw] md:min-w-[24vw]  snap-center overflow-hidden flex items-end rounded-tl-[90px] p-3;
   }
 
   .highlight-card-item {
-    @apply rounded min-w-[45vw] md:min-w-0 aspect-square snap-center bg-neutral-dark p-6 flex flex-col space-y-3 justify-end hover:bg-linear-to-b from-primary-2/50 to-transparent;
+    @apply rounded aspect-square min-w-[45vw] md:min-w-[18vw] bg-soft-dark w-25 p-6 flex flex-col justify-end space-y-3 hover:bg-linear-to-b from-primary-2/50 to-transparent;
   }
 
   .service-card {
-    @apply bg-neutral-dark h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:scale-105
+    @apply bg-soft-dark h-50 md:h-80 p-6 flex flex-col justify-between transition-all hover:scale-105
     hover:bg-linear-to-t from-secondary-2 to-transparent hover:border-l-3 border-primary;
   }
 

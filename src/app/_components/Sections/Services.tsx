@@ -5,16 +5,15 @@ import { StaggerContainer, StaggerItem } from "../Animations/StaggerContainer";
 export default function Services() {
   return (
     <section className="md:py-9">
-
       <StaggerContainer
         className="md:p-0 container-1 grid md:grid-cols-4 md:gap-3 gap-6 p-6"
-        staggerDelay={0.30}
+        staggerDelay={0.3}
       >
-          <div className="md:h-80 flex items-end justify-start md:px-3">
-            <h2>
-              NOSSOS <br className="hidden md:block" /> SERVIÇOS
-            </h2>
-          </div>
+        <div className="md:h-80 flex items-end justify-start md:px-3">
+          <h2 className="text-6xl">
+            NOSSOS <br className="hidden md:block" /> SERVIÇOS
+          </h2>
+        </div>
 
         {/* Mapeamento dos Cards de Serviço */}
         {services.map((item) => (

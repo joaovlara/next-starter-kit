@@ -38,23 +38,21 @@ export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const { isPreloaderFinished } = useLoading();
 
+  // A imagem só faz o fade-in quando estiver carregada E as cortinas abrirem
+  const showImage = isLoaded && isPreloaderFinished;
+
   return (
     <section className="px-6 md:p-0">
-      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[80vh] bg-gradient-t-dark b-shadow-secondary">
-        {/* Imagem de Fundo */}
+      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[70vh] bg-gradient-t-dark b-shadow-secondary">
+        {/* Imagem de Fundo com Fade-In Sincronizado */}
         <Image
           src="/images/condominio.jpg"
           alt="Imagem de fundo da seção Hero"
           fill
           priority
-          onLoad={(img) => {
-            // Garante a execução mesmo se a imagem já estiver no cache do navegador
-            if (img.currentTarget.complete) {
-              setIsLoaded(true);
-            }
-          }}
-          className={`object-cover -z-10 transition-opacity duration-1000 ease-in-out ${
-            isLoaded ? "opacity-60" : "opacity-0"
+          onLoad={() => setIsLoaded(true)}
+          className={`object-cover -z-10 transition-opacity duration-3000 ease-in-out ${
+            showImage ? "opacity-60" : "opacity-0"
           }`}
         />
 
@@ -64,7 +62,7 @@ export default function Hero() {
             <div className="flex-1">
               <h1>
                 {isPreloaderFinished ? (
-                  <SplitText text={hero.h1} delay={0.1} />
+                  <SplitText text={hero.h1} delay={0.3} />
                 ) : (
                   <span className="opacity-0">{hero.h1}</span>
                 )}

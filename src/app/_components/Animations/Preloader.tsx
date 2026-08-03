@@ -7,7 +7,7 @@ import { useLoading } from '../../_context/LoadingContext';
 export default function Preloader() {
   const [percent, setPercent] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  const { finishPreloader } = useLoading(); // Função para disparar quando acabar
+  const { finishPreloader } = useLoading();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,7 +39,6 @@ export default function Preloader() {
             initial={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={curtainTransition}
-            // Dispara o evento para o Hero assim que a cortina começa a abrir
             onAnimationStart={finishPreloader} 
             className="absolute top-0 left-0 w-1/2 h-full z-10"
             style={{ backgroundColor: 'var(--color-dark)' }}
@@ -61,30 +60,31 @@ export default function Preloader() {
             transition={{ duration: 0.3 }}
             className="relative z-20 flex flex-col justify-end h-full p-6 md:p-10"
           >
+            {/* Spinner Duplo Centralizado */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative flex items-center justify-center w-20 h-20">
+                {/* Spinner Fora: Primary (Sentido Horário) */}
                 <div
                   className="absolute inset-0 rounded-full border-4 border-t-transparent animate-spin"
                   style={{
                     borderColor: 'var(--color-primary-2)',
-                    borderTopColor: 'var(--color-secondary)',
-                    animationDuration: '1s',
+                    borderTopColor: 'var(--color-primary)',
+                    animationDuration: '1.2s',
                   }}
                 />
+
+                {/* Spinner Dentro: Secondary (Sentido Anti-Horário) */}
                 <div
-                  className="w-12 h-12 rounded-full border-4 border-b-transparent animate-[spin_0.8s_linear_infinite_reverse]"
+                  className="w-11 h-11 rounded-full border-4 border-b-transparent animate-[spin_0.8s_linear_infinite_reverse]"
                   style={{
-                    borderColor: 'var(--color-neutral)',
-                    borderBottomColor: 'var(--color-primary)',
+                    borderColor: 'var(--color-neutral-dark)',
+                    borderBottomColor: 'var(--color-secondary)',
                   }}
-                />
-                <div
-                  className="w-2.5 h-2.5 rounded-full animate-ping"
-                  style={{ backgroundColor: 'var(--color-secondary)' }}
                 />
               </div>
             </div>
 
+            {/* Rodapé: Barra e Percentual */}
             <div
               className="relative z-10 flex items-end justify-between border-t pt-4"
               style={{ borderColor: 'var(--color-neutral-dark)' }}
@@ -102,7 +102,7 @@ export default function Preloader() {
                 />
               </div>
               <span
-                className="font-mono text-3xl md:text-4xl font-bold tracking-tight"
+                className="font-mono text-lg md:text-2xl font-bold tracking-tight"
                 style={{ color: 'var(--color-secondary)' }}
               >
                 {percent}%

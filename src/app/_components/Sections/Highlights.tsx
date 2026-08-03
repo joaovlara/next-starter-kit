@@ -6,7 +6,7 @@ export default function Highlights() {
   return (
     <section className="">
       <StaggerContainer
-        className="container-1 carousel md:p-0 gap-6"
+        className="carousel mx-auto md:max-w-[90%]"
         staggerDelay={0.2}
       >
         {/* Banner Principal */}
@@ -35,7 +35,7 @@ export default function Highlights() {
                 <IconComponent size={24} className="text-secondary" />
               )}
               <h3>{item.title}</h3>
-              <p className="text-sm">{item.description}</p>
+              <p className="text-sm line-clamp-3">{item.description}</p>{" "}
               <span className="text-xs text-secondary pt-3">0{index + 1}</span>
             </StaggerItem>
           );
