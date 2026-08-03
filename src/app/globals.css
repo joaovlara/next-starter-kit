@@ -220,6 +220,10 @@
     @apply border-2 border-primary rounded-md transition-all duration-300 hover:border-secondary hover:shadow-primary;
   }
 
+  .border-hover-secondary {
+    @apply border-2 border-secondary rounded-md transition-all duration-300 hover:border-secondary hover:shadow-secondary;
+  }
+
   .border-hover-accent {
     @apply border-2 border-accent rounded-md transition-all duration-300 hover:border-secondary hover:shadow-accent;
   }

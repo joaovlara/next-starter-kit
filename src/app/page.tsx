@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <>
       <main>
+        <WhatsAppButton />
         <Hero />
         <GetApp />
         <Highlights />
@@ -19,10 +20,8 @@ export default function Home() {
         <Services />
         <Testimonials />
         <CTA />
-        <Preloader
-         />
+        <Preloader />
       </main>
-      {/* <WhatsAppButton /> */}
     </>
   );
 }

@@ -41,7 +41,7 @@ export default function GetApp() {
   return (
     <section className="px-6 pt-0 md:p-0">
       <article className="container-1">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6">
           {/* Texto surgindo da esquerda */}
           <motion.p
             variants={textVariants}

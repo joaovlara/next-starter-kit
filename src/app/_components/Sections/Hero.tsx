@@ -43,7 +43,7 @@ export default function Hero() {
 
   return (
     <section className="px-6 md:p-0">
-      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[70vh] h-[70vh] bg-gradient-t-dark b-shadow-secondary">
+      <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[75vh] h-[70vh] bg-gradient-t-dark b-shadow-secondary">
         {/* Imagem de Fundo com Fade-In Sincronizado */}
         <Image
           src="/images/condominio.jpg"
