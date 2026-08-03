@@ -7,7 +7,7 @@ import { motion, Variants } from "framer-motion";
 import SplitText from "../Animations/SplitText";
 import { useLoading } from "../../_context/LoadingContext"; 
 
-// Animações de entrada
+// Animações de entrada com tempos estendidos
 const paragraphVariants: Variants = {
   hidden: { opacity: 0, y: 15 },
   visible: {
@@ -16,7 +16,7 @@ const paragraphVariants: Variants = {
     transition: {
       duration: 0.6,
       ease: "easeOut",
-      delay: 0.3,
+      delay: 1.9, // Inicia após a conclusão completa do H1
     },
   },
 };
@@ -29,7 +29,7 @@ const buttonVariants: Variants = {
     transition: {
       duration: 0.6,
       ease: "easeOut",
-      delay: 0.9,
+      delay: 1.6, // Inicia após a exibição do parágrafo
     },
   },
 };
