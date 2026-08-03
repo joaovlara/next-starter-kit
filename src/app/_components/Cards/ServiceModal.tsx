@@ -1,0 +1,145 @@
+"use client";
+
+import { useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, CheckCircle2, ArrowRight } from "lucide-react";
+import { ElementType } from "react";
+import { infos } from "../../_data/data";
+
+export interface ServiceItem {
+  id?: string;
+  title: string;
+  description: string;
+  details?: string[];
+  icon: ElementType;
+}
+
+interface ServiceModalProps {
+  service?: ServiceItem | null;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function ServiceModal({ service, isOpen, onClose }: ServiceModalProps) {
+  // Trava o scroll do body e escuta a tecla ESC
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!service) return null;
+
+  const Icon = service.icon;
+  const defaultDetails = [
+    "Atendimento personalizado e dedicado",
+    "Profissionais altamente qualificados",
+    "Padrão de execução rigoroso",
+    "Suporte contínuo para você ou seu condomínio",
+  ];
+  const detailsList = service.details || defaultDetails;
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 overflow-y-auto">
+          {/* Fundo escuro desfocado */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-dark/80 backdrop-blur-sm"
+          />
+
+          {/* Card do Modal */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="relative w-full max-w-2xl bg-soft-dark border border-primary b-shadow-secondary rounded p-6 md:p-8 z-10 overflow-hidden my-auto"
+          >
+            {/* Botão Fechar */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 p-2 rounded-full bg-primary-2/40 text-olive-300 hover:text-secondary hover:bg-primary-2 transition-colors"
+              aria-label="Fechar modal"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Cabeçalho */}
+            <div className="flex items-center gap-4 mb-6 pr-8">
+              <div className="p-4 rounded bg-primary text-secondary shrink-0">
+                <Icon className="w-8 h-8" />
+              </div>
+              <div>
+                <span className="text-xs uppercase tracking-widest text-secondary font-semibold">
+                  Detalhes do Serviço
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold uppercase text-olive-200">
+                  {service.title}
+                </h3>
+              </div>
+            </div>
+
+            {/* Descrição Completa */}
+            <div className="mb-6">
+              <p className="text-olive-300 text-sm md:text-base leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+
+            {/* Lista de Diferenciais */}
+            <div className="mb-8 p-4 rounded bg-neutral-dark/60 border border-primary-2/40">
+              <h4 className="text-xs uppercase font-semibold text-secondary tracking-wider mb-3">
+                O que está incluso
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {detailsList.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-2.5 text-xs md:text-sm text-olive-200"
+                  >
+                    <CheckCircle2
+                      size={16}
+                      className="text-secondary shrink-0"
+                    />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Rodapé com Chamada para Ação */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-primary-2/40">
+              <span className="text-xs text-olive-300/70 hidden sm:inline-block">
+                Fale diretamente com nossa equipe.
+              </span>
+              <a
+                href={infos.wppApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary w-full sm:w-auto rounded flex items-center justify-center gap-2 text-sm uppercase tracking-wider"
+              >
+                <span>Solicitar Orçamento</span>
+                <ArrowRight size={16} />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
+  );
+}
