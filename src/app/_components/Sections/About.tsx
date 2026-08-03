@@ -23,7 +23,7 @@ export default function About() {
   return (
     <section className="bg-texture-pattern min-h-[35vh] flex items-center justify-center p-6">
       <article className="container-1 text-center space-y-3">
-        <h2 className="h1">
+        <h2 className="text-xl md:text-5xl">
           <SplitText text={about.h2} delay={0.18} />
         </h2>
         <motion.div
@@ -32,7 +32,7 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <p className="text text-xl upper mb-12">{about.text}</p>
+          <p className="text mb-12">{about.text}</p>
         </motion.div>
         <AnimatedSeparator />
       </article>

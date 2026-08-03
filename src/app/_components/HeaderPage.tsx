@@ -35,7 +35,7 @@ export default function HeaderPage({
       <article className="container-1">
         <div className="p-6 space-y-3">
           {/* Título com animação SplitText */}
-          <h1 className="text-6xl">
+          <h1 className="md:text-6xl">
             <SplitText text={title} delay={0.12} />
           </h1>
 

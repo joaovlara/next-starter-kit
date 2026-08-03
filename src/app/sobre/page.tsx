@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import HeaderPage from "../_components/HeaderPage";
 import CTA from "../_components/Sections/CTA";
 import { aboutHeader } from "../_data/data";
+import Testimonials from "../_components/Sections/Testimonials";
 
 // Variantes para entrada da esquerda
 const fadeInLeft: Variants = {
@@ -94,7 +95,7 @@ export default function Sobre() {
           </div>
         </article>
       </section>
-
+      <Testimonials />
       <CTA />
     </main>
   );
