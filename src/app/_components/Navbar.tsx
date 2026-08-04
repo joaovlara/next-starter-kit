@@ -71,6 +71,9 @@ const Navbar = () => {
           <Link href="/fale-conosco" className="btn-nav">
             Fale Conosco
           </Link>
+          <a href="" className="btn-nav2 ml-4">
+            Acessar Boleto
+          </a>
         </div>
 
         {/* BOTÃO MENU MOBILE */}
@@ -104,14 +107,18 @@ const Navbar = () => {
                 </Link>
               );
             })}
+
+            <Link
+              href="/fale-conosco"
+              className="btn-nav mt-4 block w-full text-center"
+              onClick={() => setIsOpen(false)}
+            >
+              Fale Conosco
+            </Link>
+            <a href="" className="btn-nav2 block w-full text-center">
+              Acessar Boleto
+            </a>
           </div>
-          <Link
-            href="/fale-conosco"
-            className="btn-nav mt-4 block w-full text-center"
-            onClick={() => setIsOpen(false)}
-          >
-            Fale Conosco
-          </Link>
         </div>
       )}
     </nav>
