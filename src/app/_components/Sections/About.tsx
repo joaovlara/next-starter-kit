@@ -21,7 +21,7 @@ const fadeInVariants: Variants = {
 
 export default function About() {
   return (
-    <section className="bg-texture-pattern min-h-[35vh] flex items-center justify-center p-6">
+    <section className="bg-texture-pattern min-h-[35vh] flex items-center justify-center px-6 py-30">
       <article className="container-1 text-center space-y-3">
         <h2 className="text-xl md:text-5xl">
           <SplitText text={about.h2} delay={0.18} />

@@ -31,11 +31,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`z-50 w-full bg-dark transition-all duration-300 md:relative ${
+      className={`z-50 w-full bg-dark transition-all duration-300 lg:relative ${
         isFixed ? "fixed top-0 left-0 shadow-md" : "relative"
       }`}
     >
-      <section className="mx-auto flex w-full max-w-[90%] items-center justify-between py-6 md:px-0">
+      <section className="mx-auto flex w-full max-w-[90%] items-center justify-between py-6 lg:px-0">
         {/* Logo Clicável */}
         <div className="shrink-0">
           <Link href="/">
@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
 
         {/* NAVEGAÇÃO DESKTOP */}
-        <div className="hidden flex-1 items-center justify-center gap-6 font-semibold md:flex">
+        <div className="hidden flex-1 items-center justify-center gap-6 font-semibold lg:flex">
           {routes.map((rota, index) => {
             const isActive = pathname === rota.href;
             return (
@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
 
         {/* CTA DESKTOP */}
-        <div className="hidden items-center justify-end md:flex">
+        <div className="hidden items-center justify-end lg:flex">
           <Link href="/fale-conosco" className="btn-nav">
             Fale Conosco
           </Link>
@@ -79,7 +79,7 @@ const Navbar = () => {
         {/* BOTÃO MENU MOBILE */}
         <button
           type="button"
-          className="rounded p-2 md:hidden"
+          className="rounded p-2 lg:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-expanded={isOpen}
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* MENU MOBILE */}
       {isOpen && (
-        <div className="b-shadow-secondary bg-dark p-6 md:hidden">
+        <div className="b-shadow-secondary bg-dark p-6 lg:hidden">
           <div className="flex flex-col gap-4 font-semibold">
             {routes.map((rota, index) => {
               const isActive = pathname === rota.href;

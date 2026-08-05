@@ -7,8 +7,8 @@ import { StaggerContainer, StaggerItem } from "../Animations/StaggerContainer";
 
 export default function Testimonials() {
   return (
-    <section className="relative overflow-hidden">
-      <article className="container-1 max-w-5xl mx-auto">
+    <section className="relative overflow-hidden pb-9">
+      <article className="container-1 max-w-7xl mx-auto">
         {/* Cabeçalho */}
         <div className="flex flex-col items-center text-center mb-8">
           <span className="text-[11px] uppercase tracking-widest text-secondary font-semibold mb-1">
@@ -25,7 +25,7 @@ export default function Testimonials() {
           {testimonials.items.map((item) => (
             <StaggerItem
               key={item.id}
-              className="testimonial-card-item group relative bg-soft-dark p-5 flex flex-col items-center text-center justify-between transition-all duration-300 max-w-sm mx-auto w-full b-shadow-primary-2"
+              className="testimonial-card-item group relative bg-soft-dark p-6 md:p-7 flex flex-col items-center text-center justify-between transition-all duration-300 md:max-w-[30rem] mx-auto w-full min-h-[280px] md:min-h-[300px] b-shadow-primary-2"
             >
               {/* Ícone de Aspas */}
               <div className="mb-2 flex justify-center">

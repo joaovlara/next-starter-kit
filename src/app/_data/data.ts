@@ -11,15 +11,16 @@ import {
 } from "react-icons/fa";
 import {
  Apple,
+ BarChart3,
+ BellRing,
  CircleDollarSign,
- Cloud,
- Code,
  Cpu,
- Database,
+ FileCheck2,
  Headphones,
- Layout,
+ ReceiptText,
+ Scale,
  ShieldCheck,
- Smartphone,
+ Wallet,
 } from "lucide-react";
 import { BsBuildingCheck } from "react-icons/bs";
 import { details } from "framer-motion/client";
@@ -169,7 +170,7 @@ export const services = [
    details: [
      "Processo estruturado para recuperação de pagamentos com comunicação clara e foco em resultados.",
    ],
-   icon: Code,
+   icon: BellRing,
  },
  {
    id: "repasse-garantido",
@@ -179,7 +180,7 @@ export const services = [
    details: [
      "Fluxo de repasse organizado para manter a previsibilidade financeira do condomínio.",
    ],
-   icon: Layout,
+   icon: Wallet,
  },
  {
    id: "relatorios-completos",
@@ -189,7 +190,7 @@ export const services = [
    details: [
      "Informações precisas para tomada de decisão com acompanhamento em tempo real.",
    ],
-   icon: Smartphone,
+   icon: BarChart3,
  },
  {
    id: "emissao-de-boletos",
@@ -199,7 +200,7 @@ export const services = [
    details: [
      "Processo simplificado para emissão, envio e organização dos boletos do condomínio.",
    ],
-   icon: Database,
+   icon: ReceiptText,
  },
  {
    id: "fluxo-de-caixa-saudavel",
@@ -209,7 +210,7 @@ export const services = [
    details: [
      "Acompanhamento contínuo do recebimento para preservar a saúde financeira da administração.",
    ],
-   icon: ShieldCheck,
+   icon: CircleDollarSign,
  },
  {
    id: "concilacao-e-controle-financeiro",
@@ -219,7 +220,7 @@ export const services = [
    details: [
      "Conciliação eficiente dos dados financeiros com maior clareza e controle operacional.",
    ],
-   icon: Cloud,
+   icon: Scale,
  },
 ];
 
