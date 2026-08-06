@@ -40,10 +40,10 @@ const Navbar = () => {
         <div className="shrink-0">
           <Link href="/">
             <Image
-              src="/images/image 9.png"
+              src="/images/iz-logo-principal- 2.png"
               alt="Logo"
-              width={50}
-              height={50}
+              width={150}
+              height={100}
             />
           </Link>
         </div>

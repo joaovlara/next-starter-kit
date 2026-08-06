@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Coluna 1: Logo */}
           <StaggerItem className="flex justify-center items-center h-full w-full">
             <Image
-              src="/images/image 9.png"
+              src="/images/iz-simbolo-01.png"
               alt="Logo"
               width={160}
               height={160}
