@@ -275,7 +275,7 @@ export const aboutHeader = {
  section1Title: "Texto sobre a historia e valores",
  section1Text:
    "A IZ Garantia Condominial nasceu para fortalecer a gestão financeira dos condomínios com responsabilidade, previsibilidade e tecnologia. Nossa operação combina cuidado de perto com a rotina administrativa e a visão de longo prazo para proteger a saúde financeira de cada condomínio.",
- image1path: "/images/image 9.png",
+ image1path: "/images/tech-house.jpg",
  image1Alt: "Imagem do escritório ou logo",
  section2Title: "Texto sobre o propósito e futuro da empresa",
  section2Text:

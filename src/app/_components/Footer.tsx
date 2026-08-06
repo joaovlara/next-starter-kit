@@ -90,7 +90,7 @@ export default function Footer() {
         </StaggerContainer>
 
         {/* Direitos Reservados */}
-        <article>
+        <article className="p-3">
           <p className="text-sm">
             © Todos os direitos reservados {currentYear}
           </p>
