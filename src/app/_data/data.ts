@@ -1,4 +1,3 @@
-import type { ElementType } from "react";
 import {
  FaApple,
  FaEnvelope,
@@ -27,8 +26,8 @@ import { details } from "framer-motion/client";
 
 
 export const infos = {
- name: "nome da empresa",
- adress: "Endereço daEmpresa, 000, Brasil",
+ name: "IZ Garantia Condominial",
+ adress: "Av. Lins de Vasconcelos, 3464, Sala 51, 5º andar. Vila Mariana, São Paulo/SP",
  phone: "99 99999-9999",
  mail: "email@email.com",
  instagram: "https://www.instagram.com",
@@ -43,7 +42,7 @@ export const social = [
    icon: FaWhatsapp,
    name: "WhatsApp",
    url: infos.wppApp,
- },
+ }, 
  {
    icon: FaInstagram,
    name: "Instagram",
@@ -95,7 +94,7 @@ export const contato = [
  },
  {
    icon: FaInstagram,
-   name: "@instagram",
+   name: "@izgarantiacondominial",
    value: infos.instagram,
  },
 ];
@@ -115,7 +114,7 @@ export const routes = [
 export const hero = {
  h1: "Tecnologia e segurança para o seu condomínio",
  text: "O seu condomínio com tecnologia, equilíbrio financeiro e inadimplência zero.",
- link: "link do whatsApp",
+ link: infos.wppApp,
 };
 
 
@@ -226,10 +225,8 @@ export const services = [
 
 
 export const cta = {
- eyebrow: "CTA",
  h2: "Fale com um especialista agora e descubra como podemos ajudar seu condomínio",
- text: "Solução convidativa",
- linkCta: "linkdocta",
+ linkCta: infos.wppApp,
  buttonLabel: "Fale Conosco",
 };
 
@@ -240,18 +237,18 @@ export const testimonials = {
  items: [
    {
      id: 1,
-     nome: "Carlos Eduardo",
-     funcao: "Proprietário",
+     nome: "Fernanda Ribeiro",
+     funcao: "Moradora",
      depoimento:
-       "A experiência de morar neste condomínio superou todas as nossas expectativas. O acabamento e a segurança são de primeiríssima qualidade.",
+       "O atendimento é sempre rápido e personalizado. Eles realmente entendem as necessidades do condomínio e buscam soluções práticas.",
      imagem: "/images/avatars/user1.jpg",
    },
    {
      id: 2,
-     nome: "Mariana Siqueira",
-     funcao: "Moradora",
+     nome: "Eduardo Santos",
+     funcao: "Conselheiro Fiscal",
      depoimento:
-       "A tranquilidade do local aliada à estrutura completa de lazer fez toda a diferença para o bem-estar da minha família.",
+       "Os relatórios completos nos permitem acompanhar tudo de perto. Hoje me sinto muito mais seguro em relação às contas do condomínio.",
      imagem: "/images/avatars/user2.jpg",
    },
    {
@@ -271,12 +268,15 @@ export const testimonials = {
 
 export const aboutHeader = {
  h1: "Mais do que garantia: uma operação digital para manter o condomínio saudável",
- text: "texto breve",
- section1Title: "Texto sobre a historia e valores",
- section1Text:
-   "A IZ Garantia Condominial nasceu para fortalecer a gestão financeira dos condomínios com responsabilidade, previsibilidade e tecnologia. Nossa operação combina cuidado de perto com a rotina administrativa e a visão de longo prazo para proteger a saúde financeira de cada condomínio.",
+ text: "Conheça nossa história, valores e soluções em gestão condominial. Mais de 40 anos de experiência garantindo tranquilidade, segurança e eficiência para síndicos e condôminos.",
+ 
+ 
+ section1Title: "INSIRA AQUI UM Texto sobre a historia e valores",
+ section1Text:"A IZ Garantia Condominial nasceu para fortalecer a gestão financeira dos condomínios com responsabilidade, previsibilidade e tecnologia. Nossa operação combina cuidado de perto com a rotina administrativa e a visão de longo prazo para proteger a saúde financeira de cada condomínio.",
  image1path: "/images/tech-house.jpg",
  image1Alt: "Imagem do escritório ou logo",
+
+ 
  section2Title: "Texto sobre o propósito e futuro da empresa",
  section2Text:
    "Nosso propósito é transformar a gestão condominial em um processo mais simples, transparente e sustentável. Com foco em inovação e atendimento especializado, seguimos construindo uma operação que apoia síndicos, administradoras e moradores com confiança e eficiência.",
@@ -306,9 +306,6 @@ export const contactHeader = {
 };
 
 
-//Footer Page
-
-
 export const footer = {
  social: {
    social,
@@ -319,6 +316,3 @@ export const footer = {
    social,
  },
 };
-
-
-

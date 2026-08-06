@@ -33,17 +33,12 @@ export default function CTA() {
         />
       </div>
 
-      <article className="container-1 w-full flex flex-col justify-between space-y-6 relative z-10">
-        <div className="space-y-3">
-          <p className="text-secondary">{cta.eyebrow}</p>
+      <article className="container-1 w-full flex flex-col justify-between relative z-10">
+        <div className="space-y-6">
 
-          <h3 className="h1">
+          <h3 className="text-3xl upp md:text-5xl">
             <SplitText text={cta.h2} delay={0.3} />
           </h3>
-
-          <p className="text">
-            <SplitText text={cta.text} delay={0.6} />
-          </p>
 
           <motion.div
             variants={fadeInVariants}
