@@ -93,6 +93,36 @@ export default function Sobre() {
               <p className="text">{aboutHeader.section2Text}</p>
             </motion.div>
           </div>
+
+          {/* Terceira Linha: Texto na esquerda (vem da esq), Imagem na direita (vem da dir) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <motion.div
+              variants={fadeInLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="space-y-3 bg-texture-pattern"
+            >
+              <h2>{aboutHeader.section3Title}</h2>
+              <p className="text">{aboutHeader.section3Text}</p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="flex justify-center"
+            >
+              <Image
+                src={aboutHeader.image3path}
+                alt={aboutHeader.image3Alt}
+                width={500}
+                height={300}
+                className="rounded shadow-lg"
+              />
+            </motion.div>
+          </div>
         </article>
       </section>
       <Testimonials />

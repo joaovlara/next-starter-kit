@@ -24,7 +24,7 @@ export default function CTA() {
       {/* Imagem Fixa de Fundo */}
       <div className="fixed inset-0 -z-10 h-full w-full">
         <Image
-          src="/images/condominio.jpg"
+          src="/images/tech-house.jpg"
           alt="Condomínio"
           fill
           priority

@@ -12,7 +12,7 @@ export default function Highlights() {
         {/* Banner Principal */}
         <StaggerItem className="highlight-card-banner bg-gradient-t-dark relative">
           <Image
-            src="/images/diferencial-image.jpg"
+            src="/images/conected-house.png"
             alt="Foto do condomínio"
             fill
             className="object-cover -z-10 opacity-60"
@@ -35,7 +35,7 @@ export default function Highlights() {
                 <IconComponent size={24} className="text-secondary-2/80" />
               )}
               <h3>{item.title}</h3>
-              <p className="text-sm line-clamp-3">{item.description}</p>{" "}
+              <p className="text-sm">{item.description}</p>
               <span className="text-xs text-secondary/70 pt-3">0{index + 1}</span>
             </StaggerItem>
           );

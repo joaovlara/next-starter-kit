@@ -23,7 +23,7 @@ export function ServiceCardPage({
     >
       <div>
         <div className="flex items-center justify-between mb-4">
-          <div className="p-3 rounded bg-primary-2/50 text-secondary group-hover:bg-primary transition-colors">
+          <div className="p-3 rounded-full bg-primary-2/50 text-secondary group-hover:bg-primary transition-colors">
             <Icon className="w-7 h-7" />
           </div>
           <ArrowUpRight className="w-5 h-5 text-secondary/50 group-hover:text-secondary transition-all" />

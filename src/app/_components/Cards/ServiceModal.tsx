@@ -81,7 +81,7 @@ export function ServiceModal({ service, isOpen, onClose }: ServiceModalProps) {
 
             {/* Cabeçalho */}
             <div className="flex items-center gap-4 mb-6 pr-8">
-              <div className="p-4 rounded bg-primary text-secondary shrink-0">
+              <div className="p-4 rounded-full bg-primary text-secondary shrink-0">
                 <Icon className="w-8 h-8" />
               </div>
               <div>
@@ -99,43 +99,6 @@ export function ServiceModal({ service, isOpen, onClose }: ServiceModalProps) {
               <p className="text-olive-300 text-sm md:text-base leading-relaxed">
                 {service.description}
               </p>
-            </div>
-
-            {/* Lista de Diferenciais */}
-            <div className="mb-8 p-4 rounded bg-neutral-dark/60 border border-primary-2/40">
-              <h4 className="text-xs uppercase font-semibold text-secondary tracking-wider mb-3">
-                O que está incluso
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {detailsList.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2.5 text-xs md:text-sm text-olive-200"
-                  >
-                    <CheckCircle2
-                      size={16}
-                      className="text-secondary shrink-0"
-                    />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Rodapé com Chamada para Ação */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-primary-2/40">
-              <span className="text-xs text-olive-300/70 hidden sm:inline-block">
-                Fale diretamente com nossa equipe.
-              </span>
-              <a
-                href={infos.wppApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full sm:w-auto rounded flex items-center justify-center gap-2 text-sm uppercase tracking-wider"
-              >
-                <span>Solicitar Orçamento</span>
-                <ArrowRight size={16} />
-              </a>
             </div>
           </motion.div>
         </div>

@@ -273,15 +273,24 @@ export const aboutHeader = {
  
  section1Title: "INSIRA AQUI UM Texto sobre a historia e valores",
  section1Text:"A IZ Garantia Condominial nasceu para fortalecer a gestão financeira dos condomínios com responsabilidade, previsibilidade e tecnologia. Nossa operação combina cuidado de perto com a rotina administrativa e a visão de longo prazo para proteger a saúde financeira de cada condomínio.",
- image1path: "/images/tech-house.jpg",
+ image1path: "/images/condominio.jpg",
  image1Alt: "Imagem do escritório ou logo",
 
  
  section2Title: "Texto sobre o propósito e futuro da empresa",
  section2Text:
    "Nosso propósito é transformar a gestão condominial em um processo mais simples, transparente e sustentável. Com foco em inovação e atendimento especializado, seguimos construindo uma operação que apoia síndicos, administradoras e moradores com confiança e eficiência.",
- image2path: "/images/image 9.png",
+ image2path: "/images/tech-office.png",
  image2Alt: "Imagem relacionada à área de atuação",
+
+
+ section3Title: "Texto sobre o grupo que a empresa faz parte",
+ section3Text:
+   "Nosso propósito é transformar a gestão condominial em um processo mais simples, transparente e sustentável. Com foco em inovação e atendimento especializado, seguimos construindo uma operação que apoia síndicos, administradoras e moradores com confiança e eficiência.",
+ image3path: "/images/selo-rede.png",
+ image3Alt: "Selo da Rede: RedeGarantidora",
+
+
 };
 
 
@@ -292,7 +301,7 @@ export const servicesHeader = {
  h1: "Nossos Serviços",
  text: "Explore as soluções e recursos que entregamos com foco em qualidade e resultado.",
  eyebrow: "O que oferecemos",
- title: "Nossos Serviços Exclusivos",
+ title: "Nossos Serviços",
 };
 
 
