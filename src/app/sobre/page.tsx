@@ -119,7 +119,7 @@ export default function Sobre() {
                 alt={aboutHeader.image3Alt}
                 width={500}
                 height={300}
-                className="rounded shadow-lg"
+                className="rounded-4xl shadow-lg"
               />
             </motion.div>
           </div>
