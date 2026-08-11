@@ -12,15 +12,24 @@
 import type { Metadata } from "next";
 
 // Variáveis globais
-const url = "url";
-const title = "Titulo";
-const description = "Descrição";
+const url = "https://izgarantia.com.br";
+const title = "IZ Garantia Condominial | Gestão Financeira para Condomínios";
+const description =
+  "Soluções para condomínios com repasse garantido, cobrança amigável, relatórios completos e gestão financeira mais segura e eficiente.";
 const image = `${url}/preview.jpg`;
 
 export const seoConfig: Metadata = {
   title,
   description,
-  keywords: ["Next.js", "ReactJs", "TailwindCSS"],
+  keywords: [
+    "gestão condominial",
+    "condomínio",
+    "repasse garantido",
+    "cobrança amigável",
+    "inadimplência zero",
+    "IZ Garantia Condominial",
+    "administração de condomínios",
+  ],
   alternates: {
     canonical: url,
   },
@@ -50,5 +59,5 @@ export const seoConfig: Metadata = {
     description,
     images: [image],
   },
-  authors: [{ name: "João Lara", url: "" }],
+  authors: [{ name: "IZ Garantia Condominial", url }],
 };
