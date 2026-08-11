@@ -117,7 +117,7 @@ export default function Sobre() {
               <Image
                 src={aboutHeader.image3path}
                 alt={aboutHeader.image3Alt}
-                width={500}
+                width={400}
                 height={300}
                 className="rounded-4xl shadow-lg"
               />

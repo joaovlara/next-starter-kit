@@ -12,7 +12,7 @@ export default function Highlights() {
         {/* Banner Principal */}
         <StaggerItem className="highlight-card-banner bg-gradient-t-dark relative">
           <Image
-            src="/images/conected-house.png"
+            src="/images/sean-benesh-pG7_hF2gOmQ-unsplash.jpg"
             alt="Foto do condomínio"
             fill
             className="object-cover -z-10 opacity-60"
