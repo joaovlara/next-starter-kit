@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://izgarantia.com.br/sitemap.xml
