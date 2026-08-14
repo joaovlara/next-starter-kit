@@ -6,6 +6,7 @@ import About from "./_components/Sections/About";
 import Services from "./_components/Sections/Services";
 import Preloader from "./_components/Animations/Preloader";
 import Testimonials from "./_components/Sections/Testimonials";
+import DownloadApp from "./_components/Sections/DownloadApp";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Highlights />
         <About />
         <Services />
+        <DownloadApp />
         <Testimonials />
         <CTA />
         <Preloader />

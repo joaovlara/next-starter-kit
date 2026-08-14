@@ -29,6 +29,8 @@ export const infos = {
   wppApp: "https://wa.me/5511946271110",
   appleStore: "https://www.appstore.com",
   playStore: "https://www.playstore.com",
+  appleStoreQRCode: "/images/selo-rede.jpg",
+  playStoreQRCode:  "/images/selo-rede.jpg",
 };
 
 export const social = [
@@ -218,6 +220,17 @@ export const services = [
     icon: Cpu,
   },
 ];
+
+export const downloadApp = {
+
+  title: "Baixe Nosso Aplicativo",
+  subtitle: "Disponível para iOS e Android",
+  description: "Acesse todos os serviços e conteúdos na palma da sua mão. Faça o download direto da sua loja de aplicativos ou escaneie o QR Code correspondente.",
+  appleLink: infos.appleStore,
+  googleLink: infos.playStore,
+  appleQrText: infos.appleStoreQRCode,
+  googleQrText: infos.playStoreQRCode,
+};
 
 export const cta = {
   h2: "*Revolucione a gestão* do seu condomínio e fale com um dos nossos especialistas",

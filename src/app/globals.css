@@ -7,10 +7,10 @@
   /* Colors */
   --color-primary: #115945;
   --color-primary-2: #193930;
-  --color-primary-3: #2B7818;
+  --color-primary-3: #2b7818;
   --color-secondary: #bf9850;
   --color-secondary-2: #b0812a;
-  --color-accent: #2B7818;
+  --color-accent: #2b7818;
   --color-neutral: #2f3634;
   --color-neutral-dark: #242424;
   --color-soft-dark: #121212;
@@ -136,6 +136,22 @@
 
   .service-card-description {
     @apply text-sm line-clamp-4;
+  }
+
+  .download-section-container {
+    @apply relative min-h-[65vh] flex items-center justify-center overflow-hidden px-6 ;
+  }
+
+  .download-grid-2x2 {
+    @apply grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-lg z-10;
+  }
+
+  .download-grid-card {
+    @apply flex flex-col items-center justify-center p-3 sm:p-4 bg-soft-dark/80 backdrop-blur-sm border border-primary-2 rounded transition-all duration-300 hover:border-secondary;
+  }
+
+  .download-btn-card {
+    @apply font-semibold flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 p-3 sm:p-4 bg-soft-dark border border-primary text-olive-200 rounded hover:bg-primary hover:text-dark transition-all duration-300 z-10 text-center sm:text-left;
   }
 }
 
