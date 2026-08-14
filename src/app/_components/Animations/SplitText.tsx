@@ -14,7 +14,7 @@ export default function SplitText({
   text = "",
   className = "",
   delay = 0.03,
-  highlightClass = "text-primary",
+  highlightClass = "text-accent",
   secondaryHighlightClass = "text-secondary-2",
 }: SplitTextProps) {
   if (!text) return null;
@@ -51,12 +51,12 @@ export default function SplitText({
   };
 
   const wordVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.2,
         ease: "easeOut",
       },
     },

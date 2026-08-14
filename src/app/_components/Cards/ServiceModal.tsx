@@ -10,7 +10,7 @@ export interface ServiceItem {
   id?: string;
   title: string;
   description: string;
-  details?: string[];
+  details?: string;
   icon: ElementType;
 }
 
@@ -85,9 +85,6 @@ export function ServiceModal({ service, isOpen, onClose }: ServiceModalProps) {
                 <Icon className="w-8 h-8" />
               </div>
               <div>
-                <span className="text-xs uppercase tracking-widest text-secondary font-semibold">
-                  Detalhes do Serviço
-                </span>
                 <h3 className="text-2xl md:text-3xl font-bold uppercase text-olive-200">
                   {service.title}
                 </h3>
@@ -95,10 +92,11 @@ export function ServiceModal({ service, isOpen, onClose }: ServiceModalProps) {
             </div>
 
             {/* Descrição Completa */}
-            <div className="mb-6">
-              <p className="text-olive-300 text-sm md:text-base leading-relaxed">
+            <div className="mb-6 space-y-3">
+              <p className="text-olive-300 text-base leading-relaxed">
                 {service.description}
               </p>
+              <p className="text-olive-400 text-sm">{service.details}</p>
             </div>
           </motion.div>
         </div>

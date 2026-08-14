@@ -2,10 +2,12 @@
 
 import { ElementType } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { details } from "framer-motion/client";
 
 export interface ServiceCardProps {
   title: string;
   description: string;
+  details: string;
   icon: ElementType;
   onClick: () => void;
 }
@@ -13,6 +15,7 @@ export interface ServiceCardProps {
 export function ServiceCardPage({
   title,
   description,
+  details,
   icon: Icon,
   onClick,
 }: ServiceCardProps) {
@@ -29,13 +32,12 @@ export function ServiceCardPage({
           <ArrowUpRight className="w-5 h-5 text-secondary/50 group-hover:text-secondary transition-all" />
         </div>
 
-        <h3 className="text-xl font-bold uppercase text-olive-200 mb-2">
-          {title}
-        </h3>
+      <div className="space-y-3">
+        <h3 className="text-xl font-bold uppercase text-olive-200 mb-2">{title}</h3>
+        <p className="text-olive-300 text-sm leading-relaxed">{description}</p>
+        <p className="text-olive-400 text-xs leading-relaxed">{details}</p>
+      </div>
 
-        <p className="text-olive-300 text-sm leading-relaxed line-clamp-3">
-          {description}
-        </p>
       </div>
 
       <div className="pt-4 mt-6 border-t border-primary/20 flex items-center justify-between text-xs font-semibold text-secondary uppercase tracking-wider">

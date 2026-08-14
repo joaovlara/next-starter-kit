@@ -6,7 +6,10 @@ import CTA from "../_components/Sections/CTA";
 import { services, servicesHeader } from "../_data/data";
 import { ServiceCardPage } from "../_components/Cards/ServiceCardPage";
 import { ServiceModal } from "../_components/Cards/ServiceModal";
-import { StaggerContainer, StaggerItem } from "../_components/Animations/StaggerContainer";
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "../_components/Animations/StaggerContainer";
 
 export default function ServicosPage() {
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -62,6 +65,7 @@ export default function ServicosPage() {
                   <ServiceCardPage
                     title={item.title}
                     description={item.description}
+                    details={item.details}
                     icon={item.icon}
                     onClick={() => handleOpenModal(serviceId)}
                   />

@@ -154,64 +154,67 @@ export const services = [
   {
     id: "cobranca-amigavel",
     title: "Cobrança Amigável",
-    description: "Equipe para cobrança dos inadimplentes, inclusive os retroativos.",
-    details: [
+    description:
+      "Equipe para cobrança dos inadimplentes, inclusive os retroativos.",
+    details:
       "Processo estruturado para recuperação de pagamentos com comunicação clara e foco em resultados.",
-    ],
+
     icon: BellRing,
   },
   {
     id: "repasse-garantido",
     title: "Repasse garantido",
-    description: "Recebimento do valor integral das taxas condominiais todos os meses.",
-    details: [
+    description:
+      "Recebimento do valor integral das taxas condominiais todos os meses.",
+    details:
       "Fluxo de repasse organizado para manter a previsibilidade financeira do condomínio.",
-    ],
+
     icon: Wallet,
   },
   {
     id: "relatorios-completos",
     title: "Relatórios completos",
-    description: "Acesso facilitado a relatórios detalhados sobre inadimplência.",
-    details: [
+    description:
+      "Acesso facilitado a relatórios detalhados sobre inadimplência.",
+    details:
       "Informações precisas com acompanhamento em tempo real para tomadas de decisão mais assertivas.",
-    ],
     icon: BarChart3,
   },
   {
     id: "emissao-de-boletos",
     title: "Emissão de boletos",
     description: "Boletos mensais enviados aos condôminos todos os meses.",
-    details: [
+    details:
       "Processo simplificado para emissão, envio e organização dos boletos do condomínio.",
-    ],
     icon: ReceiptText,
   },
   {
     id: "fluxo-de-caixa-saudavel",
     title: "Fluxo de caixa saudável",
-    description: "Controle financeiro seguro, garantindo que as contas estejam sempre em dia.",
-    details: [
+    description:
+      "Controle financeiro seguro, garantindo que as contas estejam sempre em dia.",
+    details:
       "Acompanhamento contínuo do recebimento para preservar a saúde financeira da administração.",
-    ],
+
     icon: CircleDollarSign,
   },
   {
     id: "concilacao-e-controle-financeiro",
     title: "Conciliação e controle financeiro",
-    description: "Organização do fluxo de recebimentos, com visibilidade para apoiar a gestão.",
-    details: [
+    description:
+      "Organização do fluxo de recebimentos, com visibilidade para apoiar a gestão.",
+    details:
       "Conciliação eficiente dos dados financeiros com maior clareza e controle operacional.",
-    ],
+
     icon: Scale,
   },
   {
     id: "acompanhamento-digital",
     title: "Acompanhamento digital",
     description: "Acesso aos informativos em um ambiente rápido e digital.",
-    details: [
+    details:
       "Consulte boletos e relatórios em uma plataforma online, com agilidade, praticidade e transparência para síndicos e administradoras.",
-    ],
+
     icon: Cpu,
   },
 ];
