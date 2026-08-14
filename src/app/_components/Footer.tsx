@@ -52,11 +52,12 @@ export default function Footer() {
             <h3 className="h2 font-bold mb-2">Contato</h3>
             {contato.map((item) => {
               const Icon = item.icon;
+              
 
               return (
                 <a
                   key={item.name}
-                  href={item.value}
+                  href={item.url ? item.url : item.value}
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   {Icon && (
@@ -64,7 +65,7 @@ export default function Footer() {
                       <Icon size={18} aria-hidden="true" />
                     </span>
                   )}
-                  <span>{item.name}</span>
+                  <span>{item.value}</span>
                 </a>
               );
             })}

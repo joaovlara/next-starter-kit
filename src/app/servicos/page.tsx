@@ -45,10 +45,7 @@ export default function ServicosPage() {
         <div className="container-1 mx-auto p-0">
           {/* Cabeçalho */}
           <div className="flex flex-col items-center text-center mb-10">
-            <span className="uppercase text-secondary font-semibold mb-1">
-              {servicesHeader.eyebrow}
-            </span>
-            <h2>{servicesHeader.title}</h2>
+            <h2>{servicesHeader.eyebrow}</h2>
           </div>
 
           {/* Grid de Serviços */}

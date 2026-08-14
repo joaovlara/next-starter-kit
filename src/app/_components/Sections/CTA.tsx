@@ -11,9 +11,9 @@ const fadeInVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: "easeOut",
-      delay: 0.9,
+      delay: 0.3,
     },
   },
 };
@@ -46,7 +46,7 @@ export default function CTA() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <a href={cta.linkCta} className="btn-cta w-full md:w-70 inline-flex justify-center">
+            <a href={cta.linkCta} className="btn-cta w-full md:w-100 inline-flex justify-center">
               {cta.buttonLabel}
             </a>
           </motion.div>

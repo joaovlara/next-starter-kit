@@ -31,13 +31,13 @@ export default function ContatoPage() {
                 return (
                   <StaggerItem key={item.name}>
                     <a
-                      href={item.value}
+                      href={item.url ? item.url : item.value}
                       className="flex items-center gap-2 border-b border-primary pb-2 hover:opacity-80 transition-opacity"
                     >
                       <div className="flex items-center justify-center rounded-full bg-primary p-2">
                         {Icon && <Icon aria-hidden="true" />}
                       </div>
-                      <p>{item.name}</p>
+                      <p>{item.value}</p>
                     </a>
                   </StaggerItem>
                 );

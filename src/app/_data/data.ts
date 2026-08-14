@@ -64,11 +64,13 @@ export const contato = [
     icon: BsBuildingCheck,
     name: "Nome",
     value: infos.name,
+    url: "https://www.izgarantia.com.br",
   },
   {
     icon: FaMapPin,
     name: "Endereço",
     value: infos.adress,
+    url: "https://maps.app.goo.gl/xrmgp92QC3QWFMod8",
   },
   {
     icon: FaPhone,
@@ -83,12 +85,14 @@ export const contato = [
   {
     icon: FaWhatsapp,
     name: "WhatsApp",
-    value: infos.wppApp,
+    value: "WhatsApp",
+    url: infos.wppApp,
   },
   {
     icon: FaInstagram,
-    name: "@izgarantiacondominial",
-    value: infos.instagram,
+    name: "Instagram",
+    value: "@izgarantiacondominial",
+    url: infos.instagram,
   },
 ];
 
@@ -102,7 +106,7 @@ export const routes = [
 // Home Page
 
 export const hero = {
-  h1: "Seu condomínio com Inadimplência Zero",
+  h1: "Seu condomínio com # Inadimplência Zero #",
   text: "Tecnologia, equilíbrio financeiro e gestão simplificada",
   link: infos.wppApp,
 };
@@ -142,7 +146,7 @@ export const highlights = [
 ];
 
 export const about = {
-  h2: "Mais do que garantia: uma operação digital para manter o condomínio saudável.",
+  h2: "*Mais do que garantia:*  uma operação digital para manter o condomínio saudável.",
   text: "A IZ Garantia Condominial simplifica a gestão financeira do seu condomínio com repasse garantido, cobrança estruturada e uma operação 100% orientada por dados.",
 };
 
@@ -213,7 +217,7 @@ export const services = [
 ];
 
 export const cta = {
-  h2: "Revolucione a gestão do seu condomínio e fale com um dos nossos especialistas",
+  h2: "*Revolucione a gestão* do seu condomínio e fale com um dos nossos especialistas",
   linkCta: infos.wppApp,
   buttonLabel: "Entre em contato",
 };

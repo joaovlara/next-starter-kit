@@ -3,25 +3,49 @@
 import { motion, Variants } from "framer-motion";
 
 interface SplitTextProps {
-  text: string;
+  text?: string;
   className?: string;
   delay?: number;
+  highlightClass?: string;
+  secondaryHighlightClass?: string;
 }
 
 export default function SplitText({
-  text,
+  text = "",
   className = "",
-  delay = 0.05,
+  delay = 0.03,
+  highlightClass = "text-primary",
+  secondaryHighlightClass = "text-secondary-2",
 }: SplitTextProps) {
-  // Separa o texto em um array de palavras
-  const words = text.split(" ");
+  if (!text) return null;
+  const chunks = text.split(/(\*.*?\*|#.*?#)/g);
+  const words = chunks.flatMap((chunk) => {
+    if (!chunk) return [];
+
+    let currentClass = "";
+    let cleanText = chunk;
+    if (chunk.startsWith("*") && chunk.endsWith("*") && chunk.length > 2) {
+      currentClass = highlightClass;
+      cleanText = chunk.slice(1, -1);
+    } 
+    else if (chunk.startsWith("#") && chunk.endsWith("#") && chunk.length > 4) {
+      currentClass = secondaryHighlightClass;
+      cleanText = chunk.slice(2, -2);
+    }
+    const wordsInChunk = cleanText.split(/\s+/).filter(Boolean);
+
+    return wordsInChunk.map((word) => ({
+      text: word,
+      className: currentClass,
+    }));
+  });
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: delay, // Tempo de atraso entre cada palavra
+        staggerChildren: delay,
       },
     },
   };
@@ -32,7 +56,7 @@ export default function SplitText({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.3,
         ease: "easeOut",
       },
     },
@@ -46,13 +70,13 @@ export default function SplitText({
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
     >
-      {words.map((word, index) => (
+      {words.map((wordObj, index) => (
         <motion.span
           key={index}
           variants={wordVariants}
-          className="inline-block mr-[0.25em] whitespace-nowrap"
+          className={`inline-block mr-[0.25em] whitespace-nowrap ${wordObj.className}`}
         >
-          {word}
+          {wordObj.text}
         </motion.span>
       ))}
     </motion.span>
