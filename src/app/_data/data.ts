@@ -29,8 +29,8 @@ export const infos = {
   wppApp: "https://wa.me/5511946271110",
   appleStore: "https://www.appstore.com",
   playStore: "https://www.playstore.com",
-  appleStoreQRCode: "/images/selo-rede.jpg",
-  playStoreQRCode:  "/images/selo-rede.jpg",
+  appleStoreQRCode: "/images/qrcode.png",
+  playStoreQRCode:  "/images/qrcode.png",
 };
 
 export const social = [
@@ -278,13 +278,13 @@ export const aboutHeader = {
   section1Title: "Uma história construída com confiança.",
   section1Text:
     "Com mais de 20 anos de experiência, a IZ Garantia Condominial nasceu para fortalecer a gestão financeira dos condomínios com responsabilidade, confiabilidade e tecnologia. Nossa operação visa proteger a longo prazo a saúde financeira de cada condomínio.",
-  image1path: "/images/charlesdeluvio-Lks7vei-eAg-unsplash.jpg",
+  image1path: "/images/christin-hume-Hcfwew744z4-unsplash.jpg",
   image1Alt: "Imagem do escritório ou logo",
 
   section2Title: "O futuro da gestão condominial é mais simples, seguro e previsível.",
   section2Text:
     "Nosso propósito é transformar a gestão condominial em um processo mais simples, transparente e sustentável. Por isso, investimos continuamente em processos, ferramentas e atendimento especializado para apoiar síndicos e administradoras em uma gestão mais estratégica e preparada para o futuro.",
-  image2path: "/images/istockphoto-1598005707-612x612.jpg",
+  image2path: "/images/tech-office.jpg",
   image2Alt: "Imagem relacionada à área de atuação",
 
   section3Title: "Parte de uma rede que entende do mercado",

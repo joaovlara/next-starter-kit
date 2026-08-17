@@ -139,7 +139,7 @@
   }
 
   .download-section-container {
-    @apply relative min-h-[65vh] flex items-center justify-center overflow-hidden px-6 ;
+    @apply relative min-h-[65vh] flex items-center justify-center overflow-hidden px-6;
   }
 
   .download-grid-2x2 {
@@ -147,11 +147,11 @@
   }
 
   .download-grid-card {
-    @apply flex flex-col items-center justify-center p-3 sm:p-4 bg-soft-dark/80 backdrop-blur-sm border border-primary-2 rounded transition-all duration-300 hover:border-secondary;
+    @apply aspect-square opacity-75 flex items-center justify-center p-1 border border-primary-2 bg-soft-dark rounded;
   }
 
   .download-btn-card {
-    @apply font-semibold flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 p-3 sm:p-4 bg-soft-dark border border-primary text-olive-200 rounded hover:bg-primary hover:text-dark transition-all duration-300 z-10 text-center sm:text-left;
+    @apply flex items-center justify-between p-4 border border-primary bg-soft-dark hover:bg-primary transition-all duration-300 rounded;
   }
 }
 

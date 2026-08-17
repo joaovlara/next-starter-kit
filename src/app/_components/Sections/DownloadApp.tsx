@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
-import { FaApple, FaGooglePlay, FaQrcode } from "react-icons/fa6";
+import { FaApple, FaGooglePlay } from "react-icons/fa6";
 import SplitText from "../Animations/SplitText";
 import AnimatedSeparator from "../Animations/AnimatedSeparator";
 import { downloadApp } from "../../_data/data";
+import { MdArrowOutward } from "react-icons/md";
 
 interface DownloadAppProps {
   title?: string;
@@ -32,11 +33,21 @@ const fadeInVariants: Variants = {
 
 export default function DownloadApp({}: DownloadAppProps) {
   return (
-    <section className="download-section-container bg-texture-pattern">
-      <article className="container-1 relative z-10 w-full space-y-12">        
+    <section className="download-section-container bg-texture-pattern relative overflow-hidden">
+      {/* Background Mobile */}
+      <div className="absolute inset-0 z-0 opacity-15 pointer-events-none lg:hidden">
+        <Image
+          src="/images/phone.png"
+          alt="Imagem de Telefone para Background"
+          fill
+          className="object-cover object-center"
+        />
+      </div>
+
+      <article className="container-1 relative z-10 w-full space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Primeira Coluna: Textos */}
-          <div className="space-y-4 text-left">
+          <div className="relative space-y-4 text-left overflow-hidden lg:overflow-visible p-4 lg:p-0">
             <span className="block text-sm md:text-base font-semibold text-secondary uppercase tracking-widest">
               {downloadApp.subtitle}
             </span>
@@ -53,16 +64,16 @@ export default function DownloadApp({}: DownloadAppProps) {
             </motion.div>
           </div>
 
-          {/* Segunda Coluna: Grid 2x2 */}
+          {/* Segunda Coluna: Grid Ajustado */}
           <motion.div
             variants={fadeInVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end w-full"
           >
-            <div className="download-grid-2x2">
-              {/* Item 1: Botão App Store */}
+            <div className="grid grid-cols-2 gap-4 w-full max-w-md">
+              {/* --- LINHA 1: BOTÕES DE LINK (RETANGULARES) --- */}
               <a
                 href={downloadApp.appleLink}
                 target="_blank"
@@ -70,23 +81,14 @@ export default function DownloadApp({}: DownloadAppProps) {
                 className="download-btn-card"
                 aria-label="Download App Store"
               >
-                <span className="block text-xs uppercase text-olive-300">
-                  Disponível na <br /> App Store
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="text-xs text-olive-300">
+                    Disponível na App Store
+                  </span>
+                </div>
+                <MdArrowOutward className="text-xs text-olive-300" />
               </a>
 
-              {/* Item 2: QR Code App Store */}
-              <div className="download-grid-card">
-                <Image
-                  src={downloadApp.appleQrText}
-                  alt="QR Code App Store"
-                  width={80}
-                  height={80}
-                  className="object-contain"
-                />
-              </div>
-
-              {/* Item 3: Botão Google Play */}
               <a
                 href={downloadApp.googleLink}
                 target="_blank"
@@ -94,19 +96,32 @@ export default function DownloadApp({}: DownloadAppProps) {
                 className="download-btn-card"
                 aria-label="Download Google Play"
               >
-                <span className="block text-xs uppercase text-olive-300">
-                  Disponível no <br /> Google Play
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="text-xs text-olive-300">
+                    Disponível no Google Play
+                  </span>
+                </div>
+                <MdArrowOutward className="text-xs text-olive-300" />
               </a>
 
-              {/* Item 4: QR Code Google Play */}
-              <div className="download-grid-card">
+              {/* --- LINHA 2: QR CODES (QUADRADOS) --- */}
+              <div className="download-grid-card ">
+                <Image
+                  src={downloadApp.appleQrText}
+                  alt="QR Code App Store"
+                  width={140}
+                  height={140}
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div>
+
+              <div className="download-grid-card ">
                 <Image
                   src={downloadApp.googleQrText}
                   alt="QR Code Google Play"
-                  width={80}
-                  height={80}
-                  className="object-contain"
+                  width={140}
+                  height={140}
+                  className="w-full h-full object-contain rounded-lg"
                 />
               </div>
             </div>
