@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa6";
 import SplitText from "../Animations/SplitText";
 import AnimatedSeparator from "../Animations/AnimatedSeparator";
@@ -18,60 +17,35 @@ interface DownloadAppProps {
   googleQrText?: string;
 }
 
-const fadeInVariants: Variants = {
-  hidden: { opacity: 0, y: 15 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-      delay: 0.2,
-    },
-  },
-};
-
 export default function DownloadApp({}: DownloadAppProps) {
   return (
     <section className="download-section-container bg-texture-pattern relative overflow-hidden">
-      {/* Background Mobile */}
-      <div className="absolute inset-0 z-0 opacity-15 pointer-events-none lg:hidden">
-        <Image
-          src="/images/phone.png"
-          alt="Imagem de Telefone para Background"
-          fill
-          className="object-cover object-center"
-        />
-      </div>
-
       <article className="container-1 relative z-10 w-full space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Primeira Coluna: Textos */}
-          <div className="relative space-y-4 text-left overflow-hidden lg:overflow-visible p-4 lg:p-0">
-            <span className="block text-sm md:text-base font-semibold text-secondary uppercase tracking-widest">
+
+          {/* Primeira Coluna: Textos com imagem de fundo */}
+          <div className="relative space-y-3 text-left p-4 lg:p-0 z-10">
+            {/* Imagem de Fundo Ajustada */}
+            <Image
+              src="/images/phone.png"
+              alt="Padrão de fundo"
+              fill
+              className="absolute -z-10 md:object-left scale-125 md: md:scale-170 opacity-15"
+            />
+
+            <span className="block text-sm md:text-base font-semibold text-secondary uppercase tracking-widest relative z-10">
               {downloadApp.subtitle}
             </span>
-            <h2 className="text-2xl md:text-5xl text-olive-200">
+            <h2 className="text-2xl md:text-5xl text-olive-200 relative z-10">
               <SplitText text={downloadApp.title} delay={0.18} />
             </h2>
-            <motion.div
-              variants={fadeInVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
+            <div className="relative z-10">
               <p className="text max-w-xl">{downloadApp.description}</p>
-            </motion.div>
+            </div>
           </div>
 
           {/* Segunda Coluna: Grid Ajustado */}
-          <motion.div
-            variants={fadeInVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex justify-center lg:justify-end w-full"
-          >
+          <div className="flex justify-center lg:justify-end w-full">
             <div className="grid grid-cols-2 gap-4 w-full max-w-md">
               {/* --- LINHA 1: BOTÕES DE LINK (RETANGULARES) --- */}
               <a
@@ -125,7 +99,7 @@ export default function DownloadApp({}: DownloadAppProps) {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
         <AnimatedSeparator />
       </article>
