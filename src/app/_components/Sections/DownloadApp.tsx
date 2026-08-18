@@ -2,32 +2,44 @@
 
 import Image from "next/image";
 import SplitText from "../Animations/SplitText";
+import { motion, Variants } from "framer-motion";
 import AnimatedSeparator from "../Animations/AnimatedSeparator";
 import { downloadApp } from "../../_data/data";
 
-interface DownloadAppProps {
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  appleLink?: string;
-  googleLink?: string;
-  appleQrText?: string;
-  googleQrText?: string;
-}
+// Variantes de animação de fade in para o Framer Motion
+const fadeInVariants: Variants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 1.2,
+    },
+  },
+};
 
-export default function DownloadApp({}: DownloadAppProps) {
+export default function DownloadApp() {
   return (
     <section className="download-section-container bg-texture-pattern relative overflow-hidden">
       <article className="container-1 relative z-10 w-full space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Seção Esquerda: Conteúdo de Texto */}
           <div className="relative space-y-3 text-center md:text-left p-3 lg:p-0 z-10">
-            <h2 className="text-3xl md:text-4xl">
+            <h2 className="text-xl md:text-5xl">
               <SplitText text={downloadApp.title} delay={0.18} />
             </h2>
-            <div className="relative z-10">
-              <p className="text">{downloadApp.text}</p>
-            </div>
+            <motion.div
+              variants={fadeInVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <div className="relative z-10">
+                <p className="text-sm">{downloadApp.text}</p>
+              </div>
+            </motion.div>
           </div>
 
           {/* Seção Direita: Container da Imagem do Celular */}
