@@ -263,7 +263,7 @@ export const aboutHeader = {
   section1Title: "Uma história construída com confiança.",
   section1Text:
     "Com mais de 20 anos de experiência, a IZ Garantia Condominial nasceu para fortalecer a gestão financeira dos condomínios com responsabilidade, confiabilidade e tecnologia. Nossa operação visa proteger a longo prazo a saúde financeira de cada condomínio.",
-  image1path: "/images/christin-hume-Hcfwew744z4-unsplash.jpg",
+  image1path: "/images/pexels-olly-3760058.jpg",
   image1Alt: "Imagem do escritório ou logo",
 
   section2Title:
