@@ -14,7 +14,7 @@ export default function SplitText({
   text = "",
   className = "",
   delay = 0.03,
-  highlightClass = "text-accent",
+  highlightClass = "text-primary",
   secondaryHighlightClass = "text-secondary-2",
 }: SplitTextProps) {
   if (!text) return null;

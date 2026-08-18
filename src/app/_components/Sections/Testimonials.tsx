@@ -17,15 +17,15 @@ export default function Testimonials() {
           <h2>{testimonials.title}</h2>
         </div>
 
-        {/* Grid Centralizado de Cards */}
+        {/* Grid Centralizado de Cards (2 Colunas) */}
         <StaggerContainer
-          className="carousel mx-auto md:max-w-[90%] md:grid md:grid-cols-3 md:justify-center md:items-stretch md:overflow-visible md:gap-5 md:py-0"
+          className="carousel mx-auto max-w-4xl md:grid md:grid-cols-2 md:justify-center md:items-stretch md:overflow-visible md:gap-6 md:py-0"
           staggerDelay={0.15}
         >
           {testimonials.items.map((item) => (
             <StaggerItem
               key={item.id}
-              className="testimonial-card-item group relative bg-soft-dark p-6 md:p-7 flex flex-col items-center text-center justify-between transition-all duration-300 md:max-w-[30rem] mx-auto w-full min-h-[280px] md:min-h-[300px] b-shadow-primary-2"
+              className="testimonial-card-item group relative bg-soft-dark p-6 md:p-7 flex flex-col items-center text-center justify-between transition-all duration-300 max-w-[30rem] mx-auto w-full min-h-[280px] md:min-h-[300px] b-shadow-primary-2"
             >
               {/* Ícone de Aspas */}
               <div className="mb-2 flex justify-center">
@@ -39,7 +39,7 @@ export default function Testimonials() {
 
               {/* Autor do Depoimento (Em Linha) */}
               <div className="flex flex-row items-center justify-center gap-3 pt-3 border-t border-primary/30 w-full">
-                <div className="relative w-9 h-9 rounded-full overflow-hidden  shrink-0">
+                <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
                   <Image
                     src={item.imagem}
                     alt={item.nome}

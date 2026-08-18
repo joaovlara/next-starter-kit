@@ -22,15 +22,14 @@ import { BsBuildingCheck } from "react-icons/bs";
 
 export const infos = {
   name: "IZ Garantia Condominial",
-  adress: "Av. Lins de Vasconcelos, 3464 - Sl 51 - Vila Mariana, São Paulo - SP, 04112-002",
+  adress:
+    "Av. Lins de Vasconcelos, 3464 - Sl 51 - Vila Mariana, São Paulo - SP, 04112-002",
   phone: "11 94627-1110",
   mail: "iz@izgarantia.com.br",
   instagram: "https://www.instagram.com/izgarantiacondominial/",
   wppApp: "https://wa.me/5511946271110",
   appleStore: "https://www.appstore.com",
   playStore: "https://www.playstore.com",
-  appleStoreQRCode: "/images/qrcode.png",
-  playStoreQRCode:  "/images/qrcode.png",
 };
 
 export const social = [
@@ -185,7 +184,7 @@ export const services = [
   {
     id: "emissao-de-boletos",
     title: "Emissão de boletos",
-    description: "Boletos mensais enviados aos condôminos todos os meses.",
+    description: "Boletos mensais enviados aos condôminos todos os meses, diretamente via WhatsApp e E-mail.",
     details:
       "Processo simplificado para emissão, envio e organização dos boletos do condomínio.",
     icon: ReceiptText,
@@ -222,14 +221,8 @@ export const services = [
 ];
 
 export const downloadApp = {
-
-  title: "Baixe Nosso Aplicativo",
-  subtitle: "Disponível para iOS e Android",
-  description: "Acesse todos os serviços e conteúdos na palma da sua mão. Faça o download direto da sua loja de aplicativos ou escaneie o QR Code correspondente.",
-  appleLink: infos.appleStore,
-  googleLink: infos.playStore,
-  appleQrText: infos.appleStoreQRCode,
-  googleQrText: infos.playStoreQRCode,
+  title: "Seu condomínio mais organizado e conectado",
+  text: "Com o aplicativo exclusivo da IZ, você resolve tudo de forma rápida e fácil: acessa boletos, acompanha as finanças, consulta atas, participa de enquetes e ainda faz reservas das áreas comuns. Tudo na palma da sua mão. Porque uma gestão eficiente também pode ser simples. Entre em contato e conheça as soluções da IZ.",
 };
 
 export const cta = {
@@ -252,19 +245,11 @@ export const testimonials = {
     },
     {
       id: 2,
-      nome: "Mariana Siqueira",
-      funcao: "Moradora",
+      nome: "Rogério R.",
+      funcao: "Síndico",
       depoimento:
-        "A tranquilidade do local aliada à estrutura completa de lazer fez toda a diferença para o bem-estar da minha família.",
+        "A vida financeira dos dois condomínios melhoraram, agora temos como planejar as benfeitorias a realizar sem ter receio da falta do dinheiro para cumprir com nossas obrigações e cada vez mais melhorar e valorizar os condomínios e consequentemente a valorização de cada unidade autônoma",
       imagem: "/images/avatars/user2.jpg",
-    },
-    {
-      id: 3,
-      nome: "Roberto & Ana",
-      funcao: "Investidores",
-      depoimento:
-        "Excelente valorização e gestão extremamente profissional. Todo o suporte oferecido pela equipe passa total confiança.",
-      imagem: "/images/avatars/user3.jpg",
     },
   ],
 };
@@ -281,7 +266,8 @@ export const aboutHeader = {
   image1path: "/images/christin-hume-Hcfwew744z4-unsplash.jpg",
   image1Alt: "Imagem do escritório ou logo",
 
-  section2Title: "O futuro da gestão condominial é mais simples, seguro e previsível.",
+  section2Title:
+    "O futuro da gestão condominial é mais simples, seguro e previsível.",
   section2Text:
     "Nosso propósito é transformar a gestão condominial em um processo mais simples, transparente e sustentável. Por isso, investimos continuamente em processos, ferramentas e atendimento especializado para apoiar síndicos e administradoras em uma gestão mais estratégica e preparada para o futuro.",
   image2path: "/images/tech-office.jpg",

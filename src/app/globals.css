@@ -146,12 +146,26 @@
     @apply grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-lg z-10;
   }
 
-  .download-grid-card {
-    @apply aspect-square opacity-75 flex items-center justify-center p-1 border border-primary-2 bg-soft-dark rounded;
+  .download-phone-wrapper {
+    @apply absolute inset-0 -z-10 flex items-center justify-center opacity-30 pointer-events-none
+           lg:static lg:z-10 lg:opacity-70 lg:pointer-events-auto lg:flex lg:justify-end lg:w-full;
   }
 
-  .download-btn-card {
-    @apply flex items-center justify-between p-4 border border-primary bg-soft-dark hover:bg-primary transition-all duration-300 rounded;
+  /* Dimensões, posição, escala e gradiente de transparência da imagem */
+  .download-phone-image {
+    @apply object-contain h-auto w-5/6 max-w-md -translate-y-8
+           lg:w-full lg:max-w-md lg:scale-105 lg:translate-x-8 lg:translate-y-0;
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 }
 

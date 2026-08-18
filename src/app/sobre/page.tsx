@@ -43,7 +43,7 @@ export default function Sobre() {
               viewport={{ once: true, margin: "-50px" }}
               className="space-y-3 bg-texture-pattern"
             >
-              <h2 className="text-accent">{aboutHeader.section1Title}</h2>
+              <h2 className="text-primary">{aboutHeader.section1Title}</h2>
               <p className="text">{aboutHeader.section1Text}</p>
             </motion.div>
 
@@ -103,7 +103,7 @@ export default function Sobre() {
               viewport={{ once: true, margin: "-50px" }}
               className="space-y-3 bg-texture-pattern"
             >
-              <h2 className="text-accent">{aboutHeader.section3Title}</h2>
+              <h2 className="text-primary">{aboutHeader.section3Title}</h2>
               <p className="text">{aboutHeader.section3Text}</p>
             </motion.div>
 

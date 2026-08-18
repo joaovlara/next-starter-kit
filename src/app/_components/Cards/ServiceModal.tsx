@@ -41,13 +41,6 @@ export function ServiceModal({ service, isOpen, onClose }: ServiceModalProps) {
   if (!service) return null;
 
   const Icon = service.icon;
-  const defaultDetails = [
-    "Atendimento personalizado e dedicado",
-    "Profissionais altamente qualificados",
-    "Padrão de execução rigoroso",
-    "Suporte contínuo para você ou seu condomínio",
-  ];
-  const detailsList = service.details || defaultDetails;
 
   return (
     <AnimatePresence>

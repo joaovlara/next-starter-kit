@@ -10,7 +10,7 @@ export default function Services() {
         staggerDelay={0.3}
       >
         <div className="md:h-80 flex items-end justify-start md:px-3">
-          <h2 className="lg:text-6xl">
+          <h2 className="lg:text-5xl">
             NOSSOS <br className="hidden lg:block" /> SERVIÇOS
           </h2>
         </div>

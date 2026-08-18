@@ -35,7 +35,6 @@ export function ServiceCardPage({
       <div className="space-y-3">
         <h3 className="text-xl font-bold uppercase text-olive-200 mb-2">{title}</h3>
         <p className="text-olive-300 text-sm leading-relaxed">{description}</p>
-        <p className="text-olive-400 text-xs leading-relaxed">{details}</p>
       </div>
 
       </div>
