@@ -22,7 +22,7 @@ export default function DownloadApp({}: DownloadAppProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Seção Esquerda: Conteúdo de Texto */}
           <div className="relative space-y-3 text-center md:text-left p-3 lg:p-0 z-10">
-            <h2 className="text-4xl">
+            <h2 className="text-3xl md:text-4xl">
               <SplitText text={downloadApp.title} delay={0.18} />
             </h2>
             <div className="relative z-10">
