@@ -147,7 +147,7 @@
   }
 
   .download-phone-wrapper {
-    @apply absolute inset-0 -z-10 flex items-center justify-center opacity-30 pointer-events-none
+    @apply absolute inset-0 -z-10 flex items-center justify-center opacity-20 pointer-events-none
            lg:static lg:z-10 lg:opacity-70 lg:pointer-events-auto lg:flex lg:justify-end lg:w-full;
   }
 

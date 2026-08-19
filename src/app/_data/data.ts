@@ -221,12 +221,12 @@ export const services = [
 ];
 
 export const downloadApp = {
-  title: "Seu condomínio mais organizado e conectado",
+  title: "Seu condomínio mais # organizado # e # conectado #",
   text: "Com o aplicativo exclusivo da IZ, você resolve tudo de forma rápida e fácil: acessa boletos, acompanha as finanças, consulta atas, participa de enquetes e ainda faz reservas das áreas comuns. Tudo na palma da sua mão. Porque uma gestão eficiente também pode ser simples. Entre em contato e conheça as soluções da IZ.",
 };
 
 export const cta = {
-  h2: "*Revolucione a gestão* do seu condomínio e fale com um dos nossos especialistas",
+  h2: "# Revolucione a gestão # do seu condomínio e fale com um dos nossos especialistas",
   linkCta: infos.wppApp,
   buttonLabel: "Entre em contato",
 };
@@ -240,7 +240,7 @@ export const testimonials = {
       nome: "Hudson Garcia",
       funcao: "Síndico",
       depoimento:
-        "Garantir as receitas 100% é o sonho de todo síndico. Encontramos na SP Condo a solução ideal, onde temos a garantia do recebimento das taxas condominiais, atendimento profissional adequado, com rapidez e eficiência e o mais importante: a confiança de um parceiro de negócios.",
+        "Garantir as receitas 100% é o sonho de todo síndico. Encontramos a solução ideal, onde temos a garantia do recebimento das taxas condominiais, atendimento profissional adequado, com rapidez e eficiência e o mais importante: a confiança de um parceiro de negócios",
       imagem: "/images/avatars/user1.jpg",
     },
     {

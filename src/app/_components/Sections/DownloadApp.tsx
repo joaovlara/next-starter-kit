@@ -37,7 +37,7 @@ export default function DownloadApp() {
               viewport={{ once: true }}
             >
               <div className="relative z-10">
-                <p className="text-sm">{downloadApp.text}</p>
+                <p className="text-sm md:text-base">{downloadApp.text}</p>
               </div>
             </motion.div>
           </div>
@@ -45,12 +45,14 @@ export default function DownloadApp() {
           {/* Seção Direita: Container da Imagem do Celular */}
           <div className="download-phone-wrapper">
             <Image
-              src="/images/phone.png"
+              src="/images/phone2.png"
               alt="Visualização do aplicativo"
               width={500}
               height={800}
               className="download-phone-image"
               priority
+              quality={100}
+              unoptimized={true}
             />
           </div>
         </div>
