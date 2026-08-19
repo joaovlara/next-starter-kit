@@ -4,7 +4,7 @@ import Image from "next/image";
 import SplitText from "../Animations/SplitText";
 import { motion, Variants } from "framer-motion";
 import AnimatedSeparator from "../Animations/AnimatedSeparator";
-import { downloadApp } from "../../_data/data";
+import { downloadApp, infos } from "../../_data/data";
 
 // Variantes de animação de fade in para o Framer Motion
 const fadeInVariants: Variants = {
@@ -26,18 +26,18 @@ export default function DownloadApp() {
       <article className="container-1 relative z-10 w-full space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Seção Esquerda: Conteúdo de Texto */}
-          <div className="relative space-y-3 text-center md:text-left p-3 lg:p-0 z-10">
-            <h2 className="text-xl md:text-5xl">
+          <div className="relative space-y-5 text-center md:text-left p-3 lg:p-0 z-10">
+            <h2 className="text-2xl md:text-5xl">
               <SplitText text={downloadApp.title} delay={0.18} />
             </h2>
             <motion.div
               variants={fadeInVariants}
-              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <div className="relative z-10">
+              <div className="relative z-10 space-y-4">
                 <p className="text-sm md:text-base">{downloadApp.text}</p>
+                <a className="btn-download-app" href={infos.wppApp} >Entre em contato e conheça as soluções da IZ</a>
               </div>
             </motion.div>
           </div>

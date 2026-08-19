@@ -222,7 +222,7 @@ export const services = [
 
 export const downloadApp = {
   title: "Seu condomínio mais # organizado # e # conectado #",
-  text: "Com o aplicativo exclusivo da IZ, você resolve tudo de forma rápida e fácil: acessa boletos, acompanha as finanças, consulta atas, participa de enquetes e ainda faz reservas das áreas comuns. Tudo na palma da sua mão. Porque uma gestão eficiente também pode ser simples. Entre em contato e conheça as soluções da IZ.",
+  text: "Com a IZ, você conta com um aplicativo exclusivo do seu condomínio e resolve tudo de forma rápida e fácil: acessa boletos, consulta atas e o regimento interno, participa de enquetes e ainda faz reservas das áreas comuns. O condomínio fica responsável pela disponibilidade das informações e você com tudo na palma da sua mão.",
 };
 
 export const cta = {

@@ -68,6 +68,10 @@
     @apply bg-primary text-olive-200 px-12 py-3 rounded uppercase font-black hover:bg-white hover:text-dark;
   }
 
+  .btn-download-app {
+    @apply inline-flex items-center justify-center bg-primary text-olive-200 px-6 py-3 md:px-10 md:py-4 rounded text-sm font-semibold text-center hover:bg-white hover:text-dark;
+  }
+
   .btn-primary {
     @apply bg-primary px-6 py-3 font-semibold transition-all duration-300 hover:bg-secondary hover:shadow-lg focus:outline-none;
   }
