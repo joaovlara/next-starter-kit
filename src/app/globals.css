@@ -7,7 +7,7 @@
   /* Colors */
   --color-primary: #115945;
   --color-primary-2: #193930;
-  --color-primary-3: #2b7818;
+  --color-primary-3: #0B845A;
   --color-secondary: #bf9850;
   --color-secondary-2: #b0812a;
   --color-accent: #2b7818;
@@ -57,7 +57,7 @@
   }
 
   .btn-hero {
-    @apply px-15 md:px-30 py-6 border-2 w-full flex justify-center border-primary rounded-full text-olive-300 hover:bg-primary hover:text-black uppercase font-bold;
+    @apply px-15 md:px-30 py-6 border-2 w-full flex justify-center border-primary-3 rounded-full text-olive-300 hover:bg-primary-3 hover:text-white uppercase font-bold;
   }
 
   .btn-nav {
@@ -69,7 +69,7 @@
   }
 
   .btn-download-app {
-    @apply inline-flex items-center justify-center bg-primary text-olive-200 px-6 py-3 md:px-10 md:py-4 rounded text-sm font-semibold text-center hover:bg-white hover:text-dark;
+    @apply inline-flex items-center justify-center bg-primary-3 text-olive-200 px-6 py-3 md:px-10 md:py-4 rounded text-sm font-semibold text-center hover:bg-white hover:text-dark;
   }
 
   .btn-primary {

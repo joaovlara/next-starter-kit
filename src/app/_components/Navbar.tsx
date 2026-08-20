@@ -41,9 +41,9 @@ const Navbar = () => {
           <Link href="/">
             <Image
               src="/images/iz-logo-principal- 1 1.png"
-              alt="Logo"
-              width={150}
-              height={100}
+              alt="Logo - Iz garantia Condominial"
+              width={200}
+              height={200}
             />
           </Link>
         </div>
