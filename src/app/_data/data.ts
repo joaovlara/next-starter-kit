@@ -107,7 +107,7 @@ export const routes = [
 // Home Page
 
 export const hero = {
-  h1: "Seu condomínio com # Inadimplência Zero #",
+  h1: "Seu condomínio com * Inadimplência Zero *",
   text: "Tecnologia, equilíbrio financeiro e gestão simplificada",
   link: infos.wppApp,
 };
@@ -221,12 +221,12 @@ export const services = [
 ];
 
 export const downloadApp = {
-  title: "Seu condomínio mais # organizado # e # conectado #",
+  title: "Seu condomínio mais * organizado * e * conectado *",
   text: "Com a IZ, você conta com um aplicativo exclusivo para seu condomínio e resolve tudo de forma rápida e fácil: acessa boletos, consulta atas e o regimento interno, participa de enquetes, faz reservas das áreas comuns e muito mais. O condomínio fica responsável pela disponibilidade das informações e você com tudo na palma da sua mão.",
 };
 
 export const cta = {
-  h2: "# Revolucione a gestão # do seu condomínio e fale com um dos nossos especialistas",
+  h2: "* Revolucione a gestão * do seu condomínio e fale com um dos nossos especialistas",
   linkCta: infos.wppApp,
   buttonLabel: "Entre em contato",
 };

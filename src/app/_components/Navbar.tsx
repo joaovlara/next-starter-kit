@@ -56,8 +56,8 @@ const Navbar = () => {
               <Link
                 key={index}
                 href={rota.href}
-                className={`transition-colors duration-200 hover:text-secondary-2 ${
-                  isActive ? "text-secondary-2" : ""
+                className={`transition-colors duration-200 hover:text-primary ${
+                  isActive ? "text-primary" : ""
                 }`}
               >
                 {rota.name}

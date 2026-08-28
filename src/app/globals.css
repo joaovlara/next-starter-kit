@@ -5,11 +5,11 @@
   --font-montserrat: "Montserrat", sans-serif;
 
   /* Colors */
-  --color-primary: #0B845A;
-  --color-primary-2: #193930;
-  --color-primary-3: #0B845A;
-  --color-secondary: #bf9850;
-  --color-secondary-2: #b0812a;
+  --color-primary: #761CD6;
+  --color-primary-2: #2E035C;
+  --color-primary-3: #6300DD;
+  --color-secondary: #BCBCBC;
+  --color-secondary-2: #858585;
   --color-accent: #2b7818;
   --color-neutral: #2f3634;
   --color-neutral-dark: #242424;
@@ -53,7 +53,7 @@
 @layer components {
   /* Botões do sistema */
   .btn-cta {
-    @apply px-16 py-4 transition-all duration-300 bg-secondary-2 uppercase font-black hover:bg-primary-2 hover:shadow-2xl;
+    @apply px-16 py-4 transition-all duration-300 bg-primary uppercase font-black hover:bg-primary-2 hover:shadow-2xl;
   }
 
   .btn-hero {
@@ -96,7 +96,7 @@
   }
 
   .separador {
-    @apply border-b border-secondary-2/70 w-full;
+    @apply border-b border-primary-2/70 w-full;
   }
 
   .carousel {
