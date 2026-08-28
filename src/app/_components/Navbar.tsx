@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="shrink-0">
           <Link href="/">
             <Image
-              src="/images/logo-IZ.png"
+              src="/images/logo-IZ-roxo.png"
               alt="Logo - Iz garantia Condominial"
               width={200}
               height={200}
