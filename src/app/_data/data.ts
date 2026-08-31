@@ -270,7 +270,7 @@ export const aboutHeader = {
     "O futuro da gestão condominial é mais simples, seguro e previsível.",
   section2Text:
     "Nosso propósito é transformar a gestão condominial em um processo mais simples, transparente e sustentável. Por isso, investimos continuamente em processos, ferramentas e atendimento especializado para apoiar síndicos e administradoras em uma gestão mais estratégica e preparada para o futuro.",
-  image2path: "/images/tech-office.jpg",
+  image2path: "/images/tech-office-roxo.png",
   image2Alt: "Imagem relacionada à área de atuação",
 
   section3Title: "Parte de uma rede que entende do mercado",

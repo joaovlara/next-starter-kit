@@ -46,7 +46,7 @@ export default function Hero() {
       <article className="container-1 relative overflow-hidden rounded-b-[70px] md:h-[75vh] h-[70vh] bg-gradient-t-dark b-shadow-primary">
         {/* Imagem de Fundo com Fade-In Sincronizado */}
         <Image
-          src="/images/tech-house-2.jpg"
+          src="/images/tech-house-roxo.png"
           alt="Imagem de fundo da seção Hero"
           fill
           priority
